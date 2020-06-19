@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux磁盘管理 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/21.d96df1dc.js" as="script"><link rel="preload" href="/book/assets/js/3.b5cecfc5.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" class="sidebar-link">Linux必备命令</a></li><li><a href="/book/linux/user_rights.html" class="sidebar-link">Linux用户及权限管理</a></li><li><a href="/book/linux/Software.html" class="sidebar-link">Linux软件包企业实战</a></li><li><a href="/book/linux/disk.html" aria-current="page" class="active sidebar-link">Linux磁盘管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/disk.html#计算机硬盘简介" class="sidebar-link">计算机硬盘简介</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#硬盘block及inode详解" class="sidebar-link">硬盘block及inode详解</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#硬链接与软链接" class="sidebar-link">硬链接与软链接</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#linux下磁盘实战操作命令" class="sidebar-link">Linux下磁盘实战操作命令</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#基于gpt格式磁盘分区" class="sidebar-link">基于GPT格式磁盘分区</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#mount命令工具" class="sidebar-link">mount命令工具</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#linux硬盘故障修复" class="sidebar-link">Linux硬盘故障修复</a></li><li class="sidebar-sub-header"><a href="/book/linux/disk.html#思考" class="sidebar-link">思考</a></li></ul></li><li><a href="/book/linux/vdftpd.html" class="sidebar-link">Linux文件服务器企业实战</a></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" class="sidebar-link">Apache Web服务器企业实战</a></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux磁盘管理"><a href="#linux磁盘管理" class="header-anchor">#</a> Linux磁盘管理</h1> <p>Linux系统一切以文件的方式存储于硬盘中，应用程序数据需要时刻读写磁盘，所以企业生产环境对硬盘的操作变得尤为重要，对硬盘的和管理也是每个运维工程师必备的工作之一。</p> <h2 id="计算机硬盘简介"><a href="#计算机硬盘简介" class="header-anchor">#</a> 计算机硬盘简介</h2> <p>硬盘是计算机主要的存储媒介之一，由一个或者多个铝制或者玻璃制的碟片组成，碟片外覆盖有铁磁性材料，硬盘内部有磁道、柱面、扇区、磁头等部分组成。</p> <p>Linux 系统中硬件设备相关配置文件存放在/dev/下，常见硬盘命名为/dev/hda、/dev/sda、/dev/sdb、/dev/sdc、/dev/vda。不同硬盘接口，在系统中识别的设备名称不一样。</p> <p>IDE硬盘接口在Linux中设备名为/dev/hda,SAS、SCSL、SATA硬盘接口在Linux中设备名为sda，高效云盘硬盘接口会识别为/dev/vda等。</p> <p>文件存储在硬盘上，硬盘的最小存储单位叫作sector（扇区），每个sector存储512字节。操作系统在读取硬盘的时候，不会逐个sector地去读取，这样效率非常低，为了提升读取效率，操作系统会一次性连续读取多个sector，即一次性读取多个sector称为一个block（块）。</p> <p>有多个sector组成的block是文件存取的最小单位。block的大小常见的有1KB、2KB、4KB，block在linux中常设置为4KB，即连续8个sector组成一个block。</p> <p>/boot分区的block一般为1KB，而/deta/分区或者/分区的block为4KB。可以通过以下3中方法查看Linux分区的block大小：</p> <p><strong>查看block的方法</strong></p> <div class="language- extra-class"><pre><code>    // ext3与ext4格式化文件系统
+    [root@localhost ~]# stat /boot/ |grep &quot;IO Block&quot;
+    Size: 4096            Blocks: 8          IO Block: 4096   directory
+    [root@localhost ~]# dumpe2fs /dev/vda1 |grep &quot;Block size&quot;
+    dumpe2fs 1.42.9 (28-Dec-2013)
+    Block size:               4096
+    [root@localhost ~]# tune2fs -l /dev/vda1 |grep &quot;Block size&quot;
+    Block size:               4096
+
+    // xfs格式化文件系统：
+    xfs_info /dev/sda1
+</code></pre></div><blockquote><p>Linux stat命令用于显示inode内容。stat以文字的格式来显示inode的内容。<br></p></blockquote> <blockquote><p>dumpe2fs用来查询文件系统状态。dumpe2fs命令用于打印“ext2/ext3”文件系统的超级块和快组信息。<br></p></blockquote> <blockquote><p>tune2fs是调整和查看ext2/ext3文件系统的文件系统参数，Windows下面如果出现意外断电死机情况，下次开机一般都会出现系统自检。Linux系统下面也有文件系统自检，而且是可以通过tune2fs命令，自行定义自检周期及方式。</p></blockquote> <p>例如创建一个普通文件，文件大小为10B，而默认设置block为4KB如果有一万个小文件，由于每个Block只能存放一个文件，如果文件的大小比Block大，会申请更多Block，相反如果文件的大小比默认Block小，仍然占用一个Block，这样剩余的空间会被浪费掉。</p> <p><strong>详细说明：</strong></p> <p>一万个文件理论只占用空间大小:10000*10=100000B=<strong>97.65625MB</strong></p> <p>一万个文件真实占用空间大小:10000*4096B=40960000B=40000MB=<strong>40GB</strong></p> <p>此时可以根据实际需求将会Block设置为1KB，从而节省更多的空间。</p> <h2 id="硬盘block及inode详解"><a href="#硬盘block及inode详解" class="header-anchor">#</a> 硬盘block及inode详解</h2> <p>操作系统对于文件数据的存放包括两个部分：1、文件内容，2、权限及文件属性</p> <p>在硬盘分区中，还有一个超级区块（superblock）</p> <ol><li><p>superblock：记录文件系统的整体信息，包括inode与block的总量、使用大小、剩余大小以及文件系统的格式与相关信息等</p></li> <li><p>inode：记录文件的属性、权限，同时会记录该文件的数据所在的block编号</p></li> <li><p>block：存储文件的内容</p></li></ol> <p>每个inode与block都有编号，而每个文件都会占用一个inode，inode内则有文件数据放置的block号码；能够找到文件的inode就可以找到该文件所放置数据的block号码，从而读取文件内容。</p> <p>操作系统进行格式化分区时，操作系统自动将硬盘分为两个区域。一个是数据block区，用于存放文件数据；另一个是inode table区，用于存放inode包含的元素信息。</p> <p>每个inode节点的大小，可以在格式化时指定，默认为128B或256B，/boot分区inode默认为128B，其他分区默认为256B。</p> <p><strong>查看Linux系统inode方法</strong></p> <div class="language- extra-class"><pre><code>    ext3与ext4格式化文件系统
+    [root@localhost ~]# dumpe2fs /dev/vda1 | grep &quot;Inode size&quot; 
+    dumpe2fs 1.42.9 (28-Dec-2013)
+    Inode size:               256
+
+    [root@localhost ~]# tune2fs -l /dev/vda1 | grep &quot;Inode size&quot; 
+    Inode size:               256
+
+    xfs格式化文件系统
+    xfs_info /dev/vda1
+</code></pre></div><p>在格式化时可以指定默认的inode与block的大小；-b指定默认block值，-I指定默认inode值，例：<code>mkfs.ext4 –b 4096 –I 256 /dev/sdb</code></p> <h3 id="linux文件访问流程"><a href="#linux文件访问流程" class="header-anchor">#</a> Linux文件访问流程</h3> <img src="/book/disk/1.png" alt="Linux文件访问流程"> <h3 id="磁盘的容量由inode和block共同决定"><a href="#磁盘的容量由inode和block共同决定" class="header-anchor">#</a> 磁盘的容量由inode和block共同决定</h3> <img src="/book/disk/2.png" alt="磁盘的容量由inode和block共同决定"> <h3 id="有关inode的总结"><a href="#有关inode的总结" class="header-anchor">#</a> 有关inode的总结</h3> <ol><li>磁盘格式化创建文件系统时会生成一定数量的inode和block；</li> <li>inode称为索引节点，作用是存放文件的属性信息和指向block的指针；</li> <li>inode是磁盘上的一块存储空间，CentOS6默认inode大小为256字节；</li> <li>inode编号是唯一的，不同的文件有唯一的inode号；</li> <li>inode号相同的文件互为硬链接；</li> <li>创建一个文件至少要占用一个inode和一个block；</li> <li>查看inode总量和使用量 <code>df -i</code>；</li> <li>查看文件的inode信息 ls -li 或 stat /etc/hosts；</li> <li>生成指定的大小的inode <code>mkfs.ext4 -b 2048 -I 256 /dev/sdb</code>。</li></ol> <h3 id="有关block的总结"><a href="#有关block的总结" class="header-anchor">#</a> 有关block的总结</h3> <ol><li>磁盘存取文件是按block为单位存取的；</li> <li>一个文件可能占用多个block，但是每读取一个block就会消耗一次磁盘I/O；</li> <li>如果要提升磁盘IO性能，那么block应该大一点，从而能读取更多内容；</li> <li>block太大，存放小文件就会造成空间浪费；block太小，又会消耗磁盘IO；</li> <li>要根据业务需求确定block大小，一般默认设置为4K；</li> <li>block大小也是格式化时确定的，命令是 <code>mkfs.ext4 -b 2048 -I 256 /dev/sdb</code>。</li></ol> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ol><li>磁盘格式化文件系统后，会分为inode和block两部分；</li> <li>inode存放文件属性和指向block的指针；</li> <li>文件名和inode对应关系存放在上级目录里的block；</li> <li>inode默认256B，block默认4K；</li> <li>通过<code>df -i</code> 查看inode数量及使用量；</li> <li>查看 inode和block大小 <code>dumpe2fs /dev/sda1 | egrep &quot;Inode size|Block size&quot;</code>；</li> <li>一个文件至少占用一个inode和block，硬链接占用同一个inode；</li> <li>一个block只能被一个文件使用，block太小，性能差，block太大，浪费空间；</li> <li>通常，一块空间能放多少文件取决于inode和block的数量和大小，如果文件很小，那么block或inode就容易耗尽；如果文件很大，则应该用block的总数除以一个文件占用的block的数量得出存放文件的数目。</li></ol> <h2 id="硬链接与软链接"><a href="#硬链接与软链接" class="header-anchor">#</a> 硬链接与软链接</h2> <p>下面用一个实例来说明硬链接和软链接。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>现在目录下有两个文件，一个名为AAA，一个名为BBB。
+引用
+[root@centos7 app]#ls -il
+total 0
+67 -rw-r--r--. 1 root root 8 Nov 18 19:41 AAA
+68 -rw-r--r--. 1 root root 0 Nov 18 19:41 BBB
+
+首先先做一个AAA的硬链接。
+引用
+[root@centos7 app]#ln AAA AAAhard      
+[root@centos7 app]#ls -il     
+67 -rw-r--r--. 2 root root 8 Nov 18 19:41 AAA
+67 -rw-r--r--. 2 root root 8 Nov 18 19:41 AAAhard
+68 -rw-r--r--. 1 root root 0 Nov 18 19:41 BBB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>这里我们注意在创建链接前，AAA显示的链接数目为1，创建链接后</p> <ol><li>AAA和AAAhard的链接数目都变为2。</li> <li>AAA和AAAhard的inode号是一样的，都是67。</li> <li>AAA和AAAhard显示的文件大小也是一样，都是8B。
+可见进行了ln命令的操作结果：AAA和AAAhard是同一个文件的两个名字， 它们具有同样的索引节点号和文件属性，建立文件AAA的硬链接，就是为 AAA的文件索引节点在当前目录上建立一个新指针。你可以删除其中任何一个，如rm AAA，每次只会删除一个指针，链接数同时减一，只有将所有指向文件内容的指针，也即链接数减为0时，内核才会把文件内容从磁盘上删除。</li></ol> <p>尽管硬链接节省空间，也是Linux系统整合文件系统的传统方式，但是存在一些不足之处：</p> <ol><li>不允许给目录创建硬链接。</li> <li>不可以在不同文件系统的文件间建立链接。因为 inode 是这个文件在当前分区中的索引值，是相对于这个分区的，当然不能跨越文件系统了。</li></ol> <p>接着我们做一个指向BBB的软链接，软链接克服了硬链接的不足，没有任何文件系统的限制，任何用户可以创建指向目录的符号链接。因而现在更为广泛使用，它具有更大的灵活性，甚至可以跨越不同机器、不同网络对文件进行链接。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>引用
+[root@centos7 app]#ln -s BBB BBBsoft
+[root@centos7 app]#ls -il
+67 -rw-r--r--. 2 root root 8 Nov 18 19:44 AAA
+67 -rw-r--r--. 2 root root 8 Nov 18 19:44 AAAhard
+68 -rw-r--r--. 1 root root 0 Nov 18 19:41 BBB
+69 lrwxrwxrwx. 1 root root 3 Nov 18 19:46 BBBsoft -&gt; BBB
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>从上面链接后的结果可以看出来软链接与硬链接，区别不仅仅是在概念上，在实现上也是完全不同的。</p> <p><strong>区别：</strong></p> <ol><li>硬链接原文件/链接文件公用一个inode号，说明他们是同一个文件，而软链接原文件/链接文件拥有不同的inode号，表明他们是两个不同的文件；</li> <li>在文件属性上软链接明确写出了是链接文件，而硬链接没有写出来，因为在本质上硬链接文件和原文件是完全平等关系；</li> <li>链接数目是不一样的，软链接的链接数目不会增加；</li> <li>文件大小是不一样的，硬链接文件显示的大小是跟原文件是一样的。而这里软链接显示的大小与原文件就不同了，BBB大小是95B，而BBBsoft是3B。因为BBB共有3个字符</li> <li>软链接没有任何文件系统的限制，任何用户可以创建指向目录的符号链接</li></ol> <p>总之，建立软链接就是建立了一个新文件。当访问链接文件时，系统就会发现他是个链接文件，它读取链接文件找到真正要访问的文件。</p> <p>当然软链接也有硬链接没有的缺点：因为链接文件包含有原文件的路径信息，所以当原文件从一个目录下移到其他目录中，再访问链接文件，系统就找不到了，而硬链接就没有这个缺陷，</p> <h2 id="linux下磁盘实战操作命令"><a href="#linux下磁盘实战操作命令" class="header-anchor">#</a> Linux下磁盘实战操作命令</h2> <p>由于硬盘常年大量读写，经常会出现坏盘，需要更换硬盘，或者由于磁盘空间不足，需要添加新硬盘，新添加的硬盘需要经过格式化、分区才能被Linux系统所使用。</p> <p>服务器添加一块新硬盘，不需要关机，直接插入即可，一般硬盘均支持热插拔功能。</p> <p><strong>下面是添加新硬盘的操作流程</strong></p> <p>检测Linux系统识别的硬盘设备，新添加地硬盘一般会被识别为/dev/sdb,如果有多块硬盘，会依次识别为/dev/sdc、/dev/sdd等设备名称。</p> <ol><li><p>查看是否有新添加的硬盘</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# fdisk -l
+
+ Disk /dev/sda: 42.9 GB, 42949672960 bytes, 83886080 sectors
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+ Disk label type: dos
+ Disk identifier: 0x000cd1e5
+
+ Device Boot      Start         End      Blocks   Id  System
+ /dev/sda1   *        2048     2099199     1048576   83  Linux
+ /dev/sda2         2099200    83886079    40893440   8e  Linux LVM
+
+ Disk /dev/sdb: 21.5 GB, 21474836480 bytes, 41943040 sectors  # 这里多一个 Disk /dev/sdb: 21.5 GB
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+</code></pre></div></li></ol> <ul><li><p>这里显示fdisk的各个参数的用法</p> <div class="language- extra-class"><pre><code>  a   toggle a bootable flag # 活动分区标记/引导分区
+  b   edit bsd disklabel # 编辑bsd disklabel
+  c   toggle the dos compatibility flag # 切换dos兼容性标志
+  d   delete a partition # 删除分区
+  g   create a new empty GPT partition table # 创建一个新的空GPT分区表
+  G   create an IRIX (SGI) partition table # 创建一个IRIX（SGI）分区表
+  l   list known partition types # 显示分区类型
+  m   print this menu # 显示菜单和帮助信息
+  n   add a new partition # 新建分区
+  o   create a new empty DOS partition table # 创建一个新空DOS分区表
+  p   print the partition table # 显示分区信息
+  q   quit without saving changes # 退出不保存
+  s   create a new empty Sun disklabel # 创建一个新的空的sun磁盘标签
+  t   change a partition's system id # 设置分区号
+  u   change display/entry units # 更改显示/输入单位
+  v   verify the partition table # 进行扥去检查
+  w   write table to disk and exit # 保存修改
+  x   extra functionality (experts only) # 扩展应用，高级功能
+</code></pre></div></li></ul> <ol start="2"><li><p>基于新硬盘/dev/sdb设备，创建磁盘分区/dev/sdb1 ，创建/dev/sdb1分区方法，执行命令<code>fdisk /dev/sdb</code>,然后按屏幕提示依次输入n、p、1、按enter键，在输入+10G，在按enter键，输入w，最后执行<code>fdisk -l</code>在查看一下</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# fdisk /dev/sdb 
+ Welcome to fdisk (util-linux 2.23.2).
+
+ Changes will remain in memory only, until you decide to write them.
+ Be careful before using the write command.
+
+ Device does not contain a recognized partition table
+ Building a new DOS disklabel with disk identifier 0x33ae5fdc.
+
+ Command (m for help): m
+ Command action
+ a   toggle a bootable flag
+ b   edit bsd disklabel
+ c   toggle the dos compatibility flag
+ d   delete a partition
+ g   create a new empty GPT partition table
+ G   create an IRIX (SGI) partition table
+ l   list known partition types
+ m   print this menu
+ n   add a new partition
+ o   create a new empty DOS partition table
+ p   print the partition table
+ q   quit without saving changes
+ s   create a new empty Sun disklabel
+ t   change a partition's system id
+ u   change display/entry units
+ v   verify the partition table
+ w   write table to disk and exit
+ x   extra functionality (experts only)
+
+ Command (m for help): n
+ Partition type:
+ p   primary (0 primary, 0 extended, 4 free)
+ e   extended
+ Select (default p): p
+ Partition number (1-4, default 1): 1
+ First sector (2048-41943039, default 2048): 
+ Using default value 2048
+ Last sector, +sectors or +size{K,M,G} (2048-41943039, default 41943039): +10G
+ Partition 1 of type Linux and of size 10 GiB is set
+
+ Command (m for help): w
+ The partition table has been altered!
+
+ Calling ioctl() to re-read partition table.
+ Syncing disks.
+</code></pre></div></li></ol> <hr> <ul><li><p>查看是否成功创建磁盘分区/dev/sdb1
+[root@localhost ~]# fdisk -l</p> <div class="language- extra-class"><pre><code>  Disk /dev/sda: 42.9 GB, 42949672960 bytes, 83886080 sectors
+  Units = sectors of 1 * 512 = 512 bytes
+  Sector size (logical/physical): 512 bytes / 512 bytes
+  I/O size (minimum/optimal): 512 bytes / 512 bytes
+  Disk label type: dos
+  Disk identifier: 0x000cd1e5
+
+  Device Boot      Start         End      Blocks   Id  System
+  /dev/sda1   *        2048     2099199     1048576   83  Linux
+  /dev/sda2         2099200    83886079    40893440   8e  Linux LVM
+
+  Disk /dev/sdb: 21.5 GB, 21474836480 bytes, 41943040 sectors
+  Units = sectors of 1 * 512 = 512 bytes
+  Sector size (logical/physical): 512 bytes / 512 bytes
+  I/O size (minimum/optimal): 512 bytes / 512 bytes
+  Disk label type: dos
+  Disk identifier: 0x33ae5fdc
+
+  Device Boot      Start         End      Blocks   Id  System
+  /dev/sdb1            2048    20973567    10485760   83  Linux  # /dev/sdb1 创建出来了，大小10G
+</code></pre></div></li></ul> <ol start="3"><li><p>执行<code>mkfs.ext4 /dev/sdb1</code> 格式化磁盘分区</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# mkfs.ext4 /dev/sdb1 
+ mke2fs 1.42.9 (28-Dec-2013)
+ Filesystem label=
+ OS type: Linux
+ Block size=4096 (log=2)
+ Fragment size=4096 (log=2)
+ Stride=0 blocks, Stripe width=0 blocks
+ 655360 inodes, 2621440 blocks
+ 131072 blocks (5.00%) reserved for the super user
+ First data block=0
+ Maximum filesystem blocks=2151677952
+ 80 block groups
+ 32768 blocks per group, 32768 fragments per group
+ 8192 inodes per group
+ Superblock backups stored on blocks: 
+         32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+ Allocating group tables: done                            
+ Writing inode tables: done                            
+ Creating journal (32768 blocks): done
+ Writing superblocks and filesystem accounting information: done 
+</code></pre></div></li> <li><p>/dev/sdb1分区格式化，使用mount命令挂载/data/目录，并将挂载分区命令写入/etc/fstab文件中，开机启动</p> <div class="language- extra-class"><pre><code> # 创建/data/数据目录
+ [root@localhost ~]# mkdir /data 
+
+ # 挂载/dev/sdb1 分区至/data/目录
+ [root@localhost ~]# mount /dev/sdb1  /data/
+
+ # 将挂载分区命令写入/etc/fstab文件中，开机启动
+ [root@localhost ~]# echo '/dev/sdb1 /data ext4 defaults 0 0' &gt;&gt; /etc/fstab
+
+ #`df -h`查看挂载是否成功
+ [root@localhost ~]# df -h
+ Filesystem               Size  Used Avail Use% Mounted on
+ /dev/mapper/centos-root   36G  1.5G   35G   4% /
+ devtmpfs                 735M     0  735M   0% /dev
+ tmpfs                    747M     0  747M   0% /dev/shm
+ tmpfs                    747M  9.5M  737M   2% /run
+ tmpfs                    747M     0  747M   0% /sys/fs/cgroup
+ /dev/sda1               1014M  130M  885M  13% /boot
+ tmpfs                    150M     0  150M   0% /run/user/0
+ /dev/sdb1                9.8G   37M  9.2G   1% /data
+</code></pre></div></li></ol> <h2 id="基于gpt格式磁盘分区"><a href="#基于gpt格式磁盘分区" class="header-anchor">#</a> 基于GPT格式磁盘分区</h2> <p>MBR分区标准决定了MBR只支持在2TB以下的硬盘分区，为了能支持使用大于2TB硬盘空间，需要GPT格式进行分区。创建大于2TB的分区，需要使用parted工具。</p> <p>通常服务器有多块硬盘，整个硬盘容量为10TB,需要基于GTP格式对10TB硬盘进行分区，操作如下：</p> <ol><li><p>查看是新添加的硬盘/dev/sdc，假设有10TB</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# fdisk -l
+
+ Disk /dev/sda: 42.9 GB, 42949672960 bytes, 83886080 sectors
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+ Disk label type: dos
+ Disk identifier: 0x000cd1e5
+
+ Device Boot      Start         End      Blocks   Id  System
+ /dev/sda1   *        2048     2099199     1048576   83  Linux
+ /dev/sda2         2099200    83886079    40893440   8e  Linux LVM
+
+ Disk /dev/sdb: 21.5 GB, 21474836480 bytes, 41943040 sectors
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+ Disk label type: dos
+ Disk identifier: 0x33ae5fdc
+
+ Device Boot      Start         End      Blocks   Id  System
+ /dev/sdb1            2048    20973567    10485760   83  Linux
+
+ Disk /dev/sdc: 21.5 GB, 21474836480 bytes, 41943040 sectors   # 这里新添加一个Disk /dev/sdc: 21.5 GB
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+</code></pre></div></li></ol> <blockquote><p>虚拟机先添加的硬盘不显示需要执行<code>echo &quot;- - -&quot; &gt; /sys/class/scsi_host/host0/scan</code>命令使主机识别新增的硬盘。</p></blockquote> <ol start="2"><li><p>设置分区类型为gpt格式</p> <div class="language- extra-class"><pre><code> # 设置分区类型为gpt格式
+ [root@localhost ~]# parted -s /dev/sdc mklabel gpt
+
+ # 查看是否成功设置为gpt格式
+ [root@localhost ~]# fdisk -l |tail
+ WARNING: fdisk GPT support is currently new, and therefore in an experimental phase. Use at your own discretion.
+
+ Disk /dev/sdc: 21.5 GB, 21474836480 bytes, 41943040 sectors
+ Units = sectors of 1 * 512 = 512 bytes
+ Sector size (logical/physical): 512 bytes / 512 bytes
+ I/O size (minimum/optimal): 512 bytes / 512 bytes
+ Disk label type: gpt
+ Disk identifier: FFA53173-E89A-471F-8BDA-3901C3CF4D66
+ #         Start          End    Size  Type            Name
+</code></pre></div></li> <li><p>执行命令<code>mkfs.ext3 /dev/sdc</code>格式化磁盘</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# mkfs.ext3 /dev/sdc 
+ mke2fs 1.42.9 (28-Dec-2013)
+ /dev/sdc is entire device, not just one partition!
+ Proceed anyway? (y,n) y
+ Filesystem label=
+ OS type: Linux
+ Block size=4096 (log=2)
+ Fragment size=4096 (log=2)
+ Stride=0 blocks, Stripe width=0 blocks
+ 1310720 inodes, 5242880 blocks
+ 262144 blocks (5.00%) reserved for the super user
+ First data block=0
+ Maximum filesystem blocks=4294967296
+ 160 block groups
+ 32768 blocks per group, 32768 fragments per group
+ 8192 inodes per group
+ Superblock backups stored on blocks: 
+         32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+         4096000
+
+ Allocating group tables: done                            
+ Writing inode tables: done                            
+ Creating journal (32768 blocks): done
+ Writing superblocks and filesystem accounting information: done
+</code></pre></div></li> <li><p>parted命令也可以分区，依次命令执行如下<code>parted -&gt; select /dev/sdc -&gt; mklabel gpt -&gt; mkpart primary 0 -1 -&gt; print -&gt; quit</code></p> <div class="language- extra-class"><pre><code> [root@localhost ~]# parted 
+ GNU Parted 3.1
+ Using /dev/sda
+ Welcome to GNU Parted! Type 'help' to view a list of commands.
+ (parted) select /dev/sdc 
+ Using /dev/sdc
+ (parted) mklabel gpt    #格式类型为GPT                                                     
+ Warning: The existing disk label on /dev/sdc will be destroyed and all data on this disk will be lost. Do you want to continue?
+ Yes/No? yes                                                               
+ (parted) mkpart primary 0 -1    #将整块硬盘分为一个分区
+ Warning: The resulting partition is not properly aligned for best performance.
+ Ignore/Cancel? Ignore                                                     
+ (parted) print    #打印我们刚分区的磁盘信息         
+ Model: VMware, VMware Virtual S (scsi)
+ Disk /dev/sdc: 21.5GB
+ Sector size (logical/physical): 512B/512B
+ Partition Table: gpt
+ Disk Flags: 
+
+ Number  Start   End     Size    File system  Name     Flags
+ 1      17.4kB  21.5GB  21.5GB               primary
+ (parted) quit    # 退出                                                     
+ Information: You may need to update /etc/fstab.
+</code></pre></div></li> <li><p>/dev/sdc1分区格式化，使用mount命令挂载/data/目录，并将挂载分区命令写入/etc/fstab文件中，开机启动</p> <div class="language- extra-class"><pre><code> [root@localhost ~]# mkfs.ext3 /dev/sdc1 
+ mke2fs 1.42.9 (28-Dec-2013)
+ Filesystem label=
+ OS type: Linux
+ Block size=4096 (log=2)
+ Fragment size=4096 (log=2)
+ Stride=0 blocks, Stripe width=0 blocks
+ 1310720 inodes, 5242631 blocks
+ 262131 blocks (5.00%) reserved for the super user
+ First data block=0
+ Maximum filesystem blocks=4294967296
+ 160 block groups
+ 32768 blocks per group, 32768 fragments per group
+ 8192 inodes per group
+ Superblock backups stored on blocks: 
+         32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+         4096000
+
+ Allocating group tables: done                            
+ Writing inode tables: done                            
+ Creating journal (32768 blocks): done
+ Writing superblocks and filesystem accounting information: done   
+
+ # 挂载/dev/sdb1 分区至/data/目录
+ [root@localhost ~]# mount /dev/sdb1  /data/
+
+  #`df -h`查看挂载是否成功
+ [root@localhost ~]# df -h
+ Filesystem               Size  Used Avail Use% Mounted on
+ /dev/mapper/centos-root   36G  1.5G   35G   4% /
+ devtmpfs                 735M     0  735M   0% /dev
+ tmpfs                    747M     0  747M   0% /dev/shm
+ tmpfs                    747M  9.5M  737M   2% /run
+ tmpfs                    747M     0  747M   0% /sys/fs/cgroup
+ /dev/sda1               1014M  130M  885M  13% /boot
+ tmpfs                    150M     0  150M   0% /run/user/0
+ /dev/sdc1                9.8G   37M  9.2G   1% /data
+</code></pre></div></li></ol> <h2 id="mount命令工具"><a href="#mount命令工具" class="header-anchor">#</a> mount命令工具</h2> <p>Linux mount命令是经常会使用到的命令，它用于挂载Linux系统外的文件。</p> <h3 id="mount命令参数详解"><a href="#mount命令参数详解" class="header-anchor">#</a> mount命令参数详解</h3> <p><strong>语法</strong></p> <div class="language- extra-class"><pre><code>    mount [-hV]
+    mount -a [-fFnrsvw] [-t vfstype]
+    mount [-fnrsvw] [-o options [,...]] device | dir
+    mount [-fnrsvw] [-t vfstype] [-o options] device dir
+</code></pre></div><p><strong>参数如下：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-V：显示mount工具版本号；
+-l：显示已加载的文件系统列表；
+-h：显示帮助信息并退出；
+-v：冗长模式，输出指令执行的详细信息；
+-n：加载没有写入文件&quot;/etc/mtab&quot;中的文件系统；
+-r：将文件系统加载为只读模式；
+-a：加载文件&quot;/etc/fstab&quot;中描述的所有文件系统。
+-o options：(挂载文件系统的选项),常见扩展指令rw，remount，loop等;
+    其中与-o相关指令如下：
+    -o atime：系统会在每次读取文档时更新文档时间。
+    -o noatime：系统会在每次读取档案时不更新文档时间『上一次调用时间』。
+    -o defaults:使用预设的选项 rw, suid, dev, exec, auto, nouser, and async等
+    -o exec:允许执行档被执行
+    -o user、-o nouser：使用者可以执行 mount/umount 的动作。
+    -o remount：将一个已经挂下的档案系统重新用不同的方式挂上。例如原先是唯读的系统，现在用可读写的模式重新挂上。
+    -o ro：用唯读模式挂上。
+    -o rw：用可读写模式挂上。
+    -o loop=：使用 loop 模式用来将一个档案当成硬盘分割挂上系统。
+-t：指定档案系统的型态，通常不必指定。mount 会自动选择正确的型态。
+    其中与-t相关指令如下：
+    iso9660:光盘或光盘镜像。
+    msdos：Fat16文件系统。（微软磁盘操作系统）
+    vfat:Fat32文件系统。（即虚拟文件分配表）
+    ntfs：ntfs文件系统。
+    ntfs-3g：识别移动硬盘格式。
+    smbfs：挂载Windows文件系统网络。
+    nfs：UNIX/Linux 文件系统网络。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="常用的mount案例"><a href="#常用的mount案例" class="header-anchor">#</a> 常用的mount案例</h3> <div class="language- extra-class"><pre><code>    mount /dev/sdb1 /data   # /dev/sdb1分区挂载至/data目录
+    mount /dev/cdrom /mnt/  # 将/dev/cdrom光盘挂载至/mnt目录
+    mount -t ntfs-3g /dev/sdc /data1 # 将/dev/sdc移动硬盘挂载至/data1目录
+    mount -o remount,rw /   # 重新以读写模式挂载/系统
+    mount -t iso9660 -o loop centos7.iso /mnt  # 将CentOS7.iso镜像文件挂载至/mnt目录
+    mount -t fat32 /dev/sdd1 /mnt        # 将U盘/dev/sdd1挂载至/mnt目录
+    mount -t nfs 192.168.1.11:/data /mnt # 将远程192.18.1.11:/data目录挂载至本地mnt目录
+</code></pre></div><h2 id="linux硬盘故障修复"><a href="#linux硬盘故障修复" class="header-anchor">#</a> Linux硬盘故障修复</h2> <p>企业服务器经常会发现系统的分区变成只读文件系统，错误提示信息为Read-Only file system。出现只读文件系统会导致只能读取而无法写入新文件、新数据等操作。</p> <p>造成该原因包括：磁盘老旧长时间大量读写、文件系统文件被破坏、磁盘碎片文件、异常断电、读写中断等。</p> <p>以企业CentOS 7 linux 为案例来修复文件系统，步骤如下：</p> <p>（1）、远程备份本地其他重要数据，出现只读文件系统，需要先备份其他重要数据，基于rsync|scp远程备份，其中/data为源目录，/data/backup/2018/为目标备份目录。</p> <div class="language- extra-class"><pre><code>    rsync -av /data root@192.168.111.188:/data/backup/2018/
+</code></pre></div><p>（2）、可以重新挂载/文件，挂在命令如下，测试文件系统是否可以写入文件</p> <div class="language- extra-class"><pre><code>    mount -a remount,rw /
+</code></pre></div><p>（3）、如果系统重新挂载/系统还是无法解决问题，则需重启服务器以CD/DVD光盘引导进入Linux Rescue修复模式。</p> <h2 id="思考"><a href="#思考" class="header-anchor">#</a> 思考<span class="badge warn" style="vertical-align:top;" data-v-6eb0829b>本章小结</span></h2> <h3 id="当linux启动时卡住mysql服务时"><a href="#当linux启动时卡住mysql服务时" class="header-anchor">#</a> 当linux启动时卡住mysql服务时</h3> <p>我们在Linux环境下安装完mysql之后，一般会把mysql添加到系统自动启动列表中，修改方法是：
+在/etc/rc.local文件中添加/usr/local/mysql/bin/mysqld_safe --user=mysql &amp;
+这样通常为用户带来了很多方便，但是笔者的Linux系统突然有一天启动时被启动mysql服务卡住了，于是我在网上找了一些解决方案，分述如下：</p> <ol><li>一般在mysql服务启动之前，ssh服务已经启动，所以可以使用putty等客户端工具登录Linux系统，修改/etc/rc.local文件（或者使用chkconfig --del mysqld命令），把mysql相关的服务删除，然后再重新启动。</li> <li>在登录Linux系统后，使用命令ps aux | grep mysql 命令将mysql相关的服务搜出来，然后kill掉对应的进程号，这样Linux系统可以继续启动</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/Software.html" class="prev">
+        Linux软件包企业实战
+      </a></span> <span class="next"><a href="/book/linux/vdftpd.html">
+        Linux文件服务器企业实战
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/21.d96df1dc.js" defer></script><script src="/book/assets/js/3.b5cecfc5.js" defer></script>
+  </body>
+</html>

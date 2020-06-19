@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux必备命令 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/20.2322d056.js" as="script"><link rel="preload" href="/book/assets/js/3.b5cecfc5.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" aria-current="page" class="active sidebar-link">Linux必备命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/command.html#cd" class="sidebar-link">cd</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#ls" class="sidebar-link">ls</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#cat" class="sidebar-link">cat</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#echo" class="sidebar-link">echo</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#chattr" class="sidebar-link">chattr</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#chmod" class="sidebar-link">chmod</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#chown" class="sidebar-link">chown</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#diff" class="sidebar-link">diff</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#file" class="sidebar-link">file</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#find" class="sidebar-link">find</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#more" class="sidebar-link">more</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#less" class="sidebar-link">less</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#cp" class="sidebar-link">cp</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#rm" class="sidebar-link">rm</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#mv" class="sidebar-link">mv</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#which" class="sidebar-link">which</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#paste" class="sidebar-link">paste</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#scp" class="sidebar-link">scp</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#read" class="sidebar-link">read</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#awk" class="sidebar-link">awk</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#awk脚本" class="sidebar-link">awk脚本</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#grep" class="sidebar-link">grep</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#sed" class="sidebar-link">sed</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#df" class="sidebar-link">df</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#last" class="sidebar-link">last</a></li><li class="sidebar-sub-header"><a href="/book/linux/command.html#思考" class="sidebar-link">思考</a></li></ul></li><li><a href="/book/linux/user_rights.html" class="sidebar-link">Linux用户及权限管理</a></li><li><a href="/book/linux/Software.html" class="sidebar-link">Linux软件包企业实战</a></li><li><a href="/book/linux/disk.html" class="sidebar-link">Linux磁盘管理</a></li><li><a href="/book/linux/vdftpd.html" class="sidebar-link">Linux文件服务器企业实战</a></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" class="sidebar-link">Apache Web服务器企业实战</a></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux必备命令"><a href="#linux必备命令" class="header-anchor">#</a> Linux必备命令</h1> <p>Linux系统启动默认位字符界面，一般不会启动图形界面，所以应对命令行熟练操作，以便更加高效地管理Linux系统。</p> <h2 id="cd"><a href="#cd" class="header-anchor">#</a> cd</h2> <p><code>cd</code> 命令用来切换工作目录至dirname。 其中dirName表示法可为绝对路径或相对路径。若目录名称省略，则变换至使用者的home directory(也就是刚login时所在的目录)。另外，<code>~</code>也表示为home directory的意思，<code>.</code>则是表示目前所在的目录，<code>..</code>则表示目前目录位置的上一层目录。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>cd    进入用户主目录；
+cd ~  进入用户主目录；
+cd -  返回进入此目录之前所在的目录；
+cd ..  返回上级目录（若当前目录为&quot;/&quot;，则执行完后还在“/&quot;；&quot;..&quot;为上级目录的意思）；
+cd ../..  返回上两级目录；
+cd !$  把上个命令的参数作为cd参数使用。
+</code></pre></div><h2 id="ls"><a href="#ls" class="header-anchor">#</a> ls</h2> <p>ls命令用来显示目标列表，在Linux中是使用率较高的命令。ls命令的输出信息可以进行彩色加亮显示，以分区不同类型的文件。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 显示当前目录下非隐藏文件与目录
+[root@localhost ~]# ls  
+anaconda-ks.cfg  install.log  install.log.syslog  satools
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 显示当前目录下包括隐藏文件在内的所有文件列表
+[root@localhost ~]# ls -a
+.   anaconda-ks.cfg  .bash_logout   .bashrc  install.log         .mysql_history  satools  .tcshrc   .vimrc
+..  .bash_history    .bash_profile  .cshrc   install.log.syslog  .rnd            .ssh     .viminfo
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 输出长格式列表
+[root@localhost ~]# ls -1
+anaconda-ks.cfg
+install.log
+install.log.syslog
+satools
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 显示文件的inode信息索引节点（index inode简称为“inode”）是Linux中一个特殊的概念，
+// 具有相同的索引节点号的两个文本本质上是同一个文件（除文件名不同外）。
+[root@localhost ~]# ls -i -l anaconda-ks.cfg install.log
+2345481 -rw------- 1 root root   859 Jun 11 22:49 anaconda-ks.cfg
+2345474 -rw-r--r-- 1 root root 13837 Jun 11 22:49 install.log
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 水平输出文件列表
+[root@localhost /]# ls -m
+bin, boot, data, dev, etc, home, lib, lost+found, media, misc, mnt, opt, proc, root, sbin, selinux, srv, sys, tmp, usr, var
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 修改最后一次编辑的文件，最近修改的文件显示在最上面。
+[root@localhost /]# ls -t
+tmp  root  etc  dev  lib  boot  sys  proc  data  home  bin  sbin  usr  var  lost+found  media  mnt  opt  selinux  srv  misc
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 显示递归文件
+[root@localhost ~]# ls -R
+.:
+anaconda-ks.cfg  install.log  install.log.syslog  satools
+
+./satools:
+black.txt  freemem.sh  iptables.sh  lnmp.sh  mysql  php502_check.sh  ssh_safe.sh
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 打印文件的UID和GID
+[root@localhost /]# ls -n
+total 254
+drwxr-xr-x   2 0 0  4096 Jun 12 04:03 bin
+drwxr-xr-x   4 0 0  1024 Jun 15 14:45 boot
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 列出文件并标记颜色分类
+[root@localhost nginx-1.2.1]# ls --color=auto
+</code></pre></div><h2 id="cat"><a href="#cat" class="header-anchor">#</a> cat</h2> <p>cat 命令用于连接文件并打印到标准输出设备上。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 由 1 开始对所有输出的行数编号。
+[root@centos7 ~]# cat -n /etc/fstab 
+    1
+    2  #
+    3  # /etc/fstab
+    4  # Created by anaconda on Sun Oct 15 15:19:00 2017
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 和 -n 相似，只不过对于空白行不编号。
+[root@centos7 ~]# cat -b /etc/fstab  
+
+    1  #
+    2  # /etc/fstab
+    3  # Created by anaconda on Sun Oct 15 15:19:00 2017
+    4  #
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 把 textfile1 的文档内容加上行号后输入 textfile2 这个文档里：
+cat -n textfile1 &gt; textfile2
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 把 textfile1 和 textfile2 的文档内容加上行号（空白行不加）之后将内容附加到 textfile3 文档里：
+cat -b textfile1 textfile2 &gt;&gt; textfile3
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 清空 /etc/test.txt 文档内容：
+cat /dev/null &gt; /etc/test.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// cat 也可以用来制作镜像文件。例如要制作软盘的镜像文件，将软盘放好后输入：
+cat /dev/fd0 &gt; OUTFILE
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 相反的，如果想把 image file 写到软盘，输入：
+cat IMG_FILE &gt; /dev/fd0
+</code></pre></div><blockquote><p>注：</p> <ol><li>OUTFILE 指输出的镜像文件名。</li> <li>IMG_FILE 指镜像文件。</li> <li>若从镜像文件写回 device 时，device 容量需与相当。</li> <li>通常用制作开机磁片。</li></ol></blockquote> <h2 id="echo"><a href="#echo" class="header-anchor">#</a> echo</h2> <ol><li>echo命令向文件中写入内容，例如:使用echo指令覆盖文件内容，使用echo指令向文件追加内容，使用echo指令往文件中追加制表符。</li> <li>echo向文件中输出内容的基本方法是使用IO重定向指令&quot;&gt;&quot;，默认情况下echo输出到标准输出中，使用&quot;&gt;&quot;指令可重定向输出到文件中。</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>用法：echo [短选项]... [字符串]...  
+  或：echo 长选项  
+将 string 回显到标准输出。  
+  -n 不尾随换行符  
+  -e 启用解释反斜杠的转义功能  
+  -E 禁用解释反斜杠的转义功能(默认)  
+      --help 显示此帮助信息并退出  
+      --version 显示版本信息并退出  
+若-e 可用，则以下序列即可识别：  
+  \\    反斜杠  
+  \a    响铃声  
+  \b    会删除字符间的所有空格  *
+  \c    不再产生新的输出  
+  \e    转义符    
+  \f    换页  
+  \n    新行 * 
+  \r    回车  
+  \t    水平制表符  
+  \v    竖直制表符  
+  \0NNN   字节数以八进制数 NNN (1至3位)表示  
+  \xHH    字节数以十六进制数 HH (1至2位)表示  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <h4 id="使用-b-选项"><a href="#使用-b-选项" class="header-anchor">#</a> 使用'\b'选项</h4> <blockquote><p>'-e'后带上'\b'会删除字符间的所有空格。
+注意： Linux中的选项'-e'扮演了转义字符反斜线的翻译器。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint \bis \ba \bcommunity \bof \bLinux \bNerds&quot; 
+TecmintisacommunityofLinuxNerds 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="使用-n-选项"><a href="#使用-n-选项" class="header-anchor">#</a> 使用'\n'选项</h4> <blockquote><p>&quot;-e&quot;后面的带上'\n'行会在遇到的地方作为新的一行</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint \nis \na \ncommunity \nof \nLinux \nNerds&quot; 
+Tecmint 
+is 
+a 
+community 
+of 
+Linux 
+Nerds 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="使用-t-选项"><a href="#使用-t-选项" class="header-anchor">#</a> 使用'\t'选项</h4> <blockquote><p>'-e'后面跟上'\t'会在空格间加上水平制表符。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint \tis \ta \tcommunity \tof \tLinux \tNerds&quot; 
+Tecmint     is  a   community   of  Linux   Nerds 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="也可以同时使用换行-n-与水平制表符-t"><a href="#也可以同时使用换行-n-与水平制表符-t" class="header-anchor">#</a> 也可以同时使用换行‘\n‘与水平制表符‘\t‘</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;\n\tTecmint \n\tis \n\ta \n\tcommunity \n\tof \n\tLinux \n\tNerds&quot; 
+ 
+    Tecmint 
+    is 
+    a 
+    community 
+    of 
+    Linux 
+    Nerds
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="使用-v-选项"><a href="#使用-v-选项" class="header-anchor">#</a> 使用'\v'选项</h4> <blockquote><p>'-e'后面跟上'\v'会加上垂直制表符。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;\vTecmint \vis \va \vcommunity \vof \vLinux \vNerds&quot; 
+ 
+Tecmint 
+        is 
+           a 
+             community 
+                       of 
+                          Linux 
+                                Nerds 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="也可以同时使用换行-n-与垂直制表符-v"><a href="#也可以同时使用换行-n-与垂直制表符-v" class="header-anchor">#</a> 也可以同时使用换行'\n'与垂直制表符'\v'</h4> <blockquote><p>注意： 你可以按照你的需求连续使用两个或者多个垂直制表符，水平制表符与换行符。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;\n\vTecmint \n\vis \n\va \n\vcommunity \n\vof \n\vLinux \n\vNerds&quot; 
+ 
+ 
+Tecmint 
+ 
+is 
+ 
+a 
+ 
+community 
+ 
+of 
+ 
+Linux 
+ 
+Nerds 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h4 id="使用-r-选项"><a href="#使用-r-选项" class="header-anchor">#</a> 使用'\r'选项</h4> <blockquote><p>'-e'后面跟上‘\r’来指定输出中的回车符。（LCTT 译注：会覆写行开头的字符）</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint \ris a community of Linux Nerds&quot; 
+ 
+is a community of Linux Nerds
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="使用-c-选项"><a href="#使用-c-选项" class="header-anchor">#</a> 使用'\c'选项</h4> <blockquote><p>'-e'后面跟上'\c'会抑制输出后面的字符并且最后不会换新行。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint is a community \cof Linux Nerds&quot; 
+Tecmint is a community [root@centos7 ~]#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="n-会在echo完后不会输出新行"><a href="#n-会在echo完后不会输出新行" class="header-anchor">#</a> '-n'会在echo完后不会输出新行</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -n &quot;Tecmint is a community of Linux Nerds&quot; 
+Tecmint is a community of Linux Nerds[root@centos7 ~]#
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="使用-a-选项"><a href="#使用-a-选项" class="header-anchor">#</a> 使用'\a'选项</h4> <blockquote><p>'-e'后面跟上'\a'选项会听到声音警告。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 ~]# echo -e &quot;Tecmint is a community of \aLinux Nerds&quot; 
+Tecmint is a community of Linux Nerds
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><blockquote><p>注意： 在你开始前，请先检查你的音量设置。</p></blockquote> <h4 id="使用echo命令打印所有的文件和文件夹（ls命令的替代）"><a href="#使用echo命令打印所有的文件和文件夹（ls命令的替代）" class="header-anchor">#</a> 使用echo命令打印所有的文件和文件夹（ls命令的替代）</h4> <blockquote><p>比如，让我们假设你想要打印所有的'.sh'文件，使用下面的命令。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@centos7 app]#echo *.sh
+backup73.sh f1.sh hello.sh scp73.sh systeminfo.sh
+[root@centos7 ~]# echo *  //打印所有与ls相当
+backup73.sh etc f1.sh hello.sh scp73.sh systeminfo.sh wang
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="chattr"><a href="#chattr" class="header-anchor">#</a> chattr</h2> <p>Linux chattr命令用于改变文件属性。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 用chattr命令防止系统中某个关键文件被修改：
+chattr +i /etc/resolv.conf
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 让某个文件只能往里面追加数据，但不能删除，适用于各种日志文件：
+chattr +a /var/log/messages
+</code></pre></div><h2 id="chmod"><a href="#chmod" class="header-anchor">#</a> chmod</h2> <p>Linux/Unix 的文件调用权限分为三级 : 文件拥有者、群组、其他。利用 chmod 可以藉以控制文件如何被他人所调用。</p> <blockquote><p>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是。<br>
++ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。<br>
+r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。</p></blockquote> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 设为所有人皆可读取 :
+chmod ugo+r file1.txt
+chmod a+r file1.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入 :
+chmod ug+w,o-w file1.txt file2.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将 ex1.py 设定为只有该文件拥有者可以执行 :
+chmod u+x ex1.py
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将目前目录下的所有文件与子目录皆设为任何人可读取 :
+chmod -R a+r *
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 此外chmod也可以用数字来表示权限如 :
+chmod 777 file
+
+语法为：
+chmod abc file
+
+其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。
+r=4，w=2，x=1
+若要rwx属性则4+2+1=7；
+若要rw-属性则4+2=6；
+若要r-x属性则4+1=5。
+
+相当于：
+chmod a=rwx file
+</code></pre></div><h2 id="chown"><a href="#chown" class="header-anchor">#</a> chown</h2> <p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。</p> <p>一般来说，这个指令只有是由系统管理者(root)所使用，一般使用者没有权限可以改变别人的文件拥有者，也没有权限可以自己的文件拥有者改设为别人。只有系统管理者(root)才有这样的权限。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 的拥有者设为 users 群体的使用者 jessie :
+chown users:jessie file1.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将目前目录下的所有文件与子目录的拥有者皆设为 users 群体的使用者 lamport :
+chown -R lamport:users *
+</code></pre></div><h2 id="diff"><a href="#diff" class="header-anchor">#</a> diff</h2> <p>Linux diff命令用于比较文件的差异。</p> <p>diff以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则diff会比较目录中相同文件名的文件，但不会比较其中子目录。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 比较两个文件
+[root@localhost test3]# diff log2014.log log2013.log 
+3c3
+&lt; 2014-03
+---
+&gt; 2013-03
+8c8
+&lt; 2013-07
+---
+&gt; 2013-08
+11,12d10
+&lt; 2013-11
+&lt; 2013-12
+</code></pre></div><blockquote><p>说明：</p> <p>上面的&quot;3c3&quot;和&quot;8c8&quot;表示log2014.log和log20143log文件在3行和第8行内容有所不同；&quot;11,12d10&quot;表示第一个文件比第二个文件多了第11和12行。</p></blockquote> <hr> <div class="language- extra-class"><pre><code>// 并排格式输出
+[root@localhost test3]# diff log2014.log log2013.log  -y -W 50
+2013-01                 2013-01
+2013-02                 2013-02
+2014-03               | 2013-03
+2013-04                 2013-04
+2013-05                 2013-05
+2013-06                 2013-06
+2013-07                 2013-07
+2013-07               | 2013-08
+2013-09                 2013-09
+2013-10                 2013-10
+2013-11               &lt;
+2013-12               &lt;
+</code></pre></div><blockquote><p>说明：</p> <p>&quot;|&quot;表示前后2个文件内容有不同<br>
+&quot;&lt;&quot;表示后面文件比前面文件少了1行内容<br>
+&quot;&gt;&quot;表示后面文件比前面文件多了1行内容</p></blockquote> <h2 id="file"><a href="#file" class="header-anchor">#</a> file</h2> <p>Linux file命令用于辨识文件类型。通过file指令，我们得以辨识该文件的类型。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>[root@localhost ~]# file install.log         &lt;== 显示文件类型
+install.log: UTF-8 Unicode text
+--------------------------------------------------------------
+[root@localhost ~]# file -b install.log      &lt;== 不显示文件名称
+UTF-8 Unicode text
+--------------------------------------------------------------
+[root@localhost ~]# file -i install.log      &lt;== 显示MIME类别
+install.log: text/plain; charset=utf-8
+--------------------------------------------------------------
+[root@localhost ~]# file -b -i install.log
+text/plain; charset=utf-8
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>显示符号链接的文件类型
+[root@localhost ~]# ls -l /var/mail
+lrwxrwxrwx 1 root root 10 08-13 00:11 /var/mail -&gt; spool/mail
+--------------------------------------------------------------
+[root@localhost ~]# file /var/mail
+/var/mail: symbolic link to `spool/mail'
+--------------------------------------------------------------
+[root@localhost ~]# file -L /var/mail
+/var/mail: directory
+--------------------------------------------------------------
+[root@localhost ~]# file /var/spool/mail
+/var/spool/mail: directory
+--------------------------------------------------------------
+[root@localhost ~]# file -L /var/spool/mail
+/var/spool/mail: directory
+</code></pre></div><h2 id="find"><a href="#find" class="header-anchor">#</a> find</h2> <p>Linux find命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则find命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 将目前目录及其子目录下所有延伸档名是 c 的文件列出来。
+# find . -name &quot;*.c&quot;
+
+// 将目前目录其其下子目录中所有一般文件列出
+# find . -type f
+
+// 将目前目录及其子目录下所有最近 20 天内更新过的文件列出
+# find . -ctime -20
+
+// 查找/var/log目录中更改时间在7日以前的普通文件，并在删除之前询问它们：
+# find /var/log -type f -mtime +7 -ok rm {} \;
+
+// 查找前目录中文件属主具有读、写权限，并且文件所属组的用户和其他用户具有读权限的文件：
+# find . -type f -perm 644 -exec ls -l {} \;
+
+// 为了查找系统中所有文件长度为0的普通文件，并列出它们的完整路径：
+# find / -type f -size 0 -exec ls -l {} \;
+</code></pre></div><h2 id="more"><a href="#more" class="header-anchor">#</a> more</h2> <p>Linux more 命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示，而且还有搜寻字串的功能（与 vi 相似），使用中的说明文件，请按 h 。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 逐页显示 testfile 文档内容，如有连续两行以上空白行则以一行空白行显示。
+more -s testfile
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 从第 20 行开始显示 testfile 之文档内容。
+more +20 testfile
+</code></pre></div><blockquote><p>常用操作命令:<br></p> <p>Enter 向下n行，需要定义。默认为1行<br>
+Ctrl+F 向下滚动一屏<br>
+空格键 向下滚动一屏<br>
+Ctrl+B 返回上一屏<br>
+= 输出当前行的行号<br>
+：f 输出文件名和当前行的行号<br>
+V 调用vi编辑器<br>
+!命令 调用Shell，并执行命令<br>
+q 退出more</p></blockquote> <h2 id="less"><a href="#less" class="header-anchor">#</a> less</h2> <p>less 与 more 类似，但使用 less 可以随意浏览文件，而 more 仅能向前移动，却不能向后移动，而且 less 在查看之前不会加载整个文件。</p> <span class="badge error" style="vertical-align:top;" data-v-6eb0829b>参数说明</span> <div class="language- extra-class"><pre><code>-i 忽略搜索时的大小写
+-m 显示类似more命令的百分比
+-N 显示每行的行号
+-o &lt;文件名&gt; 将less 输出的内容在指定文件中保存起来
+-Q 不使用警告音
+-s 显示连续空行为一行
+-S 行过长时间将超出部分舍弃
+-x &lt;数字&gt; 将&quot;tab&quot;键显示为规定的数字空格
+/字符串：向下搜索&quot;字符串&quot;的功能
+?字符串：向上搜索&quot;字符串&quot;的功能
+n：重复前一个搜索（与 / 或 ? 有关）
+N：反向重复前一个搜索（与 / 或 ? 有关）
+b 向后翻一页
+d 向后翻半页
+h 显示帮助界面
+Q 退出less 命令
+u 向前滚动半页
+y 向前滚动一行
+空格键 滚动一页
+回车键 滚动一行
+[pagedown]： 向下翻动一页
+[pageup]： 向上翻动一页
+</code></pre></div><span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 查看文件
+less log2013.log
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// ps查看进程信息并通过less分页显示
+ps -ef |less
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 查看命令历史使用记录并通过less分页显示
+[root@localhost test]# history | less
+22  scp -r tomcat6.0.32 root@192.168.120.203:/opt/soft
+23  cd ..
+24  scp -r web root@192.168.120.203:/opt/
+25  cd soft
+26  ls
+……省略……
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 浏览多个文件
+less log2013.log log2014.log
+
+说明：
+输入 ：n后，切换到 log2014.log
+输入 ：p 后，切换到log2013.log
+</code></pre></div><hr> <blockquote><p>附加备注<br> <br>
+全屏导航<br>
+ctrl + F - 向前移动一屏<br>
+ctrl + B - 向后移动一屏<br>
+ctrl + D - 向前移动半屏<br>
+ctrl + U - 向后移动半屏<br>
+单行导航<br>
+j - 向前移动一行<br>
+k - 向后移动一行</p></blockquote> <h2 id="cp"><a href="#cp" class="header-anchor">#</a> cp</h2> <p>Linux cp命令主要用于复制文件或目录。</p> <span class="badge error" style="vertical-align:top;" data-v-6eb0829b>参数说明</span> <div class="language- extra-class"><pre><code>-a：此选项通常在复制目录时使用，它保留链接、文件属性，并复制目录下的所有内容。其作用等于dpR参数组合。
+-d：复制时保留链接。这里所说的链接相当于Windows系统中的快捷方式。
+-f：覆盖已经存在的目标文件而不给出提示。
+-i：与-f选项相反，在覆盖目标文件之前给出提示，要求用户确认是否覆盖，回答&quot;y&quot;时目标文件将被覆盖。
+-p：除复制文件的内容外，还把修改时间和访问权限也复制到新文件中。
+-r：若给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件。
+-l：不复制文件，只是生成链接文件。
+</code></pre></div><span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 使用指令&quot;cp&quot;将当前目录&quot;test/&quot;下的所有文件复制到新目录&quot;newtest&quot;下，输入如下命令：
+$ cp –r test/ newtest   
+</code></pre></div><h2 id="rm"><a href="#rm" class="header-anchor">#</a> rm</h2> <p>Linux rm命令用于删除一个文件或者目录。</p> <span class="badge error" style="vertical-align:top;" data-v-6eb0829b>参数说明</span> <div class="language- extra-class"><pre><code>-i 删除前逐一询问确认。
+-f 即使原档案属性设为唯读，亦直接删除，无需逐一确认。
+-r 将目录及以下之档案亦逐一删除。
+</code></pre></div><span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>删除文件可以直接使用rm命令，若删除目录则必须配合选项&quot;-r&quot;，例如：
+
+// rm  test.txt 
+rm：是否删除 一般文件 &quot;test.txt&quot;? y  
+
+// rm  homework  
+rm: 无法删除目录&quot;homework&quot;: 是一个目录  
+
+// rm  -r  homework  
+rm：是否删除 目录 &quot;homework&quot;? y 
+
+// 删除当前目录下的所有文件及目录，命令行为：
+rm  -r  * 
+</code></pre></div><blockquote><p>切记 别写成<code>rm -rf /</code>这样会造成删除整个操作系统！！<br>
+切记 别写成<code>rm -rf /</code>这样会造成删除整个操作系统！！<br>
+切记 别写成<code>rm -rf /</code>这样会造成删除整个操作系统！！</p></blockquote> <h2 id="mv"><a href="#mv" class="header-anchor">#</a> mv</h2> <p>Linux mv命令用来为文件或目录改名、或将文件或目录移入其它位置</p> <table><thead><tr><th>命令格式</th> <th>运行结果</th></tr></thead> <tbody><tr><td>mv 文件名 文件名</td> <td>将源文件名改为目标文件名</td></tr> <tr><td>mv 文件名 目录名</td> <td>将文件移动到目标目录</td></tr> <tr><td>mv 目录名 目录名</td> <td>目标目录已存在，将源目录移动到目标目录；目标目录不存在则改名</td></tr> <tr><td>mv 目录名 文件名</td> <td>出错</td></tr></tbody></table> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 将文件 aaa 更名为 bbb :
+mv aaa bbb
+
+// 将info目录放入logs目录中。注意，如果logs目录不存在，则该命令将info改名为logs。
+mv info/ logs 
+
+// 再如将/usr/student下的所有文件和目录移到当前目录下，命令行为：
+$ mv /usr/student/*  . 
+</code></pre></div><h2 id="which"><a href="#which" class="header-anchor">#</a> which</h2> <p>which命令用于查找文件。which指令会在环境变量$PATH设置的目录里查找符合条件的文件。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 使用指令&quot;which&quot;查看指令&quot;ls，bash&quot;的绝对路径，输入如下命令：
+[root@localhost]# which ls
+alias ls='ls --color=auto'
+        /usr/bin/ls
+-------------------------------------
+[root@localhost]# which bash
+/usr/bin/bash
+</code></pre></div><h2 id="paste"><a href="#paste" class="header-anchor">#</a> paste</h2> <p>paste指令会把每个文件以列对列的方式，一列列地加以合并。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>[root@localhost ~]# cat 1
+1
+-------------------------------------
+[root@localhost ~]# cat 2
+2
+-------------------------------------
+[root@localhost ~]# cat 3
+333
+-------------------------------------
+[root@localhost ~]# paste 1 2 3
+1       2       333
+-------------------------------------
+[root@localhost ~]# paste -s 1 2 3   
+1
+2
+333
+</code></pre></div><h2 id="scp"><a href="#scp" class="header-anchor">#</a> scp</h2> <p>scp是 secure copy的缩写, scp是linux系统下基于ssh登陆进行安全的远程文件拷贝命令。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 从本地复制到远程(198.168.156.215)
+scp /home/space/music/1.mp3 root@198.168.156.215:/home/root/others/music 
+scp /home/space/music/1.mp3 root@198.168.156.215:/home/root/others/music/001.mp3 
+scp /home/space/music/1.mp3 198.168.156.215:/home/root/others/music 
+scp /home/space/music/1.mp3 198.168.156.215:/home/root/others/music/001.mp3 
+
+第1,2个指定了用户名，命令执行后需要再输入密码，第1个仅指定了远程的目录，文件名字不变，第2个指定了文件名；
+第3,4个没有指定用户名，命令执行后需要输入用户名和密码，第3个仅指定了远程的目录，文件名字不变，第4个指定了文件名；
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 从远程复制到本地，只要将从本地复制到远程的命令的后2个参数调换顺序即可，如下实例
+scp root@198.168.156.215:/home/root/others/music /home/space/music/1.mp3 
+scp -r 198.168.156.215:/home/root/others/ /home/space/music/
+-r： 递归复制整个目录。
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 如果远程服务器防火墙有为scp命令设置了指定的端口，我们需要使用 -P 参数来设置命令的端口号，命令格式如下：
+#scp 命令使用端口号 4588
+scp -P 4588 remote@198.168.156.215:/usr/local/sin.sh /home/administrator
+使用scp命令要确保使用的用户具有可读取远程服务器相应文件的权限，否则scp命令是无法起作用的
+</code></pre></div><h2 id="read"><a href="#read" class="header-anchor">#</a> read</h2> <p>read 内部命令被用来从标准输入读取单行数据。这个命令可以用来读取键盘输入，当使用重定向的时候，可以读取文件中的一行数据。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 简单读取
+------------------------------------------
+#!/bin/bash
+#这里默认会换行  
+echo &quot;输入网站名: &quot;  
+#读取从键盘的输入  
+read website  
+echo &quot;你输入的网站名是 $website&quot;  
+exit 0  #退出
+------------------------------------------
+测试结果为：
+输入网站名: 
+www.zhangqifei.top
+你输入的网站名是 www.zhangqifei.top
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>-p 参数，允许在 read 命令行中直接指定一个提示。
+------------------------------------------
+#!/bin/bash
+read -p &quot;输入网站名:&quot; website
+echo &quot;你输入的网站名是 $website&quot; 
+exit 0
+------------------------------------------
+测试结果为：    
+输入网站名:www.zhangqifei.top
+你输入的网站名是 www.zhangqifei.top
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>-t 参数指定 read 命令等待输入的秒数，当计时满时，read命令返回一个非零退出状态。
+------------------------------------------
+#!/bin/bash
+if read -t 5 -p &quot;输入网站名:&quot; name
+then
+    echo &quot;你输入的网站名是 $website&quot;
+else
+    echo -e &quot;\n抱歉，你输入超时了。&quot;
+fi
+exit 0
+------------------------------------------
+执行程序不输入，等待 5 秒后：
+输入网站名:
+抱歉，你输入超时了
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>除了输入时间计时，还可以使用 -n 参数设置 read 命令计数输入的字符。当输入的字符数目达到预定数目时，自动退出，并将输入的数据赋值给变量。
+------------------------------------------
+#!/bin/bash
+read -n1 -p &quot;Do you want to continue [Y/N]?&quot; answer
+case $answer in
+Y | y)
+    echo -e &quot;\nfine ,continue&quot;;;
+N | n)
+    echo -e &quot;\nok,good bye&quot;;;
+*)
+    echo -e &quot;\nerror choice&quot;;;
+
+esac
+exit 0
+
+该例子使用了-n 选项，后接数值 1，指示 read 命令只要接受到一个字符就退出。只要按下一个字符进行回答，read 命令立即接受输入并将其传给变量，无需按回车键。
+------------------------------------------
+只接收 2 个输入就退出：
+#!/bin/bash
+read -n2 -p &quot;请随便输入两个字符: &quot; any
+echo -e &quot;\n您输入的两个字符是:$any&quot;
+exit 0
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>-s 选项能够使 read 命令中输入的数据不显示在命令终端上（实际上，数据是显示的，只是 read 命令将文本颜色设置成与背景相同的颜色）。输入密码常用这个选项。
+------------------------------------------
+#!/bin/bash
+read  -s  -p &quot;请输入您的密码:&quot; pass
+echo -e &quot;\n您输入的密码是 $pass&quot;
+exit 0
+------------------------------------------
+执行程序输入密码后是不显示的：
+请输入您的密码:
+您输入的密码是 www.zhangqifei.top
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>每次调用 read 命令都会读取文件中的 &quot;一行&quot; 文本。当文件没有可读的行时，read 命令将以非零状态退出。
+
+通过什么样的方法将文件中的数据传给 read 呢？使用 cat 命令并通过管道将结果直接传送给包含 read 命令的 while 命令。
+------------------------------------------
+测试文件 test.txt 内容如下：
+123
+456
+www.zhangqifei.top
+------------------------------------------
+测试代码：
+#!/bin/bash
+count=1    # 赋值语句，不加空格
+cat test.txt | while read line      # cat 命令的输出作为read命令的输入,read读到&gt;的值放在line中
+do
+echo &quot;Line $count:$line&quot;
+count=$[ $count + 1 ]          # 注意中括号中的空格。
+done
+echo &quot;finish&quot;
+exit 0
+------------------------------------------
+执行结果为：
+Line 1:123
+Line 2:456
+Line 3:www.zhangqifei.top
+finish
+</code></pre></div><h2 id="awk"><a href="#awk" class="header-anchor">#</a> awk</h2> <p>awk是行处理器: 相比较屏幕处理的优点，在处理庞大文件时不会出现内存溢出或是处理缓慢的问题，通常用来格式化文本信息。awk处理过程: 依次对每一行进行处理，然后输出</p> <p><strong>下面先了解下内建变量和运算符</strong></p> <h3 id="内建变量"><a href="#内建变量" class="header-anchor">#</a> 内建变量</h3> <table><thead><tr><th>变量</th> <th>描述</th></tr></thead> <tbody><tr><td>$n</td> <td>当前记录的第n个字段，字段间由FS分隔</td></tr> <tr><td>$0</td> <td>完整的输入记录</td></tr> <tr><td>ARGC</td> <td>命令行参数的数目</td></tr> <tr><td>ARGIND</td> <td>命令行中当前文件的位置(从0开始算)</td></tr> <tr><td>ARGV</td> <td>包含命令行参数的数组</td></tr> <tr><td>CONVFMT</td> <td>数字转换格式(默认值为%.6g)ENVIRON环境变量关联数组</td></tr> <tr><td>ERRNO</td> <td>最后一个系统错误的描述</td></tr> <tr><td>FIELDWIDTHS</td> <td>字段宽度列表(用空格键分隔)</td></tr> <tr><td>FILENAME</td> <td>当前文件名</td></tr> <tr><td>FNR</td> <td>各文件分别计数的行号</td></tr> <tr><td>FS</td> <td>字段分隔符(默认是任何空格)</td></tr> <tr><td>IGNORECASE</td> <td>如果为真，则进行忽略大小写的匹配</td></tr> <tr><td>NF</td> <td>一条记录的字段的数目</td></tr> <tr><td>NR</td> <td>已经读出的记录数，就是行号，从1开始</td></tr> <tr><td>OFMT</td> <td>数字的输出格式(默认值是%.6g)</td></tr> <tr><td>OFS</td> <td>输出记录分隔符（输出换行符），输出时用指定的符号代替换行符</td></tr> <tr><td>ORS</td> <td>输出记录分隔符(默认值是一个换行符)</td></tr> <tr><td>RLENGTH</td> <td>由match函数所匹配的字符串的长度</td></tr> <tr><td>RS</td> <td>记录分隔符(默认是一个换行符)</td></tr> <tr><td>RSTART</td> <td>由match函数所匹配的字符串的第一个位置</td></tr> <tr><td>SUBSEP</td> <td>数组下标分隔符(默认值是/034)</td></tr></tbody></table> <h3 id="运算符"><a href="#运算符" class="header-anchor">#</a> 运算符</h3> <table><thead><tr><th>运算符</th> <th>描述</th></tr></thead> <tbody><tr><td>= += -= *= /= %= ^= **=</td> <td>赋值</td></tr> <tr><td>?:</td> <td>C条件表达式</td></tr> <tr><td></td> <td></td></tr> <tr><td>&amp;&amp;</td> <td>逻辑与</td></tr> <tr><td>~ ~!</td> <td>匹配正则表达式和不匹配正则表达式</td></tr> <tr><td>&lt; &lt;= &gt; &gt;= != ==</td> <td>关系运算符</td></tr> <tr><td>空格</td> <td>连接</td></tr> <tr><td>+ -</td> <td>加，减</td></tr> <tr><td>* / %</td> <td>乘，除与求余</td></tr> <tr><td>+ - !</td> <td>一元加，减和逻辑非</td></tr> <tr><td>^ ***</td> <td>求幂</td></tr> <tr><td>++ --</td> <td>增加或减少，作为前缀或后缀</td></tr> <tr><td>$</td> <td>字段引用</td></tr> <tr><td>in</td> <td>数组成员</td></tr></tbody></table> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>[root@localhost ~]# cat log.txt 
+2 this is a test
+3 Are you like awk
+This's a test
+10 There are orange,apple,mongo
+
+// 每行按空格或TAB分割，输出文本中的1、4项
+[root@localhost ~]# awk '{print $1,$4}' log.txt   
+2 a
+3 like
+This's 
+10 orange,apple,mongo
+
+// 格式化输出
+[root@localhost ~]# awk '{printf &quot;%-8s %-10s\n&quot;,$1,$4}' log.txt
+2        a         
+3        like      
+This's             
+10       orange,apple,mongo
+</code></pre></div><blockquote><p>说明 :<br></p> <p><code>%</code> 格式化输出分隔符<br> <code>-8</code> 长度为8个字符<br> <code>s</code> 表示字符串类型<br>
+打印每行两个个字段，指定第一个字段输出字符串类型(长度为8)，第二个字段输出字符串类型(长度为10)</p></blockquote> <hr> <div class="language- extra-class"><pre><code>awk -F  #-F相当于内置变量FS, 指定分割字符
+[root@localhost ~]# awk -F' ' '{print $3,$4}' log.txt   
+is a
+you like
+test 
+are orange,apple,mongo
+---------------------------------------------
+// 或者使用内建变量
+[root@localhost ~]# awk 'BEGIN{FS=&quot; &quot;} {print $3,$4}' log.txt 
+is a
+you like
+test 
+are orange,apple,mongo
+---------------------------------------------
+// 使用多个分隔符.先使用空格分割，然后对分割结果再使用&quot;,&quot;分割
+[root@localhost ~]# awk -F '[ ,]'  '{print $1,$2,$5}'   log.txt
+2 this test
+3 Are awk
+This's a 
+10 There apple
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>awk -v  # 设置变量
+---------------------------------------------
+[root@localhost ~]# awk -va=1 '{print $1,$1+a}' log.txt
+2 3
+3 4
+This's 1
+10 11
+---------------------------------------------
+[root@localhost ~]# awk -va=1 -vb=s '{print $1,$1+a,$1b}' log.txt
+2 3 2s
+3 4 3s
+This's 1 This'ss
+10 11 10s
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>awk -f {awk脚本} {文件名}
+---------------------------------------------
+// 过滤第一列大于2的行
+[root@localhost ~]# awk '$1&gt;2' log.txt    #命令
+#输出
+3 Are you like awk
+This's a test
+10 There are orange,apple,mongo
+---------------------------------------------
+// 过滤第一列等于2的行
+[root@localhost ~]# awk '$1==2 {print $1,$3}' log.txt    #命令
+#输出
+2 is
+---------------------------------------------
+// 过滤第一列大于2并且第二列等于'Are'的行
+[root@localhost ~]# awk '$1&gt;2 &amp;&amp; $2==&quot;Are&quot; {print $1,$2,$3}' log.txt    #命令
+#输出
+3 Are you
+</code></pre></div><hr> <center><strong>下方内容 请对照↑↑↑↑↑上面：内建变量表↑↑↑↑↑</strong></center> <div class="language- extra-class"><pre><code>########################################专用分界线########################################
+[root@localhost ~]# awk 'BEGIN{printf &quot;%4s %4s %4s %4s %4s %4s %4s %4s %4s\n&quot;,&quot;FILENAME&quot;,&quot;ARGC&quot;,&quot;FNR&quot;,&quot;FS&quot;,&quot;NF&quot;,&quot;NR&quot;,&quot;OFS&quot;,&quot;ORS&quot;,&quot;RS&quot;;printf &quot;---------------------------------------------\n&quot;} {printf &quot;%4s %4s %4s %4s %4s %4s %4s %4s %4s\n&quot;,FILENAME,ARGC,FNR,FS,NF,NR,OFS,ORS,RS}'  log.txt
+FILENAME ARGC  FNR   FS   NF   NR  OFS  ORS   RS
+---------------------------------------------
+log.txt    2    1         5    1         
+    
+
+log.txt    2    2         5    2         
+    
+
+log.txt    2    3         3    3         
+    
+
+log.txt    2    4         4    4         
+########################################专用分界线########################################
+[root@localhost ~]# awk -F\' 'BEGIN{printf &quot;%4s %4s %4s %4s %4s %4s %4s %4s %4s\n&quot;,&quot;FILENAME&quot;,&quot;ARGC&quot;,&quot;FNR&quot;,&quot;FS&quot;,&quot;NF&quot;,&quot;NR&quot;,&quot;OFS&quot;,&quot;ORS&quot;,&quot;RS&quot;;printf &quot;---------------------------------------------\n&quot;} {printf &quot;%4s %4s %4s %4s %4s %4s %4s %4s %4s\n&quot;,FILENAME,ARGC,FNR,FS,NF,NR,OFS,ORS,RS}'  log.txt
+FILENAME ARGC  FNR   FS   NF   NR  OFS  ORS   RS
+---------------------------------------------
+log.txt    2    1    '    1    1         
+    
+
+log.txt    2    2    '    1    2         
+    
+
+log.txt    2    3    '    2    3         
+    
+
+log.txt    2    4    '    1    4
+########################################专用分界线########################################
+// 输出顺序号 NR, 匹配文本行号
+[root@localhost ~]# awk '{print NR,FNR,$1,$2,$3}' log.txt
+1 1 2 this is
+2 2 3 Are you
+3 3 This's a test
+4 4 10 There are
+########################################专用分界线########################################
+// 指定输出分割符 OFS
+[root@localhost ~]# awk '{print $1,$2,$5}' OFS=&quot; $ &quot;  log.txt
+2 $ this $ test
+3 $ Are $ awk
+This's $ a $ 
+10 $ There $
+</code></pre></div><center><strong>使用正则，字符串匹配</strong></center> <div class="language- extra-class"><pre><code>// 输出第二列包含 &quot;th&quot;，并打印第二列与第四列
+[root@localhost ~]# awk '$2 ~ /th/ {print $2,$4}' log.txt
+---------------------------------------------
+this a
+</code></pre></div><blockquote><p>~ 表示模式开始。// 中是模式。</p></blockquote> <div class="language- extra-class"><pre><code>// 输出包含&quot;re&quot; 的行
+[root@localhost ~]# awk '/re/ ' log.txt
+---------------------------------------------
+3 Are you like awk
+10 There are orange,apple,mongo
+</code></pre></div><center><strong>忽略大小写</strong></center> <div class="language- extra-class"><pre><code>[root@localhost ~]# awk 'BEGIN{IGNORECASE=1} /this/' log.txt
+---------------------------------------------
+2 this is a test
+This's a test
+</code></pre></div><center><strong>模式取反</strong></center> <div class="language- extra-class"><pre><code>[root@localhost ~]# awk '$2 !~ /th/ {print $2,$4}' log.txt
+---------------------------------------------
+Are like
+a
+There orange,apple,mongo
+[root@localhost ~]# awk '!/th/ {print $2,$4}' log.txt
+---------------------------------------------
+Are like
+a
+There orange,apple,mongo
+</code></pre></div><center><strong>另外一些实例</strong></center>
+    // 计算文件大小
+    [root@localhost ~]# ls -l *.txt | awk '{sum+=$6} END {print sum}'
+    666581
+    --------------------------------------------------
+    // 从文件中找出长度大于80的行
+    awk 'length&gt;80' log.txt
+    --------------------------------------------------
+    // 打印九九乘法表
+    seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i&lt;=NF;i++)printf(&quot;%dx%d=%d%s&quot;, i, NR, i*NR, i==NR?&quot;\n&quot;:&quot;\t&quot;)}'  
+<h2 id="awk脚本"><a href="#awk脚本" class="header-anchor">#</a> awk脚本</h2> <p>关于awk脚本，我们需要注意两个关键词BEGIN和END。</p> <blockquote><p>BEGIN{ 这里面放的是执行前的语句 }<br>
+END {这里面放的是处理完所有的行后要执行的语句 }<br>
+{这里面放的是处理每一行时要执行的语句}</p></blockquote> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>假设有这么一个文件（学生成绩表）：
+[root@localhost ~]# cat score.txt 
+Marry   2143 78 84 77
+Jack    2321 66 78 45
+Tom     2122 48 77 71
+Mike    2537 87 97 95
+Bob     2415 40 57 62
+</code></pre></div><p>我们的awk脚本如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# cat cal.awk
+#!/bin/awk -f
+#运行前
+BEGIN {
+    math = 0
+    english = 0
+    computer = 0
+ 
+    printf &quot;NAME    NO.   MATH  ENGLISH  COMPUTER   TOTAL\n&quot;
+    printf &quot;---------------------------------------------\n&quot;
+}
+#运行中
+{
+    math+=$3
+    english+=$4
+    computer+=$5
+    printf &quot;%-6s %-6s %4d %8d %8d %8d\n&quot;, $1, $2, $3,$4,$5, $3+$4+$5
+}
+#运行后
+END {
+    printf &quot;---------------------------------------------\n&quot;
+    printf &quot;  TOTAL:%10d %8d %8d \n&quot;, math, english, computer
+    printf &quot;AVERAGE:%10.2f %8.2f %8.2f\n&quot;, math/NR, english/NR, computer/NR
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p>执行结果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# awk -f cal.awk score.txt
+NAME    NO.   MATH  ENGLISH  COMPUTER   TOTAL
+---------------------------------------------
+Marry  2143     78       84       77      239
+Jack   2321     66       78       45      189
+Tom    2122     48       77       71      196
+Mike   2537     87       97       95      279
+Bob    2415     40       57       62      159
+---------------------------------------------
+  TOTAL:       319      393      350 
+AVERAGE:     63.80    78.60    70.00
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="grep"><a href="#grep" class="header-anchor">#</a> grep</h2> <p>grep指令用于查找内容包含指定的范本样式的文件，如果发现某文件的内容符合所指定的范本样式，预设grep指令会把含有范本样式的那一列显示出来。若不指定任何文件名称，或是所给予的文件名为&quot;-&quot;，则grep指令会从标准输入设备读取数据。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>[root@localhost ~]# grep test test*  #查找前缀有“test”的文件包含“test”字符串的文件  
+testfile1:This a Linux testfile!     #列出testfile1 文件中包含test字符的行  
+testfile_2:This is a linux testfile! #列出testfile_2 文件中包含test字符的行  
+testfile_2:Linux test                #列出testfile_2 文件中包含test字符的行 
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 以递归的方式查找符合条件的文件。
+//例如，查找指定目录/etc/yum.repos.d/ 及其子目录（如果存在子目录的话）下所有文件中包含字符串&quot;update&quot;的文件，并打印出该字符串所在行的内容
+[root@localhost ~]#  grep -r update /etc/yum.repos.d/
+/etc/yum.repos.d/CentOS-Base.repo:[updates]
+/etc/yum.repos.d/CentOS-Base.repo:baseurl=http://mirrors.cloud.aliyuncs.com/centos/$releasever/updates/$basearch/
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>//反向查找。前面各个例子是查找并打印出符合条件的行，通过&quot;-v&quot;参数可以打印出不符合条件行的内容。
+//查找文件名中包含 test 的文件中不包含test 的行，此时，使用的命令为：
+[root@localhost ~]# grep -v update /etc/yum.repos.d/epel.repo 
+[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+enabled=1
+failovermethod=priority
+baseurl=http://mirrors.cloud.aliyuncs.com/epel/7/$basearch
+gpgcheck=0
+gpgkey=http://mirrors.cloud.aliyuncs.com/epel/RPM-GPG-KEY-EPEL-7
+</code></pre></div><h2 id="sed"><a href="#sed" class="header-anchor">#</a> sed</h2> <p>Sed主要用来自动编辑一个或多个文件；简化对文件的反复操作；编写转换程序等。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>[root@localhost ~]# cat log.txt 
+2 this is a test
+3 Are you like awk
+This's a test
+10 There are orange,apple,mongo
+---------------------------------------------------------------
+// 在log.txt文件的第五行后添加一行，并将结果输出到标准输出
+[root@localhost ~]# sed -e 4a\newLine log.txt 
+2 this is a test
+3 Are you like awk
+This's a test
+10 There are orange,apple,mongo
+newLine
+</code></pre></div><center><strong>以行为单位的新增/删除</strong></center> <div class="language- extra-class"><pre><code>// 将 /etc/passwd 的内容列出并且列印行号，同时，请将第 2~5 行删除！
+[root@localhost ~]# nl /etc/passwd | sed '2,5d'
+ 1  root:x:0:0:root:/root:/bin/bash
+ 6  sync:x:5:0:sync:/sbin:/bin/sync
+ 7  shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+ 8  halt:x:7:0:halt:/sbin:/sbin/halt
+ 9  mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+10  operator:x:11:0:operator:/root:/sbin/nologin
+.....(后面省略).....
+</code></pre></div><blockquote><p>sed 的动作为 '2,5d' ，那个 d 就是删除！因为 2-5 行给他删除了，所以显示的数据就没有 2-5 行罗～ 另外，注意一下，原本应该是要下达 sed -e 才对，没有 -e 也行啦！同时也要注意的是， sed 后面接的动作，请务必以 '' 两个单引号括住喔！</p></blockquote> <div class="language- extra-class"><pre><code>// 只要删除第 2 行
+nl /etc/passwd | sed '2d' 
+-------------------------------
+// 要删除第 3 到最后一行
+nl /etc/passwd | sed '3,$d' 
+-----------------------------------------------------
+// 在第二行后(亦即是加在第三行)加上『drink tea?』字样！
+[root@localhost ~]# nl /etc/passwd | sed '2a drink tea'
+1 root:x:0:0:root:/root:/bin/bash
+2 bin:x:1:1:bin:/bin:/sbin/nologin
+drink tea
+3 daemon:x:2:2:daemon:/sbin:/sbin/nologin
+.....(后面省略).....
+-------------------------------------------------------------------------   
+// 那如果是要在第二行前
+nl /etc/passwd | sed '2i drink tea' 
+-------------------------------------------------------------------------
+//如果是要增加两行以上，在第二行后面加入两行字，例如『Drink tea or .....』与『drink beer?』
+[root@localhost ~]# nl /etc/passwd | sed '2a Drink tea or ......\
+&gt; drink beer ?'
+    1  root:x:0:0:root:/root:/bin/bash
+    2  bin:x:1:1:bin:/bin:/sbin/nologin
+Drink tea or ......
+&gt; drink beer ?
+    3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+    .....(后面省略).....
+</code></pre></div><blockquote><p>每一行之间都必须要以反斜杠『 \ 』来进行新行的添加喔！所以，上面的例子中，我们可以发现在第一行的最后面就有 \ 存在。</p></blockquote> <center><strong>以行为单位的替换与显示</strong></center> <div class="language- extra-class"><pre><code>// 将第2-5行的内容取代成为『No 2-5 number』呢？
+[root@localhost ~]# nl /etc/passwd | sed '2,5c No 2-5 number'
+1 root:x:0:0:root:/root:/bin/bash
+No 2-5 number
+6 sync:x:5:0:sync:/sbin:/bin/sync
+.....(后面省略).....
+</code></pre></div><blockquote><p>透过这个方法我们就能够将数据整行取代了！
+---------------------------------------------------
+// 仅列出 /etc/passwd 文件内的第 5-7 行
+[root@localhost ~]# nl /etc/passwd | sed -n '5,7p'
+5 lp❌4:7:lp:/var/spool/lpd:/sbin/nologin
+6 sync❌5:0:sync:/sbin:/bin/sync
+7 shutdown❌6:0:shutdown:/sbin:/sbin/shutdown
+可以透过这个 sed 的以行为单位的显示功能， 就能够将某一个文件内的某些行号选择出来显示。</p></blockquote> <center><strong>数据的搜寻并显示</strong></center> <div class="language- extra-class"><pre><code>搜索 /etc/passwd有root关键字的行
+[root@localhost ~]# nl /etc/passwd | sed '/root/p'
+1  root:x:0:0:root:/root:/bin/bash
+1  root:x:0:0:root:/root:/bin/bash
+2  daemon:x:1:1:daemon:/usr/sbin:/bin/sh
+3  bin:x:2:2:bin:/bin:/bin/sh
+4  sys:x:3:3:sys:/dev:/bin/sh
+5  sync:x:4:65534:sync:/bin:/bin/sync
+....下面忽略......
+如果root找到，除了输出所有行，还会输出匹配行。[规则从第一行一直找下去，找到root打印到不到也一直在打印]
+-------------------------------------------------------------------------------
+使用-n的时候将只打印包含模板的行。
+[root@localhost ~]# nl /etc/passwd | sed -n '/root/p'
+1  root:x:0:0:root:/root:/bin/bash
+10  operator:x:11:0:operator:/root:/sbin/nologin
+</code></pre></div><center><strong>数据的搜寻并删除</strong></center> <div class="language- extra-class"><pre><code>// 删除/etc/passwd所有包含root的行，其他行输出
+[root@localhost ~]# nl /etc/passwd | sed  '/root/d'
+2  bin:x:1:1:bin:/bin:/sbin/nologin
+3  daemon:x:2:2:daemon:/sbin:/sbin/nologin
+....下面忽略....
+# 第一行的匹配root已经删除了
+</code></pre></div><center><strong>数据的搜寻并执行命令</strong></center> <div class="language- extra-class"><pre><code>//搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令
+//每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行：最后的q是退出。
+[root@localhost ~]# nl /etc/passwd | sed -n '/root/{s/bash/blueshell/;p;q}'    
+1  root:x:0:0:root:/root:/bin/blueshell
+</code></pre></div><center><strong>数据的搜寻并替换</strong></center>
+除了整行的处理模式之外， sed 还可以用行为单位进行部分数据的搜寻并取代。基本上 sed 的搜寻与替代的与 vi 相当的类似！他有点像这样
+<div class="language- extra-class"><pre><code>sed 's/要被取代的字串/新的字串/g'
+------------------------------------------------------------------
+// 先观察原始信息，利用 `ip addr` 查询 IP
+[root@localhost ~]# ip addr
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+    valid_lft forever preferred_lft forever
+2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether 00:16:3e:0a:e8:c3 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.108.3/20 brd 172.17.111.255 scope global dynamic eth0
+    valid_lft 314049316sec preferred_lft 314049316sec
+------------------------------------------------------------------
+// 本机的ip是172.17.108.3 将 IP 前面的部分予以删除
+[root@localhost ~]# ip addr|grep &quot;scope global dynamic eth0&quot;|sed 's/^.*inet //g'
+172.17.108.3/20 brd 172.17.111.255 scope global dynamic eth0
+------------------------------------------------------------------
+接下来则是删除后续的部分，亦即：172.17.108.3/20 brd 172.17.111.255 scope global dynamic eth0 将 IP 后面的部分予以删除
+[root@localhost ~]# ip addr|grep &quot;scope global dynamic eth0&quot;|sed 's/^.*inet //g'|sed 's/\/20 brd 172.17.111.255 scope global dynamic eth0//' 
+172.17.108.3
+</code></pre></div><center><strong>多点编辑</strong></center> <div class="language- extra-class"><pre><code>// 一条sed命令，删除/etc/passwd第三行到末尾的数据，并把bash替换为blueshell
+[root@localhost ~]# nl /etc/passwd | sed -e '3,$d' -e 's/bash/blueshell/'
+1  root:x:0:0:root:/root:/bin/blueshell
+2  bin:x:1:1:bin:/bin:/sbin/nologin
+</code></pre></div><blockquote><p>-e表示多点编辑，第一个编辑命令删除/etc/passwd第三行到末尾的数据，第二条命令搜索bash替换为blueshell</p></blockquote> <center><strong>直接修改文件内容(危险动作)</strong></center>
+sed 可以直接修改文件的内容，不必使用管道命令或数据流重导向！ 不过，由于这个动作会直接修改到原始的文件，所以请你千万不要随便拿系统配置来测试！ 我们还是使用下载的 regular_express.txt 文件来测试看看吧！
+<div class="language- extra-class"><pre><code>// 查看test.txt文件
+[root@localhost ~]# cat test.tst
+1111111111.
+2222222222.
+3333333333.
+4444444444.
+5555555555.
+------------------------------------------------------
+// 利用 sed 将 test.tst 内每一行结尾若为 . 则换成 !
+[root@localhost ~]# sed -i 's/\.$/\!/g' test.tst 
+[root@localhost ~]# cat test.tst 
+1111111111!
+2222222222!
+3333333333!
+4444444444!
+5555555555!
+------------------------------------------------------
+// 利用 sed 直接在 regular_express.txt 最后一行加入『# This is a test』
+[root@localhost ~]# sed -i '$a # This is a test' test.tst 
+[root@localhost ~]# cat test.tst 
+1111111111!
+2222222222!
+3333333333!
+4444444444!
+5555555555!
+# This is a test
+</code></pre></div><h2 id="df"><a href="#df" class="header-anchor">#</a> df</h2> <p>Linux df命令用于显示目前在Linux系统上的文件系统的磁盘使用情况统计。</p> <span class="badge tig" style="vertical-align:top;" data-v-6eb0829b>实例</span> <div class="language- extra-class"><pre><code>// 显示文件系统的磁盘使用情况统计：
+[root@localhost ~]# df
+文件系统        1K-块     已用内存 可用内存  已用% 挂载点
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/vda1       41151808 1656916  37381460   5% /
+devtmpfs          932240       0    932240   0% /dev
+tmpfs             941744       0    941744   0% /dev/shm
+tmpfs             941744     336    941408   1% /run
+tmpfs             941744       0    941744   0% /sys/fs/cgroup
+tmpfs             188352       0    188352   0% /run/user/0
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 使用-h选项以KB以上的单位来显示，可读性高
+[root@localhost ~]# df -h
+文件系统        容量   已用  可用 已用% 挂载点
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        40G  1.6G   36G   5% /
+devtmpfs        911M     0  911M   0% /dev
+tmpfs           920M     0  920M   0% /dev/shm
+tmpfs           920M  336K  920M   1% /run
+tmpfs           920M     0  920M   0% /sys/fs/cgroup
+tmpfs           184M     0  184M   0% /run/user/0
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 用一个-i选项的df命令的输出显示inode信息而非块使用量。
+[root@localhost ~]# df -i 
+Filesystem      Inodes IUsed   IFree IUse% Mounted on
+/dev/vda1      2621440 40886 2580554    2% /
+devtmpfs        233060   333  232727    1% /dev
+tmpfs           235436     1  235435    1% /dev/shm
+tmpfs           235436   365  235071    1% /run
+tmpfs           235436    16  235420    1% /sys/fs/cgroup
+tmpfs           235436     1  235435    1% /run/user/0
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 显示所有的信息
+[root@localhost ~]# df --total
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/vda1       41151808 1656928  37381448   5% /
+devtmpfs          932240       0    932240   0% /dev
+tmpfs             941744       0    941744   0% /dev/shm
+tmpfs             941744     336    941408   1% /run
+tmpfs             941744       0    941744   0% /sys/fs/cgroup
+tmpfs             188352       0    188352   0% /run/user/0
+total           45097632 1657264  41326936   4% -
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 查看全部文件系统
+[root@localhost ~]# df -a 
+Filesystem     1K-blocks    Used Available Use% Mounted on
+rootfs                 -       -         -    - /
+sysfs                  0       0         0    - /sys
+proc                   0       0         0    - /proc
+devtmpfs          932240       0    932240   0% /dev
+securityfs             0       0         0    - /sys/kernel/security
+tmpfs             941744       0    941744   0% /dev/shm
+devpts                 0       0         0    - /dev/pts
+tmpfs             941744     336    941408   1% /run
+tmpfs             941744       0    941744   0% /sys/fs/cgroup
+cgroup                 0       0         0    - /sys/fs/cgroup/systemd
+pstore                 0       0         0    - /sys/fs/pstore
+cgroup                 0       0         0    - /sys/fs/cgroup/cpuset
+cgroup                 0       0         0    - /sys/fs/cgroup/net_cls,net_prio
+cgroup                 0       0         0    - /sys/fs/cgroup/devices
+cgroup                 0       0         0    - /sys/fs/cgroup/pids
+cgroup                 0       0         0    - /sys/fs/cgroup/blkio
+cgroup                 0       0         0    - /sys/fs/cgroup/cpu,cpuacct
+cgroup                 0       0         0    - /sys/fs/cgroup/hugetlb
+cgroup                 0       0         0    - /sys/fs/cgroup/perf_event
+cgroup                 0       0         0    - /sys/fs/cgroup/memory
+cgroup                 0       0         0    - /sys/fs/cgroup/freezer
+configfs               0       0         0    - /sys/kernel/config
+/dev/vda1       41151808 1656928  37381448   5% /
+systemd-1              -       -         -    - /proc/sys/fs/binfmt_misc
+mqueue                 0       0         0    - /dev/mqueue
+hugetlbfs              0       0         0    - /dev/hugepages
+debugfs                0       0         0    - /sys/kernel/debug
+binfmt_misc            0       0         0    - /proc/sys/fs/binfmt_misc
+tmpfs             188352       0    188352   0% /run/user/0
+</code></pre></div><h2 id="last"><a href="#last" class="header-anchor">#</a> last</h2> <p>Linux last命令用于显示系统开机以来获是从每月初登入者的讯息。</p> <div class="language- extra-class"><pre><code>-a 把从何处登入系统的主机名称或ip地址，显示在最后一行。
+-d 指定记录文件。指定记录文件。将IP地址转换成主机名称。
+-f &lt;记录文件&gt; 　指定记录文件。
+-n &lt;显示列数&gt;或-&lt;显示列数&gt; 　设置列出名单的显示列数。
+-R 不显示登入系统的主机名称或IP地址。
+-x 显示系统关机，重新开机，以及执行等级的改变等信息
+
+以下看所有的重启、关机记录
+
+[root@localhost ~]# last | grep reboot
+reboot   system boot  3.10.0-693.2.2.e Thu Aug  9 22:03 - 14:40 (17+16:37) 
+
+[root@localhost ~]# last | grep shutdown
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 显示最后一列显示主机IP地址
+[root@localhost ~]# last -n 5 -a -i
+root   pts/4    Thu May 13 17:25  still logged in  192.168.1.10
+root   pts/2    Thu May 13 17:23 - 17:25 (00:02)   192.168.1.10
+root   pts/1    Thu May 13 16:46  still logged in  192.168.1.10
+root   pts/7    Thu May 13 15:36  still logged in  192.168.1.10
+root   pts/9    Thu May 13 15:35  still logged in  192.168.1.10
+</code></pre></div><h2 id="思考"><a href="#思考" class="header-anchor">#</a> 思考 <span class="badge warn" style="vertical-align:top;" data-v-6eb0829b>本章小结</span></h2> <h3 id="_1-修改密码的命令为passwd，需要按enter键两次，如何一条命令快速修改密码呢？"><a href="#_1-修改密码的命令为passwd，需要按enter键两次，如何一条命令快速修改密码呢？" class="header-anchor">#</a> 1. 修改密码的命令为passwd，需要按Enter键两次，如何一条命令快速修改密码呢？</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    //echo &quot;密码&quot; | passwd --stdin 用户名
+    [root@localhost ~]# echo &quot;PZ6oJXC8qShAuT4lBD9sV02Rxd73Gv&quot; | passwd --stdin root
+    Changing password for user root.
+    passwd: all authentication tokens updated successfully.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_2-企业服务器，某一天发现系统访问很慢，需要查看系统内核日志，请写出如何查看系统内核日志的命令？"><a href="#_2-企业服务器，某一天发现系统访问很慢，需要查看系统内核日志，请写出如何查看系统内核日志的命令？" class="header-anchor">#</a> 2. 企业服务器，某一天发现系统访问很慢，需要查看系统内核日志，请写出如何查看系统内核日志的命令？</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>/var/log/message	系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一 
+/var/log/secure	    与安全相关的日志信息 
+/var/log/maillog	与邮件相关的日志信息 
+/var/log/cron	    与定时任务相关的日志信息 
+/var/log/spooler	与UUCP和news设备相关的日志信息 
+/var/log/boot.log	守护进程启动和停止相关的日志消息
+/var/log/wtmp       该日志文件永久记录每个用户登录、注销及系统的启动、停机的事件（用last查看）
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <div class="language- line-numbers-mode"><pre class="language-text"><code>系统： 
+# uname -a   # 查看内核/操作系统/CPU信息 
+# cat /etc/issue 
+# cat /etc/redhat-release # 查看操作系统版本 
+# cat /proc/cpuinfo  # 查看CPU信息 
+# hostname   # 查看计算机名 
+# lspci -tv   # 列出所有PCI设备 
+# lsusb -tv   # 列出所有USB设备 
+# lsmod    # 列出加载的内核模块 
+# env    # 查看环境变量 
+资源： 
+# free -m   # 查看内存使用量和交换区使用量 
+# df -h    # 查看各分区使用情况 
+# du -sh &lt;目录名&gt;  # 查看指定目录的大小 
+# grep MemTotal /proc/meminfo # 查看内存总量 
+# grep MemFree /proc/meminfo # 查看空闲内存量 
+# uptime   # 查看系统运行时间、用户数、负载 
+# cat /proc/loadavg  # 查看系统负载 
+磁盘和分区： 
+# mount | column -t  # 查看挂接的分区状态 
+# fdisk -l   # 查看所有分区 
+# swapon -s   # 查看所有交换分区 
+# hdparm -i /dev/hda  # 查看磁盘参数(仅适用于IDE设备) 
+# dmesg | grep IDE  # 查看启动时IDE设备检测状况 
+网络： 
+# ifconfig   # 查看所有网络接口的属性 
+# iptables -L   # 查看防火墙设置 
+# route -n   # 查看路由表 
+# netstat -lntp   # 查看所有监听端口 
+# netstat -antp   # 查看所有已经建立的连接 
+# netstat -s   # 查看网络统计信息 
+进程： 
+# ps -ef   # 查看所有进程 
+# top    # 实时显示进程状态（另一篇文章里面有详细的介绍） 
+用户： 
+# w    # 查看活动用户 
+# id &lt;用户名&gt;   # 查看指定用户信息 
+# last    # 查看用户登录日志 
+# cut -d: -f1 /etc/passwd # 查看系统所有用户 
+# cut -d: -f1 /etc/group # 查看系统所有组 
+# crontab -l   # 查看当前用户的计划任务 
+服务： 
+# chkconfig –list  # 列出所有系统服务 
+# chkconfig –list | grep on # 列出所有启动的系统服务 
+程序： 
+# rpm -qa   # 查看所有安装的软件包
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/" class="prev router-link-active">
+        Linux快速入门
+      </a></span> <span class="next"><a href="/book/linux/user_rights.html">
+        Linux用户及权限管理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/20.2322d056.js" defer></script><script src="/book/assets/js/3.b5cecfc5.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux软件包企业实战 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/19.c95ccc11.js" as="script"><link rel="preload" href="/book/assets/js/3.b5cecfc5.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" class="sidebar-link">Linux必备命令</a></li><li><a href="/book/linux/user_rights.html" class="sidebar-link">Linux用户及权限管理</a></li><li><a href="/book/linux/Software.html" aria-current="page" class="active sidebar-link">Linux软件包企业实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/Software.html#rpm软件包管理" class="sidebar-link">RPM软件包管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#tar软件包管理" class="sidebar-link">tar软件包管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#zip软件包管理" class="sidebar-link">zip软件包管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#源码包软件安装" class="sidebar-link">源码包软件安装</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#yum软件包管理" class="sidebar-link">YUM软件包管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#基于iso镜像构建yum本地源" class="sidebar-link">基于ISO镜像构建YUM本地源</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#基于http构建yum网络源" class="sidebar-link">基于HTTP构建YUM网络源</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#yum源端软件包扩展" class="sidebar-link">YUM源端软件包扩展</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#同步外网yum源" class="sidebar-link">同步外网YUM源</a></li><li class="sidebar-sub-header"><a href="/book/linux/Software.html#思考" class="sidebar-link">思考</a></li></ul></li><li><a href="/book/linux/disk.html" class="sidebar-link">Linux磁盘管理</a></li><li><a href="/book/linux/vdftpd.html" class="sidebar-link">Linux文件服务器企业实战</a></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" class="sidebar-link">Apache Web服务器企业实战</a></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux软件包企业实战"><a href="#linux软件包企业实战" class="header-anchor">#</a> Linux软件包企业实战</h1> <p>Linux整个体系的关键不在于系统本身没，而是基于Linux系统去安装和配置企业中相关的软件、数据及应用程序，所以对软件的维护是运维工程师职责的重中之重</p> <h2 id="rpm软件包管理"><a href="#rpm软件包管理" class="header-anchor">#</a> RPM软件包管理</h2> <p>Linux软件包可分为二进制包和源码包，不通类别的软件包使用的管理工具也各不相同，源码包是没有经过编译的包，需要经过GCC、C++编译器环境编译才能运行，二进制包无需编译，可以直接安装使用。</p> <p>通常而言，可以通过后缀区别源码包和二进制包，例如以.tar.gz、.zip、.rar结尾的包成为源码包，以rpm结尾的软件包称为二进制包。真正区分是否为源码包还是二进制包还得基于软件包里面的文件来判断，例如.h、.c、.cpp、.cc等结尾的源码文件，称为源码包，而代码里面存在bin可执行文件，称为二进制包。</p> <p>rpm命令是RPM软件包的管理工具。rpm原本是Red Hat Linux发行版专门用来管理Linux各项套件的程序，由于它遵循GPL规则且功能强大方便，因而广受欢迎。逐渐受到其他发行版的采用。RPM套件管理方式的出现，让Linux易于安装，升级，间接提升了Linux的适用度。</p> <div class="language- extra-class"><pre><code>RPM包命名格式如下：
+name-version.rpm
+name-version-noarch.rpm
+name-version-arch.src.rpm
+
+软件包格式
+epel-release-6-8.noarch.rpm
+perl-Pod-Plainer-1.03-1.e16.noarch.rpm
+yasm-1.2.0-4.el7.x86_64.rpm
+....
+</code></pre></div><hr> <p><strong>RPM包格式解析</strong></p> <div class="language- extra-class"><pre><code>name：软件名你。例如yasm、perl-pod-Plainer
+version：版本号.1.2.0通用格式为“主版本号，次版本号，修正号”，其中4表示发布版本号，意味着该RPM包是第几次编译生成的。
+arch：适用的硬件平台，RPM支持的平台有i386.i586、1686.x86_64、sparc、alpha等
+.rpm：后缀包表示编译好的二进制包，可用rpm命令直接安装。
+.src.rpm：源代码包，源码编译生成，rpm格式的RPM包方可使用。
+el*：软件包发行版本，e16表示该软件包适用干RHEL 6.X/CenOS6.X。
+devel：开发包。
+noarch：软件包可以在任何平台上安装。
+</code></pre></div><p><strong>RPM工具命令详解</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-a 　显示所有已经安装的软件包。
+-e&lt;套件档&gt;或--erase&lt;套件档&gt; 卸载RPM软件包。
+-f&lt;文件&gt;+ 　查询拥有file的软件包。
+-h或--hash 　软件安装，可以打印安装进度条。
+-i 　显示软件包的相关信息。
+-l 　显示软件包的文件列表。
+-q 　使用询问模式，当遇到任何问题时，rpm指令会先询问用户。
+-R 　列出软件包依赖的其他软件包。
+-U&lt;套件档&gt;或--upgrade&lt;套件档&gt; 升级指定的软件包。
+-v 　显示指令执行过程。
+-vv 　详细显示指令执行过程，便于排错。
+--last 列出软件包时，并以安装时间顺序排序，最新的在最上面。
+--force 表示强制，强制安转强制卸载。
+--nodeps RPM包不依赖。
+-l或--list 列出软件包中的文件。
+--scripts 列出软件包自定义的小程序。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><strong>RPM企业案例演示</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rpm -q httpd    //检查httpd包是否安装
+rpm -ql httpd   //查看软件安装的路径
+rpm -qi httpd   //查看软件安装的版本信息
+rpm -e httpd    //卸载httpd软件
+rpm -e  --nodeps httpd  //强制卸载httpd
+rpm -qa | grep httpd    //检查httpd相关的软件是否安装
+rpm -ivh httpd-2.4.34-6.fc30.x86_64.rpm  //安装httpd软件
+rpm -Uvh httpd-2.4.34-6.fc30.x86_64.rpm  //升级httpd软件
+rpm -ivh --nodeps httpd-2.4.34-6.fc30.x86_64.rpm  //不依赖其他软件包
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="tar软件包管理"><a href="#tar软件包管理" class="header-anchor">#</a> tar软件包管理</h2> <p>Linux操作系统出来使用RPM管理工具对二进制软件包管理之外，还可以通过tar、zip、jar等工具对源码包软件进行管理。</p> <h3 id="tar命令参数详解"><a href="#tar命令参数详解" class="header-anchor">#</a> tar命令参数详解</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>-A或--catenate 新增文件到已存在的备份文件。
+-b&lt;区块数目&gt;或--blocking-factor=&lt;区块数目&gt; 设置每笔记录的区块数目，每个区块大小为12Bytes。
+-B或--read-full-records 读取数据时重设区块大小。
+-c或--create 建立新的备份文件。
+-C&lt;目的目录&gt;或--directory=&lt;目的目录&gt; 切换到指定的目录。
+-d或--diff或--compare 对比备份文件内和文件系统上的文件的差异。
+-f&lt;备份文件&gt;或--file=&lt;备份文件&gt; 指定备份文件。
+-F&lt;Script文件&gt;或--info-script=&lt;Script文件&gt; 每次更换磁带时，就执行指定的Script文件。
+-g或--listed-incremental 处理GNU格式的大量备份。
+-G或--incremental 处理旧的GNU格式的大量备份。
+-h或--dereference 不建立符号连接，直接复制该连接所指向的原始文件。
+-i或--ignore-zeros 忽略备份文件中的0 Byte区块，也就是EOF。
+-k或--keep-old-files 解开备份文件时，不覆盖已有的文件。
+-K&lt;文件&gt;或--starting-file=&lt;文件&gt; 从指定的文件开始还原。
+-l或--one-file-system 复制的文件或目录存放的文件系统，必须与tar指令执行时所处的文件系统相同，否则不予复制。
+-L&lt;媒体容量&gt;或-tape-length=&lt;媒体容量&gt; 设置存放每体的容量，单位以1024 Bytes计算。
+-m或--modification-time 还原文件时，不变更文件的更改时间。
+-M或--multi-volume 在建立，还原备份文件或列出其中的内容时，采用多卷册模式。
+-N&lt;日期格式&gt;或--newer=&lt;日期时间&gt; 只将较指定日期更新的文件保存到备份文件里。
+-o或--old-archive或--portability 将资料写入备份文件时使用V7格式。
+-O或--stdout 把从备份文件里还原的文件输出到标准输出设备。
+-p或--same-permissions 用原来的文件权限还原文件。
+-P或--absolute-names 文件名使用绝对名称，不移除文件名称前的&quot;/&quot;号。
+-r或--append 新增文件到已存在的备份文件的结尾部分。
+-R或--block-number 列出每个信息在备份文件中的区块编号。
+-s或--same-order 还原文件的顺序和备份文件内的存放顺序相同。
+-S或--sparse 倘若一个文件内含大量的连续0字节，则将此文件存成稀疏文件。
+-t或--list 列出备份文件的内容。
+-T&lt;范本文件&gt;或--files-from=&lt;范本文件&gt; 指定范本文件，其内含有一个或多个范本样式，让tar解开或建立符合设置条件的文件。
+-u或--update 仅置换较备份文件内的文件更新的文件。
+-U或--unlink-first 解开压缩文件还原文件之前，先解除文件的连接。
+-v或--verbose 显示指令执行过程。
+-V&lt;卷册名称&gt;或--label=&lt;卷册名称&gt; 建立使用指定的卷册名称的备份文件。
+-w或--interactive 遭遇问题时先询问用户。
+-W或--verify 写入备份文件后，确认文件正确无误。
+-x或--extract或--get 从备份文件中还原文件。
+-X&lt;范本文件&gt;或--exclude-from=&lt;范本文件&gt; 指定范本文件，其内含有一个或多个范本样式，让ar排除符合设置条件的文件。
+-z或--gzip或--ungzip 通过gzip指令处理备份文件。
+-Z或--compress或--uncompress 通过compress指令处理备份文件。
+-&lt;设备编号&gt;&lt;存储密度&gt; 设置备份用的外围设备编号及存放数据的密度。
+--after-date=&lt;日期时间&gt; 此参数的效果和指定&quot;-N&quot;参数相同。
+--atime-preserve 不变更文件的存取时间。
+--backup=&lt;备份方式&gt;或--backup 移除文件前先进行备份。
+--checkpoint 读取备份文件时列出目录名称。
+--concatenate 此参数的效果和指定&quot;-A&quot;参数相同。
+--confirmation 此参数的效果和指定&quot;-w&quot;参数相同。
+--delete 从备份文件中删除指定的文件。
+--exclude=&lt;范本样式&gt; file不把指定文件包含在内。
+--group=&lt;群组名称&gt; 把加入设备文件中的文件的所属群组设成指定的群组。
+--help 在线帮助。
+--ignore-failed-read 忽略数据读取错误，不中断程序的执行。
+--new-volume-script=&lt;Script文件&gt; 此参数的效果和指定&quot;-F&quot;参数相同。
+--newer-mtime 只保存更改过的文件。
+--no-recursion 不做递归处理，也就是指定目录下的所有文件及子目录不予处理。
+--null 从null设备读取文件名称。
+--numeric-owner 以用户识别码及群组识别码取代用户名称和群组名称。
+--owner=&lt;用户名称&gt; 把加入备份文件中的文件的拥有者设成指定的用户。
+--posix 将数据写入备份文件时使用POSIX格式。
+--preserve 此参数的效果和指定&quot;-ps&quot;参数相同。
+--preserve-order 此参数的效果和指定&quot;-A&quot;参数相同。
+--preserve-permissions 此参数的效果和指定&quot;-p&quot;参数相同。
+--record-size=&lt;区块数目&gt; 此参数的效果和指定&quot;-b&quot;参数相同。
+--recursive-unlink 解开压缩文件还原目录之前，先解除整个目录下所有文件的连接。
+--remove-files 文件加入备份文件后，就将其删除。
+--rsh-command=&lt;执行指令&gt; 设置要在远端主机上执行的指令，以取代rsh指令。
+--same-owner 尝试以相同的文件拥有者还原问家你。
+--suffix=&lt;备份字尾字符串&gt; 移除文件前先行备份。
+--totals 备份文件建立后，列出文件大小。
+--use-compress-program=&lt;执行指令&gt; 通过指定的指令处理备份文件。
+--version 显示版本信息。
+--volno-file=&lt;编号文件&gt; 使用指定文件内的编号取代预设的卷册编号。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div><h3 id="tar企业案例演示"><a href="#tar企业案例演示" class="header-anchor">#</a> tar企业案例演示</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar -cvf file.tar.gz file   #打包file文件或者目录，打包后名字为file.tar.gz
+tar -tf file.tar.gz         #查看file.tar.gz包中的内容
+tar -rf file.tar.gz file2   #将file2文件追加到file.tar.gz中
+tar -xvf file.tar.gz        #解压file.tar.gz程序包
+tar -czvf file.tar.gz file  #使用gzip格式打包并压缩file文件或目录
+tar -cjvf file.tar.bz2 file #使用bzip2格式打包并压缩file文件或目录
+tar -czf file.tar.gz * -X list.txt  #使用gzip格式打包并压缩当前目录所有文件，排除list.txt中记录的文件
+tar -czf file.tar.gz * --exclude=zabbix-3.2.4.tar.gz --exclude=nginx-1.12.0.tar.gz  #使用gzip格式打包并压缩所有文件和目录，排除zabbix..*、nginx..*软件包
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="tar实现linux操作系统备份"><a href="#tar实现linux操作系统备份" class="header-anchor">#</a> tar实现Linux操作系统备份</h3> <p>tar命令工具除了用于日常打包、解压源码包之外，最大的亮点还可以用于Linux操作系统文件及目录的备份。使用<code>tar -g</code>可以基干GNU格式做增量各份，备份原理是检查目录和文件的（atime，mtime，ctime）属性是否被修改。文件及日录时间属性详解如下:</p> <ul><li>文件被访问的时间(access time,atime)</li> <li>文件内容被改变的时间(modified time,mtime)</li> <li>文件写入、权限更改的时间(change time，ctime)</li></ul> <p>总结:更改文件内容mtime和ctime都会改变，但ctime可以在mtime未发生变化时被改。例如修改文件权限文件mtime时间不变而ctime时间改变。tar增量备份案例演示骤如下：</p> <ol><li>在/root 目录创建bak文件夹，同时在文件夹中创建file1.txt、file2.txt两个文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost bak]# touch file{1..2}.txt
+[root@localhost bak]# 
+[root@localhost bak]# ll
+total 0
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file1.txt
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file2.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>使用tar命令创建第一次完整备份bak文件夹，-g指定快照snapshot文件，第一次没有该文件则会自动创建。</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost bak]# tar -g /data/backup/snapshot -czvf /data/backup/2018bak.tar.gz *
+file1.txt
+file2.txt
+[root@localhost bak]# ll /data/backup/
+total 8
+-rw-r--r-- 1 root root 130 Sep 13 11:43 2018bak.tar.gz
+-rw-r--r-- 1 root root  36 Sep 13 11:43 snapshot
+[root@localhost bak]# cat /data/backup/snapshot 
+GNU tar-1.26-2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="3"><li>使用tar命令第一次完成备份bak文件夹会生成快照文件/data/backup/snapshot,后期增量备份会以snapshot文件为参考。在bak文件夹中在创建file3.txt、file4.txt、file5.txt文件，然后在通过tar命令增量备份到backup文件所有内容</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost bak]# touch file{3..5}.txt
+[root@localhost bak]# ll
+total 0
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file1.txt
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file2.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file3.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file4.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file5.txt
+[root@localhost bak]# tar -g /data/backup/snapshot -czvf /data/backup/2018bak1.tar.gz *
+file3.txt
+file4.txt
+file5.txt
+[root@localhost bak]# ll /data/backup/
+total 12
+-rw-r--r-- 1 root root 137 Sep 13 17:06 2018bak1.tar.gz
+-rw-r--r-- 1 root root 130 Sep 13 11:43 2018bak.tar.gz
+-rw-r--r-- 1 root root  36 Sep 13 17:06 snapshot
+[root@localhost bak]# tar -tf /data/backup/2018bak1.tar.gz 
+file3.txt
+file4.txt
+file5.txt
+[root@localhost bak]# tar -tf /data/backup/2018bak.tar.gz  
+file1.txt
+file2.txt
+[root@localhost bak]# cat /data/backup/snapshot 
+GNU tar-1.26-2
+1536829618865715059
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>增量备份是需-g指定第一次完整备份的快照snapshot，同时增量打包的文件名不能与第一次备份文件重名，通过<code>tar -tf</code>可以查看打包的文件内容</p> <h3 id="shell-tar实现增量备份"><a href="#shell-tar实现增量备份" class="header-anchor">#</a> shell+tar实现增量备份</h3> <p>企业中日常备份的数据包括/boot/、/etc、/root、/data等目录，备份策略为每周一至周六执行增量备份，每周日执行全备份。在企业中备份操作系统数据均使用shell脚本完成，此处auto_backup_system.sh备份脚本供参考。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>待更新
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="zip软件包管理"><a href="#zip软件包管理" class="header-anchor">#</a> zip软件包管理</h2> <p>Zip是计算机文件的压缩算法，原名deflate（真空），发明者为菲利普·卡兹（Philip Katz）他于1989年1月公布了改格式的资料。zip软件包名后缀通常使用zip。</p> <p>主流的压缩格式包括tar、rar、zip、war、gzip、bz2、iso等，性能上tar、war、rar格式比zip格式压缩率高，但压缩时间运远高于zip。zip工具可以实现对zip包进行管理，也可以将文件和文件夹打包成zip包。</p> <p><strong>zip工具常见的参数如下</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-A 调整可执行的自动解压缩文件。
+-b&lt;工作目录&gt; 指定暂时存放文件的目录。
+-c 替每个被压缩的文件加上注释。
+-d 从压缩文件内删除指定的文件。
+-D 压缩文件内不建立目录名称。
+-f 此参数的效果和指定&quot;-u&quot;参数类似，但不仅更新既有文件，如果某些文件原本不存在于压缩文件内，使用本参数会一并将其加入压缩文件中。
+-F 尝试修复已损坏的压缩文件。
+-g 将文件压缩后附加在既有的压缩文件之后，而非另行建立新的压缩文件。
+-h 在线帮助。
+-i&lt;范本样式&gt; 只压缩符合条件的文件。
+-j 只保存文件名称及其内容，而不存放任何目录名称。
+-J 删除压缩文件前面不必要的数据。
+-k 使用MS-DOS兼容格式的文件名称。
+-l 压缩文件时，把LF字符置换成LF+CR字符。
+-ll 压缩文件时，把LF+CR字符置换成LF字符。
+-L 显示版权信息。
+-m 将文件压缩并加入压缩文件后，删除原始文件，即把文件移到压缩文件中。
+-n&lt;字尾字符串&gt; 不压缩具有特定字尾字符串的文件。
+-o 以压缩文件内拥有最新更改时间的文件为准，将压缩文件的更改时间设成和该文件相同。
+-q 不显示指令执行过程。
+-r 递归处理，将指定目录下的所有文件和子目录一并处理。
+-S 包含系统和隐藏文件。
+-t&lt;日期时间&gt; 把压缩文件的日期设成指定的日期。
+-T 检查备份文件内的每个文件是否正确无误。
+-u 更换较新的文件到压缩文件内。
+-v 显示指令执行过程或显示版本信息。
+-V 保存VMS操作系统的文件属性。
+-w 在文件名称里假如版本编号，本参数仅在VMS操作系统下有效。
+-x&lt;范本样式&gt; 压缩时排除符合条件的文件。
+-X 不保存额外的文件属性。
+-y 直接保存符号连接，而非该连接所指向的文件，本参数仅在UNIX之类的系统下有效。
+-z 替压缩文件加上注释。
+-$ 保存第一个被压缩文件所在磁盘的卷册名称。
+-&lt;压缩效率&gt; 压缩效率是一个介于1-9的数值。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><h3 id="zip企业案例演示"><a href="#zip企业案例演示" class="header-anchor">#</a> zip企业案例演示</h3> <ol><li>通过zip工具打包bak文件中所有内容。</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# ll
+drwxr-xr-x 2 root root  4096 Sep 13 17:17 bak
+[root@localhost ~]# zip -rv bak.zip bak/
+  adding: bak/  (in=0) (out=0) (stored 0%)
+  adding: bak/file4.txt (in=0) (out=0) (stored 0%)
+  adding: bak/file2.txt (in=0) (out=0) (stored 0%)
+  adding: bak/file1.txt (in=0) (out=0) (stored 0%)
+  adding: bak/file5.txt (in=0) (out=0) (stored 0%)
+  adding: bak/file3.txt (in=0) (out=0) (stored 0%)
+total bytes=0, compressed=0 -&gt; 0% savings
+[root@localhost ~]# ll
+drwxr-xr-x 2 root root  4096 Sep 13 17:17 bak
+-rw-r--r-- 1 root root   928 Sep 13 18:01 bak.zip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><ol start="2"><li>通过zip工具打包bak文件夹中所有内容并排除部分文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# cd bak/
+[root@localhost bak]# ll
+total 0
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file1.txt
+-rw-r--r-- 1 root root 0 Sep 13 11:42 file2.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file3.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file4.txt
+-rw-r--r-- 1 root root 0 Sep 13 17:04 file5.txt
+[root@localhost bak]# zip -rv bak.zip * -x file1.txt 
+  adding: file2.txt     (in=0) (out=0) (stored 0%)
+  adding: file3.txt     (in=0) (out=0) (stored 0%)
+  adding: file4.txt     (in=0) (out=0) (stored 0%)
+  adding: file5.txt     (in=0) (out=0) (stored 0%)
+total bytes=0, compressed=0 -&gt; 0% savings
+[root@localhost bak]# zip -rv bak2.zip * -x file1.txt -x file3.txt 
+  adding: bak.zip       (in=606) (out=606) (stored 0%)
+  adding: file2.txt     (in=0) (out=0) (stored 0%)
+  adding: file4.txt     (in=0) (out=0) (stored 0%)
+  adding: file5.txt     (in=0) (out=0) (stored 0%)
+total bytes=606, compressed=606 -&gt; 0% savings
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><ol start="3"><li>通过zip工具删除bak.zip中file5.txt文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost bak]# zip bak2.zip -d file5.txt 
+deleting: file5.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>通过uzip工具解压bak.zip文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost bak]# mkdir zip
+[root@localhost bak]# unzip bak2.zip -d zip/
+Archive:  bak2.zip
+ extracting: zip/bak.zip             
+ extracting: zip/file2.txt           
+ extracting: zip/file4.txt           
+[root@localhost bak]# ll zip/
+total 4
+-rw-r--r-- 1 root root 606 Sep 13 18:07 bak.zip
+-rw-r--r-- 1 root root   0 Sep 13 11:42 file2.txt
+-rw-r--r-- 1 root root   0 Sep 13 17:04 file4.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><blockquote><p>可以用 -d 参数指定解压后的目录</p></blockquote> <h2 id="源码包软件安装"><a href="#源码包软件安装" class="header-anchor">#</a> 源码包软件安装</h2> <p>通常使用RPM工具管理，rpm结尾的二进制包，而标准的以.zip、.tzr结尾的源代码包则不能使用RPM工具去安装、卸载及升级。</p> <p><strong>源码包安装有以下三个步骤</strong></p> <ul><li>./configure:预编译，主要用于检测系统基准环境库是否满足gcc环境，生成makefile文件。</li> <li>make：编译，基于第一步生成的makefile文件，进行源代码的编译。</li> <li>make install：安装，编译完毕后将相关文件的可运行文件安装至系统中。</li></ul> <p>使用make编译时Linux操作系统必须有GCC编译器，用于编译源码。
+源码包安装通常需要./configure、make、namke install三个步骤，某些特殊源码可以只有三步中的其中一个或者两个步骤。</p> <p><strong>以CentOS7 Linux系统为基准，在其上安装nginx源码包，企业中源码安装软件的详细步骤如下：</strong></p> <ol><li>从nginx官网下载nginx-1.14.0.tar.gz源码包</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>nginx源码包解压</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>tar xvf nginx-1.14.0.tar.gz
+cd nginx-1.14.0/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="3"><li>安装依赖的的包</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install gcc -y
+yum -y install pcre-devel
+yum -y install zlib zlib-devel
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="4"><li>执行./configure指令进行预编译</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="5"><li>make编译及make install安装</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>make &amp;&amp; make install
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="6"><li>nginx安装的路径</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# find /|grep nginx.conf
+/usr/local/nginx/conf
+/usr/local/nginx/conf/win-utf
+/usr/local/nginx/conf/mime.types.default
+/usr/local/nginx/conf/koi-win
+/usr/local/nginx/conf/fastcgi_params.default
+/usr/local/nginx/conf/scgi_params.default
+/usr/local/nginx/conf/fastcgi_params
+/usr/local/nginx/conf/koi-utf
+/usr/local/nginx/conf/fastcgi.conf
+/usr/local/nginx/conf/uwsgi_params
+/usr/local/nginx/conf/fastcgi.conf.default
+/usr/local/nginx/conf/nginx.conf
+/usr/local/nginx/conf/mime.types
+/usr/local/nginx/conf/nginx.conf.default
+/usr/local/nginx/conf/uwsgi_params.default
+/usr/local/nginx/conf/scgi_params
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>通过以上步骤，源码包软件安装成功。源码包在编译安装时，可能会遇到各种错误，需要把错误解决之后，在进行下一步安装即可。后面会详细的介绍nginx这里只是举例。</p> <h2 id="yum软件包管理"><a href="#yum软件包管理" class="header-anchor">#</a> YUM软件包管理</h2> <p>前端软件包管理器（Yellow dog Updater Modified，YUM）适用于CentOS、Fedora、RedHat及SUSE等操作系统，主要用于管理RPM包，YUM工具能够从指定的服务器自动下载RPM包并且安装，还可以自动处理依赖性关系。</p> <p>使用RPM工具管理和安装软件时，会发现RPM包有依赖，需要逐个手动下载安装，而YUM工具的最大便利就是可以自动安装所有依赖的软件包，从而提升效率，节省时间。</p> <h3 id="yum工作原理"><a href="#yum工作原理" class="header-anchor">#</a> YUM工作原理</h3> <p>学习YUM一定要理解YUM的工作原理。YUM正常运行需要依赖两个部分：一个YUM服务端；二是YUM客户端。</p> <p>YUM客户端安装的所有RPM包全部是来自YUM服务端，YUM服务端只要提供简单的下载就可以了，ftp或者http的形式都可以。YUM服务器有一个最重要的环节就是整理出每个rpm包的基本信息，包括rpm包对应的版本号，conf文件，binary信息，以及很关键的依赖信息。</p> <p>YUM客户端每次调用yum install或者search的时候，都会去解析/etc/yum.repos.d下面所有以.repo结尾的配置文件，这些配置文件指定了YUM服务器的镜像地址。CentOS linux默认的.repo文件名为CentOS-Base.repo。所以每次安装、升级RPM包YUM客户端均会查找.repo文件。</p> <p>YUM客户端如果配置了CentOS官方repo源，客户端操作系统必须能联通外网，满足网络条件下才能下载并安装，如果没有网络则需要构建光盘源、ISO镜像、YUM内部源。YUM客户端安装软件，默认会把YUM源地址、header信息、软件包、数据库信息、缓存文件存储在<code>/var/cache/yum</code>中，每次使用YUM工具，YUm优先通过cache查找相关软件包，cache中不存在，然后在访问外网的YUM源。</p> <h3 id="yum企业案例演练"><a href="#yum企业案例演练" class="header-anchor">#</a> YUM企业案例演练</h3> <p>YUM工具的使用简便、快捷、高效。
+YUM常用命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install httpd   # 安装httpd安装包
+yum search httpd    # 搜索httpd安装包
+yum repolist        # 查看仓库
+yum list            # 显示已经安装及可安装的软件包
+yum list httpd      # 显示httpd程序包的安装情况
+yum remove httpd    # 删除httpd软件包
+yum erase httpd     # 删除httpd程序包
+yum update          # 更新所有软件命令
+yum update httpd    # 更新httpd软件
+yum check-update    # 列出所有可更新的软件清单
+yum info httpd      # 显示httpd安装包信息
+yum provides &quot;*/rz&quot; # 列出rz命令由那个软件包所提供
+yum grouplist       # 查询可以用groupinstall命令安装的组名称
+yum groupinstall &quot;Chinese Support&quot;  # 安装中文支持
+yum groupremove &quot;Chinese Support&quot;   # 删除中文支持
+yum deplist httpd   # 查看程序httpd依赖情况
+yum clean packages  # 清除缓存目录下的软件包
+yum clean headers   # 清除缓存目录下的 headers
+yum clean oldheaders# 清除缓存目录下旧的 headers
+yum clean all       # 清除缓存目录下的软件包及旧的 headers
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="基于iso镜像构建yum本地源"><a href="#基于iso镜像构建yum本地源" class="header-anchor">#</a> 基于ISO镜像构建YUM本地源</h2> <p>通常而言，YUM客户端使用前提是必须联外网，YUM安装软件会检查.repo配置文件查找相应的YUM源仓库。企业IDC机房很多服务器为了安全起见，会禁止服务器上外网，因此不能使用默认官方YUM源仓库，需要自建本地YUM仓库。</p> <p><strong>虚拟机上利用ISO文件制作本地yum源</strong></p> <ol><li>查看/dev/cdrom，并挂载到/mnt/iso/下，使用df -h命令查询挂载是否成功</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# ll /dev/cdrom 
+lrwxrwxrwx. 1 root root 3 Sep 14 17:07 /dev/cdrom -&gt; sr0
+[root@localhost ~]# mount /dev/cdrom /mnt/iso/
+mount: /dev/sr0 is write-protected, mounting read-only
+[root@localhost ~]# ls /mnt/iso/
+CentOS_BuildTag  EFI  EULA  GPL  images  isolinux  LiveOS  Packages  repodata  RPM-GPG-KEY-CentOS-7  RPM-GPG-KEY-CentOS-Testing-7  TRANS.TBL
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>在/etc/yum.repo.d/目录下编辑base.repo文件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost yum.repos.d]# vim base.repo 
+[base_ISO]
+## yum源显示名称
+name=centos7
+## ISO镜像挂在目录
+baseurl=file:///mnt/iso
+## 是否启动yum源
+enabled=1
+## 是否检查GPG-KEY
+gpgcheck=0
+##指定载目录下的GPG-KEY文件验证 
+gpgkey=http://mirrors.tencentyun.com/centos/RPM-GPG-KEY-CentOS-7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ol start="3"><li>检查是否配置成功</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost yum.repos.d]# yum repolist 
+Loaded plugins: fastestmirror
+Repodata is over 2 weeks old. Install yum-cron? Or run: yum makecache fast
+Loading mirror speeds from cached hostfile
+repo id            repo name     status
+base_ISO           centos7       9,911
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="基于http构建yum网络源"><a href="#基于http构建yum网络源" class="header-anchor">#</a> 基于HTTP构建YUM网络源</h2> <p>YUM光盘源默认只能解决本机使用，局域网其他服务器无法使用YUM光盘源，如果想使用需要在每台服务器上构建YUM本地源，该方案在企业中不可取所以需要HTTP局域网YUM源解决，可以通过createrepo创建本地YUM源端，repo即repository。</p> <h4 id="_1-查看-dev-cdrom"><a href="#_1-查看-dev-cdrom" class="header-anchor">#</a> 1. 查看/dev/cdrom</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# ll /dev/cdrom 
+lrwxrwxrwx. 1 root root 3 Sep 14 17:07 /dev/cdrom -&gt; sr0
+</code></pre></div><h4 id="_2-并挂载到-mnt-iso-下"><a href="#_2-并挂载到-mnt-iso-下" class="header-anchor">#</a> 2. 并挂载到/mnt/iso/下</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# mount /dev/cdrom /mnt/iso/
+mount: /dev/sr0 is write-protected, mounting read-only
+[root@localhost ~]# ls /mnt/iso/
+CentOS_BuildTag  EFI  EULA  GPL  images  isolinux  LiveOS  Packages  repodata  RPM-GPG-KEY-CentOS-7  RPM-GPG-KEY-CentOS-Testing-7  TRANS.TBL
+</code></pre></div><h4 id="_3-查看是否挂载成功"><a href="#_3-查看是否挂载成功" class="header-anchor">#</a> 3. 查看是否挂载成功</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   35G  2.4G   33G   7% /
+devtmpfs                 478M     0  478M   0% /dev
+tmpfs                    489M     0  489M   0% /dev/shm
+tmpfs                    489M   19M  470M   4% /run
+tmpfs                    489M     0  489M   0% /sys/fs/cgroup
+/dev/sda1               1014M  125M  890M  13% /boot
+tmpfs                     98M     0   98M   0% /run/user/0
+/dev/sr0                 8.1G  8.1G     0 100% /mnt/iso  
+</code></pre></div><h4 id="_4-创建-var-www-html-centos目录"><a href="#_4-创建-var-www-html-centos目录" class="header-anchor">#</a> 4. 创建/var/www/html/centos目录</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# mkdir -p /var/www/html/centos
+</code></pre></div><h4 id="_5-把iso镜像的rpm包复制到-var-www-html-centos目录下一份，这里需要一点时间"><a href="#_5-把iso镜像的rpm包复制到-var-www-html-centos目录下一份，这里需要一点时间" class="header-anchor">#</a> 5. 把ISO镜像的rpm包复制到/var/www/html/centos目录下一份，这里需要一点时间</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# cp -R /mnt/iso/Packages/* /var/www/html/centos/
+</code></pre></div><h4 id="_6-安装createrepo"><a href="#_6-安装createrepo" class="header-anchor">#</a> 6. 安装createrepo</h4> <div class="language- extra-class"><pre><code>[root@localhost centos]# yum install createrepo -y
+</code></pre></div><h4 id="_7-进入-var-www-html目录下使用createrepo创建本地源"><a href="#_7-进入-var-www-html目录下使用createrepo创建本地源" class="header-anchor">#</a> 7. 进入/var/www/html目录下使用createrepo创建本地源</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# cd /var/www/html
+[root@localhost html]# createrepo centos/
+Spawning worker 0 with 9591 pkgs
+Workers Finished
+Saving Primary metadata
+Saving file lists metadata
+Saving other metadata
+Generating sqlite DBs
+Sqlite DBs complete
+</code></pre></div><h4 id="_8-利用http发布yum本地源-安装httpd-web服务"><a href="#_8-利用http发布yum本地源-安装httpd-web服务" class="header-anchor">#</a> 8. 利用HTTP发布YUM本地源,安装httpd web服务</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# yum install httpd httpd-devel -y
+</code></pre></div><h4 id="_9-创建apache用户和组"><a href="#_9-创建apache用户和组" class="header-anchor">#</a> 9. 创建apache用户和组</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# useradd apache -g apache 
+useradd: user 'apache' already exists
+</code></pre></div><h4 id="_10-启动httpd-web服务"><a href="#_10-启动httpd-web服务" class="header-anchor">#</a> 10. 启动httpd web服务</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# systemctl start httpd
+</code></pre></div><h4 id="_11-临时关闭selinux应用级安全策略"><a href="#_11-临时关闭selinux应用级安全策略" class="header-anchor">#</a> 11. 临时关闭SELinux应用级安全策略</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# setenforce 0
+</code></pre></div><h4 id="_12-停止防火墙"><a href="#_12-停止防火墙" class="header-anchor">#</a> 12. 停止防火墙</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# systemctl stop firewalld.service
+</code></pre></div><h4 id="_13-在yum客户端上-etc-yum-repo-d-目录下编辑base-repo文件"><a href="#_13-在yum客户端上-etc-yum-repo-d-目录下编辑base-repo文件" class="header-anchor">#</a> 13. 在yum客户端上/etc/yum.repo.d/目录下编辑base.repo文件</h4> <div class="language- extra-class"><pre><code>[root@localhost yum.repos.d]# vim base.repo 
+[base_ISO]
+## yum源显示名称
+name=centos7
+## ISO镜像挂在目录
+baseurl=http://172.16.10.73/centos
+## 是否启动yum源
+enabled=1
+## 是否检查GPG-KEY
+gpgcheck=0
+##指定载目录下的GPG-KEY文件验证 
+gpgkey=http://mirrors.tencentyun.com/centos/RPM-GPG-KEY-CentOS-7
+</code></pre></div><h4 id="_14-检查是否配置成功"><a href="#_14-检查是否配置成功" class="header-anchor">#</a> 14. 检查是否配置成功</h4> <div class="language- extra-class"><pre><code>[root@localhost yum.repos.d]# yum repolist 
+Loaded plugins: fastestmirror
+Repodata is over 2 weeks old. Install yum-cron? Or run: yum makecache fast
+Loading mirror speeds from cached hostfile
+repo id            repo name     status
+base_ISO           centos7       9,911
+</code></pre></div><h2 id="yum源端软件包扩展"><a href="#yum源端软件包扩展" class="header-anchor">#</a> YUM源端软件包扩展</h2> <p>默认使用ISO镜像构建的HTTP YUM源，会发现缺少很多软件包。如果服务器需要挂载移动硬盘，mount挂载移动硬盘需要ntfs-3g软件包支持，而本地光盘镜像中没有该软件包，此时需要往YUM源端添加ntfs-3g软件包，添加方法如下：</p> <h4 id="切换至-var-www-html-centos-目录，下载ntfs-3g软件把"><a href="#切换至-var-www-html-centos-目录，下载ntfs-3g软件把" class="header-anchor">#</a> 切换至/var/www/html/centos/目录，下载ntfs-3g软件把</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# cd /var/www/html/centos/
+
+[root@localhost centos]# wget http://rpmfind.net/linux/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/n/ntfs-3g-2017.3.23-8.fc29.x86_64.rpm
+
+[root@localhost centos]# wget http://rpmfind.net/linux/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/n/ntfs-3g-devel-2017.3.23-8.fc29.x86_64.rpm
+
+[root@localhost centos]# ls ntfs-3g-*       
+ntfs-3g-2017.3.23-8.fc29.x86_64.rpm  ntfs-3g-devel-2017.3.23-8.fc29.x86_64.rpm
+</code></pre></div><h4 id="createrepo命令更新软件包，如需继续添加，先把软件包放到centos中，使用createrepo命令更新即可。"><a href="#createrepo命令更新软件包，如需继续添加，先把软件包放到centos中，使用createrepo命令更新即可。" class="header-anchor">#</a> createrepo命令更新软件包，如需继续添加，先把软件包放到centos中，使用createrepo命令更新即可。</h4> <div class="language- extra-class"><pre><code>[root@localhost html]# createrepo --update centos/
+Spawning worker 0 with 2 pkgs
+Workers Finished
+Saving Primary metadata
+Saving file lists metadata
+Saving other metadata
+Generating sqlite DBs
+Sqlite DBs complete
+</code></pre></div><h2 id="同步外网yum源"><a href="#同步外网yum源" class="header-anchor">#</a> 同步外网YUM源</h2> <p>在实际应用中本地的PRM软件包是不能满足需要的，用户可以把外网中的YUM源中所有的软件包同步到本地，完善本地YUM源的软件包数量及完整性。</p> <p><strong>获取外网YUm源软件常见方法包括：rsync、wget、reposync，三种同步方法的区别为：</strong></p> <ul><li>rsync：需要外网YUM源支持rsync协议；</li> <li>wget：wget可以直接获取；</li> <li>reposync：可以同步几乎所有的YUM源。</li></ul> <h3 id="reporsync，同步外网yum源软件"><a href="#reporsync，同步外网yum源软件" class="header-anchor">#</a> reporsync，同步外网YUM源软件</h3> <h4 id="下载centos-7-repo文件至-etc-yum-repos-d-，并安装reposync命令工具"><a href="#下载centos-7-repo文件至-etc-yum-repos-d-，并安装reposync命令工具" class="header-anchor">#</a> 下载CentOS 7 repo文件至/etc/yum.repos.d/，并安装reposync命令工具</h4> <div class="language- extra-class"><pre><code>[root@localhost ~]# cd /etc/yum.repos.d/
+[root@localhost yum.repos.d]# wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+[root@localhost yum.repos.d]# yum clean all
+[root@localhost yum.repos.d]# yum repolist
+[root@localhost yum.repos.d]# yum install /etc/yum.repos.d/
+</code></pre></div><blockquote><p>安装几个工具，默认的centos是没有安装，yum install createrepo yum-utils -y <br>
+安装这两个工具主要使用 createrepo 和 reposync 这两个命令</p></blockquote> <h4 id="通过reposync工具，获取外网yum源所有软件，-r指定repolist-id，默认不加-r表示获取外网所有yum软件包，-p参数表示指定下载软件的路径。"><a href="#通过reposync工具，获取外网yum源所有软件，-r指定repolist-id，默认不加-r表示获取外网所有yum软件包，-p参数表示指定下载软件的路径。" class="header-anchor">#</a> 通过reposync工具，获取外网YUM源所有软件，-r指定repolist id，默认不加-r表示获取外网所有YUM软件包，-p参数表示指定下载软件的路径。</h4> <div class="language- extra-class"><pre><code>[root@localhost yum.repos.d]# reposync -r base -p /var/www/html/centos/
+[root@localhost yum.repos.d]# reposync -r updates -p /var/www/html/centos/
+</code></pre></div><h4 id="通过reposync工具下载完所有的软件包后，需要执行createrepo更新本地yum仓库。"><a href="#通过reposync工具下载完所有的软件包后，需要执行createrepo更新本地yum仓库。" class="header-anchor">#</a> 通过reposync工具下载完所有的软件包后，需要执行createrepo更新本地YUM仓库。</h4> <p>[root@localhost yum.repos.d]# createrepo /var/www/html/centos/</p> <h2 id="思考"><a href="#思考" class="header-anchor">#</a> 思考<span class="badge warn" style="vertical-align:top;" data-v-6eb0829b>本章小结</span></h2> <h3 id="rpm及yum管理工具的区别是什么？优缺点是什么？"><a href="#rpm及yum管理工具的区别是什么？优缺点是什么？" class="header-anchor">#</a> RPM及YUM管理工具的区别是什么？优缺点是什么？</h3> <p><strong>RPM及YUM管理工具的区别</strong></p> <p>yum安装是将yum源中的rpm包下载到本地，安装这个rpm包。这个rpm包是别人编译安装好的二进制包。这种方式与其说是安装不如说是，更新来的更确切一点。</p> <p>源码安装，下载是源码包，要进行编译和安装，编译过程，可以进行参数设定。</p> <p><strong>yum安装与源码安装的的优缺点</strong></p> <p>yum安装的优点，做运维的都很清楚，安装东西，方便快捷，特别是不用考虑包依赖。</p> <p>yum安装的缺点，安装过程，人为无法干预，不能按需，安装。源里面有什么就安装什么，安装的版本也比较低。</p> <hr> <p>源码安装的优点，编译安装过程，可以设定参数，按照需求，进行安装，并且安装的版本，可以自己选择，灵活性比较大。</p> <p>源码安装的缺点，由于安装包过新或者是其他问题，导致依赖的包没有，或者版本过低。这个时候就要解决包的依赖问题，linux系统中有的包，一个依赖一个，可能装一个小东西，就要解决一堆包的依赖问题，花很多时间解决包的依赖问题，得不尝失。源码安装的多了，不敢升级系统，升级系统，可能会导致以前手动装的东西，不能用。</p> <p>很多做运维的，都认为，源码安装比yum安装的性能要好，根据参数选择安装，肯定比yum装了一大堆要好。这样认为的运维，我只能说，他不懂配置。根本不了解自已装的东西。在我看来，同一版yum安装和源码安装完全是一样的。</p> <p>以apache以例吧，这个东西，非常常见的，用做web最广泛的工具之一，源码安装，./configure时候，可以添加很多参数，来实现订制。yum安装也可以，yum安装装了很多，apache的模块，有的模块根本用不到，无故浪费系统资源和影响性能。但是我们可以配置httpd.conf啊，不需求的模块，我们可以不LoadModule啊，通过修改配置文件，完全可以实现根源码安装一样的效果。不排除少数软件，安装后，不能配置情况，也就是说安装的时候是多少东西，就是多少东西，没有配置文件可以配置。</p> <p>我觉得，对于刚接触linux的人来说，源码安装很有必要，这样你可以知道自己在做什么，安装过程中，肯定会遇到很多很多的问题，遇到问题，解决问题。这样才会成长。不要一直都用yum装，如果yum安装出了一点问题，就傻眼了，不知道怎么解决，这样很杯具。</p> <p><strong>参考：</strong><a href="https://blog.csdn.net/l_liangkk/article/details/81074142" target="_blank" rel="noopener noreferrer">yum安装与源码安装优势、劣势<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="安装软件时，何时选择yum安装或者源码编译安装？"><a href="#安装软件时，何时选择yum安装或者源码编译安装？" class="header-anchor">#</a> 安装软件时，何时选择YUM安装或者源码编译安装？</h3> <p>对于我们来说只要能解决问题都是好方法，我们最主要的是要知道这两种方法的优缺点，找到合适的解决办法。</p> <h3 id="使用源码编译安装httpd-2-4-25-tar-gz，写出安装的流程及注意事项。"><a href="#使用源码编译安装httpd-2-4-25-tar-gz，写出安装的流程及注意事项。" class="header-anchor">#</a> 使用源码编译安装httpd-2.4.25.tar.gz，写出安装的流程及注意事项。</h3> <p><strong>参考：</strong><a href="https://blog.csdn.net/qq_37187976/article/details/79210646" target="_blank" rel="noopener noreferrer">CentOS6编译安装HTTP2.4<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="如何将centos-7-linux-字符界面升级为图形界面，并设置系统默认启动图形界面。"><a href="#如何将centos-7-linux-字符界面升级为图形界面，并设置系统默认启动图形界面。" class="header-anchor">#</a> 如何将CentOS 7 Linux 字符界面升级为图形界面，并设置系统默认启动图形界面。</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>查询当前默认的启动界面
+[root@localhost]# systemctl get-default
+multi-user.target
+
+设置图形界面
+[root@localhost]# systemctl set-default graphical.target
+
+设置命令界面
+[root@localhost]# systemctl set-default multi-user.target
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><blockquote><p>multi-user.target: analogous to runlevel 3 命令界面<br>
+graphical.target: analogous to runlevel 5 图形界面</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/user_rights.html" class="prev">
+        Linux用户及权限管理
+      </a></span> <span class="next"><a href="/book/linux/disk.html">
+        Linux磁盘管理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/19.c95ccc11.js" defer></script><script src="/book/assets/js/3.b5cecfc5.js" defer></script>
+  </body>
+</html>

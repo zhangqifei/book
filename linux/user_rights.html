@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux用户及权限管理 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/25.167d455d.js" as="script"><link rel="preload" href="/book/assets/js/3.b5cecfc5.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" class="sidebar-link">Linux必备命令</a></li><li><a href="/book/linux/user_rights.html" aria-current="page" class="active sidebar-link">Linux用户及权限管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux用户及组" class="sidebar-link">Linux用户及组</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux用户管理" class="sidebar-link">Linux用户管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux组管理" class="sidebar-link">Linux组管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux用户及组案例" class="sidebar-link">Linux用户及组案例</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux权限管理" class="sidebar-link">Linux权限管理</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#chown属主及属组" class="sidebar-link">chown属主及属组</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#chmod用户及组权限" class="sidebar-link">chmod用户及组权限</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#chmod二进制权限" class="sidebar-link">chmod二进制权限</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#linux特殊权限及掩码" class="sidebar-link">Linux特殊权限及掩码</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#思考" class="sidebar-link">思考</a></li><li class="sidebar-sub-header"><a href="/book/linux/user_rights.html#扩展" class="sidebar-link">扩展</a></li></ul></li><li><a href="/book/linux/Software.html" class="sidebar-link">Linux软件包企业实战</a></li><li><a href="/book/linux/disk.html" class="sidebar-link">Linux磁盘管理</a></li><li><a href="/book/linux/vdftpd.html" class="sidebar-link">Linux文件服务器企业实战</a></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" class="sidebar-link">Apache Web服务器企业实战</a></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux用户及权限管理"><a href="#linux用户及权限管理" class="header-anchor">#</a> Linux用户及权限管理</h1> <p>Linux是一个多用户的操作系统，引入用户，可以更加方便地管理Linux服务器。系统默认需要一个用户的身份登陆，而且在系统上启动进程也需要一个用户身份启动运行，用户可以限制某些进程对特定的资源的权限控制。</p> <h2 id="linux用户及组"><a href="#linux用户及组" class="header-anchor">#</a> Linux用户及组</h2> <p>Linux操作系统对多用户的管理是非常繁琐的，所以用组的概念来管理用户就变得简单，每个用户可以在一个独立的组，每个组也可以有零个用户或者多个用户。Linux系统用户是根据用户ID来识别的，默认的ID长度是32位，默认ID编号是从0开始的。但是为了和老式系统兼容，用户ID限制在60000以下。Linux用户分为三种：</p> <ul><li><strong>root用户（ID 0）</strong></li> <li><strong>系统用户（centos6 ID1-499）（centos7 ID 1-999）</strong></li> <li><strong>普通用户（centos6 ID 500+）（centos7 ID 1000+）</strong></li></ul> <p>Linux系统中每个文件或者文件夹，都有一个所属用户及所属组，使用<code>id</code>命令可以查看显示当前用户的信息,使用<code>passwd</code>命令可以修改当前用户密码。</p> <p>Linux操作系统用户的特点如下：</p> <ul><li>每个用户拥有一个UserID，操作系统实际读取的是UID，而非用户名；</li> <li>每个用户属于一个主组，属于一个或者多个附属组，一个用户最多有31个附属组；</li> <li>每个组拥有一个GroupID；</li> <li>每个进程以一个用户身份运行，该用户可对进程拥有资源控制权限；</li> <li>每个可登陆用户拥有一个指定的shell环境；</li></ul> <h2 id="linux用户管理"><a href="#linux用户管理" class="header-anchor">#</a> Linux用户管理</h2> <p>Linux用户在操作系统中可以进行日常管理和维护，涉及的相关配置文件如下</p> <table><thead><tr><th>文件路径</th> <th>描述信息</th></tr></thead> <tbody><tr><td>/etc/passwd</td> <td>保存用户信息</td></tr> <tr><td>/etc/shdaow</td> <td>保存用户密码（以加密的形式保存）</td></tr> <tr><td>/etc/group</td> <td>保存组信息</td></tr> <tr><td>/etc/login.defs</td> <td>用户属性、密码过期时间、密码最大长度等限制</td></tr> <tr><td>/etc/default/useradd</td> <td>显示或更改默认的useradd配置文件</td></tr></tbody></table> <p>如果创建一个新用户，可以使用命令<code>useradd 用户名</code>，执行<code>useradd zhang</code>即可创建zhang用户，同时会创建一个同名的组zhang，默认该用户属于zhang的主组；</p> <p><strong><code>useradd zhang</code>命令默认创建用户zhang，会根据如下步骤进行操作：</strong></p> <ol><li>在<code>/etc/passwd</code>文件中添加用户信息</li> <li>如使用<code>passwd</code>命令创建密码；密码会保存在<code>/etc/shdaow</code>中。</li> <li>为zhang创建家目录/home/zhang;</li> <li>将<code>/etc/skel</code>中bash开头的文件复制至<code>/home/zhang</code>家目录中。</li> <li>创建与用户名相同的zhang组，zhang用户默认属于zhang的同名组。</li> <li>zhang组信息保存在<code>/etc/group</code>配置文件中</li></ol> <p><strong>在使用useradd命令创建用户时，可以支持以下参数</strong></p> <div class="language- extra-class"><pre><code>-b: 指定家目录所在的位置
+-c: 指定用户的注释信息
+-d:指定家目录所在的位置和名字
+-D:显示或者更改为用户默认添加的配置，需要有root权限，修改的文件在/etc/defauilt/useradd中
+-e:指定用户的过期时间，格式可以为YY-MM-DD
+-f:指定用户密码过期后将之锁定的期限
+-g:为用户指定主组名或ID，组名或ID必须存在
+-G:为用户指定附加组，组名或ID必须存在
+-k:为用户指定家目录下的内容模板，指定后不退出终端立刻查看会看到用户下的文件属于模板所有者且无法访问，退出终端后再次查看则文件属于用户、所有组也会变成用户所在组
+-K:覆盖/etc/defs下的键值，通过这个选项可以修改用户的一些参数
+-l:不将用户添加到lastlog和faillog数据库
+-m:创建用户的家目录，普通用户默认创建家目录，系统用户创建家目录
+-M:不创建用户家目录
+-N:不创建与用户名相同的组，而是以users作为主组
+-o:允许创建ID相同名字不同用户，系统登录名显示
+-p:可以执行但是在shadow文件中显示为明文，建立的用户无法通过-p选项创建的密码成功登录系统，可以猜测用户输入的密码       并不是与明文的密码匹配，而是以同样的加密算法加密然后匹配秘文
+-r:创建一个系统用户，系统用户没有邮箱目录和家目录，用-m可以创建家目录
+-s:指定用户的登录shell，在/etc/shells查看可用shell
+-u:指定用户的uid
+-U:创建与用户名相同的组；创建用户时默任创建与用户
+-Z:用一个特定的seuser作为SElinux用户映射
+</code></pre></div><div class="language- line-numbers-mode"><pre class="language-text"><code>添加一般用户
+# useradd zhang
+
+为添加的用户指定相应的用户组
+# useradd -g root zhang
+
+创建一个系统用户
+# useradd -r zhang
+
+为新添加的用户指定home目录
+# useradd -d /home/zhang zhang
+
+建立用户且制定ID
+# useradd caojh -u zhang
+
+建立用户zhang 指定ID为544，家目录/home/zhang 所属组zhang，
+# useradd -u 544 -d /home/zhang -g zhang -M zhang
+
+创建用户gentoo，附加组为bin和root，默认shell为/bin/csh，注释信息为&quot;Gentoo Distribution&quot; 
+# useradd -G bin,root -s /bin/csh -c 'Gentoo Distribution' gentoo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="linux组管理"><a href="#linux组管理" class="header-anchor">#</a> Linux组管理</h2> <p>所有的Linux或者Windows系统都有组的概念，通过组可以更加方便地管理用户。组的概念应用于各个行业，例如企业会使用部门、职能或者地理区域的分类方式来管理成员，映射在Linux系统，同样可以创建用户，并用组的概念对其管理。</p> <p><strong>Linux组管理有如下特点：</strong></p> <ol><li>每个组有一个组ID</li> <li>组信息保存在<code>/etc/group</code>中</li> <li>每个用户至少拥有一个主组，同事还可以拥有31个附属组</li></ol> <p><strong>groudadd用法</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-g：指定新建工作组的id；
+-r：创建系统工作组，系统工作组的组ID小于500；
+-K：覆盖配置文件“/ect/login.defs”；
+-o：允许添加组ID号不唯一的工作组。
+
+groupadd创建zhang组
+# groupadd zhang
+
+groupadd创建linux组，并指定GID为1000
+# groupadd -g 1000 linux
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>groupmod用法</strong></p> <p>需要更改群组的识别码或名称时，可用groupmod指令来完成这项工作。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-g   &lt;群组识别码&gt;将组ID改为GID。
+-o 　允许使用重复的GID。
+-n   &lt;新群组名称&gt;设置使用的群组名称。
+-p   将密码更改为（加密过的）password
+
+[root@localhost ~]# groupadd zhang 
+[root@localhost ~]# tail -1 /etc/group 
+zhang:x:500: 
+
+修改组名称把zhang换成linux
+[root@localhost ~]# groupmod -n linux zhang 
+[root@localhost ~]# tail -1 /etc/group 
+linux:x:500:
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p><strong>groupdel用法</strong></p> <p>需要从系统上删除群组时，可用groupdel(group delete)指令来完成这项工作。倘若该群组中仍包括某些用户，则必须先删除这些用户后，方能删除群组。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># groupdel zhang  #删除zhang组
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="linux用户及组案例"><a href="#linux用户及组案例" class="header-anchor">#</a> Linux用户及组案例</h2> <p>useradd主要是新建账户的，而用户新建完毕，可以使用usermord来修改用户合组的属性</p> <p><strong>以下usermod详细参数</strong></p> <div class="language- extra-class"><pre><code>-c&lt;备注&gt; 　修改用户帐号的备注文字。
+-d登入目录&gt; 　修改用户登入时的目录。
+-e&lt;有效期限&gt; 　修改帐号的有效期限。
+-f&lt;缓冲天数&gt; 　修改在密码过期后多少天即关闭该帐号。
+-g&lt;群组&gt; 　修改用户所属的群组。
+-G&lt;群组&gt; 　修改用户所属的附加群组。
+-a 将用户追加至上边-G，并不从其他组中删除此用户。
+-l&lt;帐号名称&gt; 　修改用户帐号名称。
+-L 　锁定用户密码，使密码无效。
+-s&lt;shell&gt; 　修改用户登入后所使用的shell。
+-u&lt;uid&gt; 　修改用户ID。
+-U 　解除密码锁定。
+</code></pre></div><div class="language- line-numbers-mode"><pre class="language-text"><code>将jfedu用户属组修改为jfedu1.jfedu2附属组中
+# usermod -G jfedu1,jfedu2 jfedu
+
+将jfedu用户加入到jfedu3，jfedu4附属组中，-a为添加新组，原组保留
+# usermod -a -G jfedu3,jfedu4 jfedu
+
+修改jfedu用户，并指定新的家目录，同时指定其登陆的shell
+# usermod -d /tmp/ -s /bin/sh jfedu
+
+修改newuser的用户名为newuser1
+# usermod -l newuser1 newuser
+
+锁定账号newuser1
+# usermod -L newuser1
+
+解除对newuser1的锁定
+# usermod -U newuser1
+
+更改登录目录
+# usermod -d /home/hnlinux root
+
+改变用户的uid
+# usermod -u 777 root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p><strong>userdel用法</strong></p> <p>userdel可删除用户帐号与相关的文件。若不加参数，则仅删除用户帐号，而不删除相关文件。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-r 　删除用户登入目录以及目录中所有文件
+
+userdel jfudu  保留用户目录
+userdel -r jfedu 删除用户及用户家目录，用户login系统无法删除。
+userdel -rf jfedu 强制删除用户及用户家目录，不论是否login系统。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="linux权限管理"><a href="#linux权限管理" class="header-anchor">#</a> Linux权限管理</h2> <p>Linux权限是操作系统用来限制对资源访问的机制，权限一般分为读、写、执行。系统中每个文件都有特定的权限、所属用户及所属组，通过这样的机制来限制哪些用户或用户组可以对特定文件进行相应的操作。</p> <p>Linux每个进程都是以摸个用户身份运行，进程的权限与该用户的权限一样，用户的权限越大，则进程拥有的权限就越大。</p> <table><thead><tr><th>权限</th> <th>对文件的影响</th> <th>对目录的影响</th></tr></thead> <tbody><tr><td>r（读取）</td> <td>可读取文件内容</td> <td>可列出目录文件</td></tr> <tr><td>w（写入）</td> <td>可修改文件内容</td> <td>可在目录中创建删除内容</td></tr> <tr><td>x（执行）</td> <td>可作为命令操作</td> <td>可访问文件内容</td></tr></tbody></table> <blockquote><p>目录必须拥有“x”权限，否则无法查看其内容</p></blockquote> <p>Linux权限授权，默认是授权给三种角色，分别是user，group，other</p> <p><strong>Linux权限与用户之间的关联如下</strong></p> <ul><li>U代表user，G代表group，O代表other</li> <li>每个文件的权限基于UGO进行设置</li> <li>权限三位一组（rwx），同时需授权给三种角色，即UGO</li> <li>每个文件拥有一个所属用户和所属组，对应UGO，不属于该文件所属用户或所属组使用O表示</li></ul> <p>在Linux系统中，可以通过<code>ls -l</code>查看目录的详细属性</p> <div class="language- extra-class"><pre><code>drwxr-xr-x. 85 root root  4096 Aug 29 14:32 etc
+UGO 链接数量 所属用户 所属组 大小 时间 文件名
+
+drwxr-xr-x.解读
+d：表示目录，同一个位置如果为“-”则表示普通文件
+rwxr-xr-x：表示三种角色的权限，每三位为一种角色，依次为U、G、O权限，user权限是rwx，group权限是r-x，other权限是r-x。
+“.”：文件夹的 ACL 属性，有的时候 这个点应该会变成 “+” 号
+--------------------------------------------------------
+85：表示文件夹的链接数量，可理解为该目录下子目录子目录的数量。
+root：第一个表示该用户名，第二个表示组名，其他人默认不显示。
+4096：表示该文件夹占据的字节数。
+Aug 29 14:32：文件创建或者修改的时间。
+etc：表示目录名或者文件名
+</code></pre></div><h2 id="chown属主及属组"><a href="#chown属主及属组" class="header-anchor">#</a> chown属主及属组</h2> <p>Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。</p> <p>一般来说，这个指令只有是由系统管理者(root)所使用，一般使用者没有权限可以改变别人的文件拥有者，也没有权限可以自己的文件拥有者改设为别人。只有系统管理者(root)才有这样的权限。</p> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 的拥有者设为 users 群体的使用者 jessie :
+chown users:jessie file1.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将目前目录下的所有文件与子目录的拥有者皆设为 users 群体的使用者 lamport :
+chown -R lamport:users *
+</code></pre></div><h2 id="chmod用户及组权限"><a href="#chmod用户及组权限" class="header-anchor">#</a> chmod用户及组权限</h2> <p>Linux/Unix 的文件调用权限分为三级 : 文件拥有者、群组、其他。利用 chmod 可以藉以控制文件如何被他人所调用。</p> <blockquote><p>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是。<br>
++ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。<br>
+r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。</p></blockquote> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 设为所有人皆可读取 :
+chmod ugo+r file1.txt
+chmod a+r file1.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入 :
+chmod ug+w,o-w file1.txt file2.txt
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将 ex1.py 设定为只有该文件拥有者可以执行 :
+chmod u+x ex1.py
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 将目前目录下的所有文件与子目录皆设为任何人可读取 :
+chmod -R a+r *
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>// 此外chmod也可以用数字来表示权限如 :
+chmod 777 file
+
+语法为：
+chmod abc file
+
+其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。
+r=4，w=2，x=1
+若要rwx属性则4+2+1=7；
+若要rw-属性则4+2=6；
+若要r-x属性则4+1=5。
+
+相当于：
+chmod a=rwx file
+</code></pre></div><h2 id="chmod二进制权限"><a href="#chmod二进制权限" class="header-anchor">#</a> chmod二进制权限</h2> <p>Linux权限默认使用rwx来表示，为了更简化在系统中对权限进行配置和修改，Linux权限引入二进制表示法。</p> <p>Linux权限可以将rwx用二进制表示，其中有权限的用1表示没有权限的用0表示。</p> <div class="language- extra-class"><pre><code>#转换二进制表示--&gt;
+rwx=111       --&gt; 111=4+2+1=7
+r-x=101       --&gt; 101=4+0+1=5
+rw-=110       --&gt; 110=4+2+0=6
+r--=100       --&gt; 100=4+0+0=4
+得出结论r=4,w=2,r=1 来表示权限。
+</code></pre></div><blockquote><p>目录默认权限是755；文件默认权限是644。</p></blockquote> <h2 id="linux特殊权限及掩码"><a href="#linux特殊权限及掩码" class="header-anchor">#</a> Linux特殊权限及掩码</h2> <p>Linux权限除了常见的rwx权限之外，还有很多特殊权限的权限，细心地你会问问什么Linux目录默认权限是755；文件默认权限是644，<strong>这是因为Linux权限掩码umask导致！</strong></p> <p>每个Linux终端都拥有一个umask属性，umask属性可以确定新建文件，目录的默认权限，默认系统权限掩码为022。在系统中每创建一个文件或者目录，文件默认权限是666，目录权限是777，权限对外开放比较大，所以设置了权限掩码之后，默认的文件和目录权限减去umask值才是真实的文件和目录的权限。
+对应目录的权限为777-022=755
+对应文件的权限为666-022=644
+执行<code>umask</code>命令可以查看当前默认的掩码，通过<code>umask -S 023</code>可以设置默认的权限掩码。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# umask
+0022
+[root@localhost ~]# umask -p
+umask 0022
+[root@localhost ~]# umask -S 023
+u=rwx,g=rx,o=r
+[root@localhost ~]# umask -p
+umask 0023
+[root@localhost ~]# umask
+0023
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>在Linux权限中，除了普通权限外，还有以下三个特殊权限。</strong></p> <table><thead><tr><th>特殊权限</th> <th>对文件的影响</th> <th>对目录的影响</th></tr></thead> <tbody><tr><td>u+s(suid)</td> <td>以拥有文件的用户身份，而不是以运行文件的用户身份执行文件。</td> <td>无影响。</td></tr> <tr><td>g+s(sgid)</td> <td>已拥有文件的组的身份执行文件。</td> <td>在目录中最新创建的文件将其组所有者设置为与目录的组所有者相匹配。</td></tr> <tr><td>o+t(sticky)</td> <td>无影响。</td> <td>对目录具有写入权限的用户仅可以删除其所拥有的文件，而无法删除或强制保存到其他用户所拥有的文件。</td></tr></tbody></table> <p><strong>Linux中设置特殊权限方法（例：test.txt文件为例）</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# ll
+total 4
+drwxr-xr-x 2 root root 4096 Sep  3 13:38 test.txt
+
+// 设置suid
+[root@localhost ~]# chmod u+s test.txt/        
+[root@localhost ~]# ll
+total 4
+drwsr-xr-x 2 root root 4096 Sep  3 13:38 test.txt
+
+// 设置sgid
+[root@localhost ~]# chmod g+s test.txt/ 
+[root@localhost ~]# ll
+total 4
+drwsr-sr-x 2 root root 4096 Sep  3 13:38 test.txt
+
+// 设置sticky
+[root@localhost ~]# chmod o+t test.txt/
+[root@localhost ~]# ll
+total 4
+drwsr-sr-t 2 root root 4096 Sep  3 13:38 test.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><blockquote><p>特殊权限与普通权限一样，也可以使用数字方式表示 <br>
+suid=4<br>
+guid=2<br>
+sticky=1</p></blockquote> <p>可以通过<code>chmod 4755 test.txt</code>对该目录授予特殊权限为s的权限，Linux系统中s权限的应用常见包括su、passwd、sudo。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>[root@localhost ~]# ll /bin/su
+-rwsr-xr-x. 1 root root 32096 Aug  4  2017 /bin/su
+
+[root@localhost ~]# ll /usr/bin/passwd 
+-rwsr-xr-x. 1 root root 27832 Jun 10  2014 /usr/bin/passwd
+
+[root@localhost ~]# ll /usr/bin/sudo
+---s--x--x. 1 root root 143184 Aug  4  2017 /usr/bin/sudo
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="思考"><a href="#思考" class="header-anchor">#</a> 思考 <span class="badge warn" style="vertical-align:top;" data-v-6eb0829b>本章小结</span></h2> <h3 id="某互联网公司职能及员工信息如下表，请在linux系统中创建相关员工，并加入到部门中？"><a href="#某互联网公司职能及员工信息如下表，请在linux系统中创建相关员工，并加入到部门中？" class="header-anchor">#</a> 某互联网公司职能及员工信息如下表，请在Linux系统中创建相关员工，并加入到部门中？</h3> <table><thead><tr><th>部门</th> <th>员工</th></tr></thead> <tbody><tr><td>讲师部（tracher）</td> <td>zhangsan</td></tr> <tr><td>管理部（manage）</td> <td>lisi</td></tr> <tr><td>运维部（operater）</td> <td>zhouwu</td></tr></tbody></table> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 创建三个组
+groupadd tracher
+groupadd manage
+groupadd operater
+
+// 然后创建用户并将其加入到组里面
+useradd -G tracher zhangsan
+useradd -G manage zhangsan
+useradd -G operater zhangsan
+
+// 设置密码
+echo &quot;zhangsan&quot; | passwd --stdin zhangsan
+echo &quot;lisi&quot; | passwd --stdin lisi
+echo &quot;zhouwu&quot; | passwd --stdin zhouwu
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="批量创建1-100个用户，用户以user为开头，后面紧跟1-2-3。例如user1，user2，user3。并且把账号密码记录到passwd-txt文件中。"><a href="#批量创建1-100个用户，用户以user为开头，后面紧跟1-2-3。例如user1，user2，user3。并且把账号密码记录到passwd-txt文件中。" class="header-anchor">#</a> 批量创建1~100个用户，用户以user为开头，后面紧跟1,2,3。例如user1，user2，user3。并且把账号密码记录到passwd.txt文件中。</h3> <p><strong>第一种</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ newusers user.txt  批量创建用户 但是不会创建家目录;不能登录系统，没有邮箱
+user.txt格式：fei:x:1000:1000:fei:/home/fei:/bin/bash
+
+$ cat passwd.txt | chpasswd 批量加密用户
+Passwd格式：用户名：口令
+
+chpasswd:批量创建密码，创建后能登录系统，没有邮箱
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><strong>第二种是脚本</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/bin/bash
+for num in {1..100}; do
+    user=user$num
+
+    # 创建用户
+    #useradd $user
+
+    # 删除用户
+    userdel -r $user
+
+    # 设置密码
+    #pawd=`openssl rand -hex 10`
+    #echo RedHat | passwd --stdin $user
+
+    # 把用户和密码放到一个test中
+    #echo -e &quot;用户名：$user\t密码：$pawd&quot; &gt;&gt; passwd.txt
+done
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="使用useradd创建用户并通过-p参数指定密码，设定完密码需要通过系统能正常验证并登陆。"><a href="#使用useradd创建用户并通过-p参数指定密码，设定完密码需要通过系统能正常验证并登陆。" class="header-anchor">#</a> 使用useradd创建用户并通过-p参数指定密码，设定完密码需要通过系统能正常验证并登陆。</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>useradd -p '$1$F4tQJlQt$fwl2cTEzRZ8KjYIvWcOPu' zhang
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h2> <p>用户登录到<code>/bin/bash</code>就是交互式登录，如果要禁止用户交互式登录就还要修改为<code>nologin</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>etc/passwd: 用户及其属性信息 
+zhang:x:1001:1001::/home/zhang:/bin/bash
+用户名：密码：UIL为0是管理员：UID与GID一样：添加描述：家目录：shell类型
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>/etc/shadow：用户密码及其相关属性
+zhang:!!:17487:0:99999:7:::
+1.“登录名”是与`/etc/passwd`文件中的登录名相一致的用户账号
+2.“口令”字段存放的是加密后的用户口令字，如果为空，则对应用户没有口令，登录时不需要口令；   
+叹号代表帐号被锁定；
+双叹号表示这个密码已经过期了。
+$6$开头的，表明是用SHA-512加密的，
+$1$ 表明是用MD5加密的
+$2$ 是用Blowfish加密的
+$5$ 是用 SHA-256加密的。 
+更改加密算法 `authconfig --passalgo=sha256 --update``
+使用数字、大写字母、小写字母及特殊字符中至少3种
+足够长
+使用随机密码
+定期更换,不要使用最近曾经使用过的密码
+3.“最后一次修改时间”表示的是从某个时刻起，到用户最后一次修改口令时的天数。时间起点对不同的系统可能不一样。例如在SCOLinux中，这个时间起点是1970年1月1日。
+4.“最小时间间隔”指的是两次修改口令之间所需的最小天数。
+5.“最大时间间隔”指的是口令保持有效的最大天数。
+6.“警告时间”字段表示的是从系统开始警告用户到用户密码正式失效之间的天数。
+7.“不活动时间”表示的是用户没有登录活动但账号仍能保持有效的最大天数。
+8.“失效时间”字段给出的是一个绝对的天数，如果使用了这个字段，那么就给出相应账号的生存期。期满后，该账号就不再是一个合法的账号，也就不能再用来登录了。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>// getent passwd user  查看是否拥有root用户有就显示
+[root@localhost ~]# getent passwd root
+root:x:0:0:root:/root:/bin/bash
+
+// authconfig --passalgo=sha256 --update 更改加密算法 
+// openssl rand -base64 30 |head -c30  随机生成30位
+// cat /etc/login.defs  这个文件最后有加密的方式  
+
+删除密码登录时输入name会直接登录，创建用户会默认加密！！
+# echo zhangxxxxxx |passwd --stdin zhang   一条命令修改密码history命令可查看 ====== # passwd zhang也可以修改密码 
+# echo zhangxxxxxx |passwd --stdin fei &amp;&gt; /app/null.txt   一条命令修改密码history命令不能查看
+
+
+[root@localhost ~]# echo $HISTCONTROL
+    //输入echo $HISTCONTROL  这一行显示为空
+把 HISTCONTROL=ignoreboth 添加到环境变量，之后输入的命令前面加空格history命令查询不到前面加空格的命令
+
+# passwd -e zhang 马上过期修改密码  # chage -d0 zhang 马上过期修改密码
+# chage -M 42 zhang 修改最长过期时间
+Contos5 可以$ usermod -U wangcai 去除！两次  6以上不允许了
+# usermod -L zhang   添加锁定用户
+# usermod -U zhang   添加锁定用户
+
+密码默认在shadow里面
+执行pwunconv密码切换到passwd里面
+执行pwconv密码切换到shadow里面
+
+yum安装yum install finger -y
+[root@localhost ~]# finger zhang   //查看用户详细信息
+Login: zhang                       Name: 
+Directory: /home/zhang             Shell: /bin/bash
+Last login Wed Sep  5 13:55 (CST) on pts/0
+No mail.
+No Plan.
+
+# chfn --help 查看修改信息
+# usermod -d /home/fei fei 修改家目录
+# cat /etc/shells  shells的类型
+# usermod -s 修改shells类型   # chsh -s /bin/csh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>$ su UserName：非登录式切换，即不会读取目标用户的配置文件，不改变当前工作目录
+$ su - UserName：登录式切换，会读取目标用户的配置文件，切换至家目录，完全切换
+$ su - root -c ‘cat /etc/shadow’  切换root并查看shadow文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>$ groups zhang  查看所属组
+$ usermod -aG zhang,mage fei  把zhang,mage添加到fei辅助组里面 如果里面有的话加a 就是追加的意思
+$ usermod -G “” fei 删除fei的所有辅助组 $ groupmems -p -l fei删除fei的所有辅助组
+$ usermod -d /app/mage -m fei  把fei家目录搬家到/app/mage下面
+$ nuwgrp fei 改变主组原先主组是zhang执行这条命令之后在创建文件主组变成fei
+$ gpasswd -A zhang fei  把zhang设为fei的管理员 root才有权限
+$ gpasswd -a zhang fei   把zhang加入fei这个组
+$ gpasswd -g zhang fei   把zhang改为fei的主组
+$ groupmems $ usermod $ gpasswd  都是管理组的
+$ cat /etc/group    fei:x:1000:fei(组成员辅助组)
+$ cat /etc/gshadow  fei:!!::fei(组成员辅助组)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/command.html" class="prev">
+        Linux必备命令
+      </a></span> <span class="next"><a href="/book/linux/Software.html">
+        Linux软件包企业实战
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/25.167d455d.js" defer></script><script src="/book/assets/js/3.b5cecfc5.js" defer></script>
+  </body>
+</html>

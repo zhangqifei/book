@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux文件服务器企业实战 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/26.85e97b1e.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/3.b5cecfc5.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" class="sidebar-link">Linux必备命令</a></li><li><a href="/book/linux/user_rights.html" class="sidebar-link">Linux用户及权限管理</a></li><li><a href="/book/linux/Software.html" class="sidebar-link">Linux软件包企业实战</a></li><li><a href="/book/linux/disk.html" class="sidebar-link">Linux磁盘管理</a></li><li><a href="/book/linux/vdftpd.html" aria-current="page" class="active sidebar-link">Linux文件服务器企业实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/vdftpd.html#进程与线程的概念及区别" class="sidebar-link">进程与线程的概念及区别</a></li><li class="sidebar-sub-header"><a href="/book/linux/vdftpd.html#vsftpd服务器企业实战" class="sidebar-link">Vsftpd服务器企业实战</a></li></ul></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" class="sidebar-link">Apache Web服务器企业实战</a></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="linux文件服务器企业实战"><a href="#linux文件服务器企业实战" class="header-anchor">#</a> Linux文件服务器企业实战</h1> <p>在计算机局域网中，以文件数据共享为目标，需要将供多台计算机共享的文件存放于一台计算机中。这台计算机就被称为文件服务器。</p> <p>文件服务器具有分时系统管理的全部功能，能够对全网统一管理，能够提供网络用户访问文件、目录的并发控制和安全保密措施。</p> <p>文件服务器一台特殊功能的计算机，其主要目的是向客户机提供文件服务。文件服务器可以是一台能够运行其他应用的通用计算机，也可以是一台专门提供文件服务的专用计算机。</p> <h2 id="进程与线程的概念及区别"><a href="#进程与线程的概念及区别" class="header-anchor">#</a> 进程与线程的概念及区别</h2> <p>Linux系统各种软件和服务存在于系统，必然会占用系统的各种资源，系统资源是如何分配和调度的。</p> <p>进程，是并发执行的程序在执行过程中分配和管理资源的基本单位，是一个动态概念，竟争计算机系统资源的基本单位。每一个进程都有一个自己的地址空间，即进程空间或（虚空间）。进程空间的大小与处理机的位数有关，一个 16 位长处理机的进程空间大小为 216 ，而 32 位处理机的进程空间大小为 232 。进程至少有 5 种基本状态，它们是：初始态，执行态，等待状态，就绪状态，终止状态。</p> <p>线程，在网络或多用户环境下，一个服务器通常需要接收大量且不确定数量用户的并发请求，为每一个请求都创建一个进程显然是行不通的，——无论是从系统资源开销方面或是响应用户请求的效率方面来看。因此，操作系统中线程的概念便被引进了。线程，是进程的一部分，一个没有线程的进程可以被看作是单线程的。线程有时又被称为轻权进程或轻量级进程，也是 CPU 调度的一个基本单位。</p> <p>说到这里，我们对进程与线程都有了一个大体上的印象，现在开始说说二者大致的区别。</p> <p>进程的执行过程是线状的， 尽管中间会发生中断或暂停，但该进程所拥有的资源只为该线状执行过程服务。一旦发生进程上下文切换，这些资源都是要被保护起来的。这是进程宏观上的执行过 程。而进程又可有单线程进程与多线程进程两种。我们知道，进程有 一个进程控制块 PCB ，相关程序段 和 该程序段对其进行操作的数据结构集 这三部分，单线程进程的执行过程在宏观上是线性的，微观上也只有单一的执行过程；而多线程进程在宏观上的执行过程同样为线性的，但微观上却可以有多个执行 操作（线程），如不同代码片段以及相关的数据结构集。线程的改变只代表了 CPU 执行过程的改变，而没有发生进程所拥有的资源变化。除了 CPU 之外，计算机内的软硬件资源的分配与线程无关，线程只能共享它所属进程的资源。与进程控制表和 PCB 相似，每个线程也有自己的线程控制表 TCB ，而这个 TCB 中所保存的线程状态信息则要比 PCB 表少得多，这些信息主要是相关指针用堆栈（系统栈和用户栈），寄存器中的状态数据。进程拥有一个完整的虚拟地址空间，不依赖于线程而独立存在；反之，线程是进程的一部分，没有自己的地址空间，与进程内的其他线程一起共享分配给该进程的所有资源。</p> <p>线程可以有效地提高系统的执行效率，但并不是在所有计算机系统中都是适用的，如某些很少做进程调度和切换的实时系统。使用线程的好处是有多个任务需要处理 机处理时，减少处理机的切换时间；而且，线程的创建和结束所需要的系统开销也比进程的创建和结束要小得多。最适用使用线程的系统是多处理机系统和网络系统 或分布式系统。</p> <p><strong>进程和线程的区别</strong></p> <p>(1)、地址空间:进程内的一个执行单元;进程至少有一个线程;它们共享进程的地址空间;而进程有自己独立的地址空间;</p> <p>(2)、资源拥有:进程是资源分配和拥有的单位,同一个进程内的线程共享进程的资源</p> <p>(3)、线程是处理器调度的基本单位,但进程不是.</p> <p>(4)、二者均可并发执行</p> <p><strong>优缺点</strong></p> <p>线程执行开销小，但是不利于资源的管理和保护。线程适合在SMP机器（双CPU系统）上运行。</p> <p>进程执行开销大，但是能够很好的进行资源管理和保护。进程可以跨机器前移。</p> <p><strong>何时使用多进程，何时使用多线程？</strong></p> <p>对资源的管理和保护要求高，不限制开销和效率时，使用多进程。</p> <p>要求效率高，频繁切换时，资源的保护管理要求不是很高时，使用多线程。</p> <h2 id="vsftpd服务器企业实战"><a href="#vsftpd服务器企业实战" class="header-anchor">#</a> Vsftpd服务器企业实战</h2> <p>文件传输协议（File Transfer Protocol，FTP），基于该协议FTP客户端与服务器端可以实现共享文件、上传文件、下载文件。FTP基于TCP协议生成一个虚拟的连接，主要用于控制FTP连接信息，同时在生成一个单独的TCP连接用于FTP协议传输。用户可以通过客户端像服务器端上传、下载、删除文件，FTP服务器端可以同时提供给多人共享使用。</p> <p>FTP服务是cllent/server（简称C/S）模式，基于FTP协议实现FTP文件对外共享及传输的软件称为FTP服务器源端，客户端基于FTP协议，则称为FTP客户端，FTP客户端可以向服务器端上传、下载。</p> <h3 id="ftp传输模式"><a href="#ftp传输模式" class="header-anchor">#</a> FTP传输模式</h3> <p>FTP基于C/S模式，FTP客户端与服务器端有两种传输模式，分别是FTP主动模式、FTP被动模式，主被动模式是以FTP服务器端为参照物。</p> <p><strong>Port模式（主动模式）--&gt; 默认</strong></p> <p>Ftp客户端首先和Ftp server的tcp 21端口建立连接，通过这个通道发送命令，客户端要接受数据的时候在这个通道上发送Port命令，Port命令包含了客户端用什么端口（一个大于1024的端口）接受数据，在传送数据的时候，服务器端通过自己的TCP 20端口发送数据。这个时候数据连接由server向client建立一个连接。</p> <p>Port交互流程：</p> <p>client端：client链接server的21端口，并发送用户名密码和一个随机在大于1024上的端口及port命令给server，表明采用主动模式，并开放那个随机的端口。</p> <p>server端：server收到client发来的Port主动模式命令与端口后，会通过自己的20端口与client那个随机的端口连接后，进行数据传输。</p> <p><strong>Pasv模式（被动方式）</strong></p> <p>建立控制通道和Port模式类似，当客户端通过这个通道发送Pasv命令的时候，Ftp server打开了一个位于1024和5000之间的随机端口并且通知客户端在这个端口上进行传输数据请求，然后Ftp server将通过这个端口进行数据传输。这个时候数据连接由client向server建立连接。</p> <p>Pasv交互流程：</p> <p>Client：client连接server的21号端口，发送用户名密码及pasv命令给server，表明采用被动模式。</p> <p>server：server收到client发来的pasv被动模式命令之后，把随机开放在大于1024上的端口告诉client，client再用自己的20 端口与server的那个随机端口进行连接后进行数据传输。</p> <p><strong>总结</strong></p> <p>如果从C/S模型这个角度来说，PORT对于服务器来说是OUTBOUND（出站），而PASV模式对于服务器是INBOUND（入站），这一点请特别注意，尤其是在使用防火墙的企业里，这一点非常关键，如果设置错了，那么客户将无法连接。</p> <h3 id="vsftpd服务器简介"><a href="#vsftpd服务器简介" class="header-anchor">#</a> Vsftpd服务器简介</h3> <p>vsftpd是一款在Linux发行版中最受推崇的FTP服务器程序。特点是小巧轻快，安全易用。稳定高效、满足企业跨部门、多用户的使用等。</p> <p>vsftpd 是（very secure FTP daemon）的缩写，安全性是它的一个最大的特点。vsftpd 是一个 UNIX 类操作系统上运行的服务器的名字，它可以运行在诸如 Linux、BSD、Solaris、 HP-UNIX等系统上面，是一个完全免费的、开放源代码的ftp服务器软件，支持很多其他的 FTP 服务器所不支持的特征。优点：非常高的安全性需求、带宽限制、良好的可伸缩性、可创建虚拟用户、支持IPv6、速率高等。</p> <h3 id="vsftpd服务器安装配置"><a href="#vsftpd服务器安装配置" class="header-anchor">#</a> Vsftpd服务器安装配置</h3> <p>Vsftpd服务器端安装有两种方式：一是YUM方式安装，二是基于源码编译安装，最终实现的效果是一样的，下面是基于YUM安装Vsftpd。</p> <p>一、yum安装Vsftpd服务端</p> <div class="language- extra-class"><pre><code>yum install vsftpd* -y 
+</code></pre></div><p>二、查看配置文件的路径</p> <div class="language- extra-class"><pre><code>rpm -ql vsftpd |more     
+</code></pre></div><p>三、启动Vsftpd服务</p> <div class="language- extra-class"><pre><code>systemctl restart vsftpd 
+
+// 查看进程是否启动
+[root@localhost ~]# ps -ef |grep vsftpd
+root      7397     1  0 14:57 ?        00:00:00 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
+root      7401  7328  0 14:57 pts/1    00:00:00 grep --color=auto vsftpd
+
+// 查看是否开启21端口
+[root@localhost ~]# ss -ntl
+State       Recv-Q Send-Q         Local Address:Port                Peer Address:Port              
+LISTEN      0      128                        *:22                             *:*                  
+LISTEN      0      32                        :::21                            :::*  
+</code></pre></div><p>四、启动Vsftpd服务后，通过Windows客户端资源管理器访问Vsftpd服务器.(192.168.111.121--&gt;本机内网ip)</p> <div class="language- extra-class"><pre><code>ftp://192.168.111.121
+</code></pre></div><p>五、存放文件的路径</p> <div class="language- extra-class"><pre><code>[root@localhost pub]# pwd
+/var/ftp/pub
+</code></pre></div><blockquote><p>/etc/vsftpd/vsftpd.conf  #主配置文件
+<br>
+/etc/vsftpd/ftpusers     #不能访问FTP用户列表
+<br>
+/etc/vsftpd/user_list    #不能访问FTP用户列表</p></blockquote> <p><strong>vsftpd配置文件<code>/etc/vsftpd/vsftpd.conf</code>详解！</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#设置为NO代表不允许匿名
+anonymous_enable=YES
+ 
+#设定本地用户可以访问，主要是虚拟宿主用户，如果设为NO那么所欲虚拟用户将无法访问。
+local_enable=YES
+ 
+#可以进行写的操作
+write_enable=YES
+ 
+#设定上传文件的权限掩码
+local_umask=022
+ 
+#禁止匿名用户上传
+anon_upload_enable=NO
+ 
+#禁止匿名用户建立目录
+anon_mkdir_write_enable=NO
+ 
+# 设定开启目录标语功能
+dirmessage_enable=YES
+ 
+# 设定开启日志记录功能
+xferlog_enable=YES
+ 
+#设定端口20进行数据连接
+connect_from_port_20=YES
+ 
+#设定禁止上传文件更改宿主
+chown_uploads=NO
+ 
+#设定vsftpd服务日志保存路劲。注意：改文件默认不纯在，需手动touch，且由于这里更改了vsftpd服务的宿主用户为手动建立的vsftpd，则必
+须注意给予该用户对日志的读取权限否则服务启动失败。
+xferlog_file=/var/log/vsftpd.log
+ 
+#设定日志使用标准的记录格式
+xferlog_std_format=YES
+ 
+#设定空闲链接超时时间，这里使用默认/秒。
+idle_session_timeout=600
+ 
+#设定最大连接传输时间，这里使用默认，将具体数值留给每个用户具体制定，默认120/秒
+data_connection_timeout=3600
+ 
+#设定支撑vsftpd服务的宿主用户为手动建立的vsftpd用户。注意：一旦更改宿主用户，需一起与该服务相关的读写文件的读写赋权问题.
+nopriv_user=vsftpd
+ 
+#设定支持异步传输的功能
+async_abor_enable=YES
+ 
+#设置vsftpd的登陆标语
+ftpd_banner=hello 欢迎登陆
+ 
+#禁止用户登出自己的ftp主目录
+chroot_list_enable=NO
+ 
+#禁止用户登陆ftp后使用ls -R 命令。该命令会对服务器性能造成巨大开销，如果该项运行当多个用户使用该命令会对服务器造成威胁。
+ls_recurse_enable=NO
+
+#启用IPv6监听
+listen_ipv6=YES
+ 
+#设定vsftpd服务工作在standalone模式下。所谓standalone模式就是该服务拥有自己的守护进程，在ps -A可以看出vsftpd的守护进程名。如果
+不想工作在standalone模式下，可以选择SuperDaemon模式，注释掉即可，在该模式下vsftpd将没有自己的守护进程，而是由超级守护进程Xinetd全权代理，&gt;与此同时，vsftpd服务的许多功能，将得不到实现。
+listen=YES
+ 
+#设定userlist_file中的用户将不能使用ftp
+userlist_enable=YES
+ 
+ 
+#设定pam服务下的vsftpd验证配置文件名。因此，PAM验证将参考/etc/pam.d/下的vsftpd文件配置。
+pam_service_name=vsftpd
+ 
+#设定支持TCPwrappers
+tcp_wrappers=YES
+ 
+#########以下是关于虚拟用户支持的重要配置项目，默认.conf配置文件中是不包含这些项目的，需手动添加。#########
+#启用虚拟用户功能
+guest_enable=YES
+ 
+#指定虚拟的宿主用户
+guest_username=virtusers
+ 
+#设定虚拟用户的权限符合他们的宿主用户
+virtual_use_local_privs=YES
+ 
+#设定虚拟用户个人vsftp的配置文件存放路劲。这个被指定的目录里，将被存放每个虚拟用户个性的配置文件，注意的地方是：配置文件名必须
+和虚拟用户名相同。
+user_config_dir=/etc/vsftpd/vconf
+ 
+#禁止反向域名解析，若是没有添加这个参数可能会出现用户登陆较慢，或则客户链接不上ftp的现象
+reverse_lookup_enable=NO
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br></div></div><p><strong>FTP主被动模式的选择，默认为主动模式，设置为被动模式的方法：</strong></p> <div class="language- extra-class"><pre><code>pasv_enable=YES
+pasv_min_port=60000
+pasv_max_port=60100
+
+service iptables start 打开防火墙
+iptables -I INPUT  -p tcp  --dport 10020:10040  -j ACCEPT
+iptables -I INPUT -p tcp --dport 21 -j ACCEPT
+</code></pre></div><h3 id="vsftpd匿名用户配置"><a href="#vsftpd匿名用户配置" class="header-anchor">#</a> Vsftpd匿名用户配置</h3> <p>Vsftpd默认以匿名用户访问，匿名用户默认访问的FTP服务器发布端路径为/var/ftp/pub,匿名用户只有查看的权限，无法创建、删除、修改。如需关闭FTP匿名用户访问，需要修改配置文件<code>/etc/vsftpd/vsftpd.conf</code>，将<code>anonymous_enable=YES</code>修改为<code>anonymous_enable=NO</code>,重启Vsftpd服务即可。</p> <p>如果允许匿名用户上传、下载、删除文件，需要修改配置文件<code>/etc/vsftpd/vsftpd.conf</code>，加入以下代码：</p> <div class="language- extra-class"><pre><code>anon_upload_enable=YES      # 允许匿名用户上传
+anon_mkdir_write_enable=YES # 允许匿名用户建立目录
+anon_other_write_enable=YES # 允许匿名用户其他人写入权限
+</code></pre></div><p><strong>匿名用户完整的vsftpd.conf配置文件代码如下：</strong></p> <div class="language- extra-class"><pre><code>anonymous_enable=YES
+local_enable=YES
+write_enable=YES
+local_umask=022
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+anon_other_write_enable=YES
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+</code></pre></div><p>由于默认Vsftpd匿名用户有两种：anonymous、ftp，所以匿名用户如果需要上传文件、删除及修改等权限，需要Vsftpd用户对/var/ftp/pub/目录有写权限，使用chown和chmod设置权限，命令如下：</p> <div class="language- extra-class"><pre><code>chown -R ftp:ftp /var/ftp/pub
+chmod o+w /var/ftp/pub
+</code></pre></div><p>如上vsftpd.conf配置文件配置完毕，同时权限设置完毕，重启vsftpd服务即可，通过Windows客户端访问，能够上传文件、删除文件、创建目录等操作。</p> <h4 id="ftp操作文件报-550-create-directory-operation-failed-解决方法？"><a href="#ftp操作文件报-550-create-directory-operation-failed-解决方法？" class="header-anchor">#</a> ftp操作文件报“550 create directory operation failed”解决方法？</h4> <p><strong>linux下文件夹属性设置正确，操作ftp文件（如新建文件/文件夹, 删除文件, 重命名等都不可操作) 弹出 &quot;550 create directory operation failed&quot; 的错误信息</strong></p> <p><strong>原因:</strong></p> <p>是SELinux(Security-Enhanced Linux)----是美国国家安全局对于强制访问控制的实现, 是Linux 上最杰出的新安全子系统.)安装机制搞的鬼.只要disable SELinux或者permissive SELinux就可以了.</p> <p><strong>解决命令：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>sed -i.bak 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config &amp;&amp; setenforce 0 &amp;&amp; getenforce
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="vsftpd系统用户配置"><a href="#vsftpd系统用户配置" class="header-anchor">#</a> Vsftpd系统用户配置</h3> <p>Vsftpd匿名用户设置完毕后，任何人都可以查看FTP服务器端的文件、目录，甚至可以修改、删除、文件和目录，如果存放私密文件在FTP服务器端，并保证文件或者目录专属于拥有者。</p> <p>实现Vsftpd系统用户方式验证，只需在Linux系统中设置多个用户即可，创建用户使用useradd指令，同时给用户设置密码，即可通过用户和密码登陆FTP，进行文件上传、下载、删除等操作。Vsftpd系统用户实现方法步骤如下：</p> <p>一、Linux系统中创建系统用户xingzheng、qianduan,分别设置密码为123456,456789。</p> <div class="language- extra-class"><pre><code>useradd xingzheng
+useradd qianduan
+echo 123456 |passwd --stdin xingzheng
+echo 456789 |passwd --stdin qianduan
+</code></pre></div><p>二、修改vsftpd.conf配置文件代码如下：</p> <div class="language- extra-class"><pre><code>anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+</code></pre></div><p>三、通过Windows资源客户端验证，使xingzheng，qiandaun用户登陆FTP服务器，即可上传、下载、删除文件，xingzheng，qiandaun系统用户上传文件的家目录在/home/xingzheng，/home/qiandaun下。</p> <h3 id="vsftpd虚拟用户配置"><a href="#vsftpd虚拟用户配置" class="header-anchor">#</a> Vsftpd虚拟用户配置</h3> <p>Vsftpd基于系统用户访问FTP服务器，系统用户越来越多不利于管理，而且不利于系统安全，为了更加安全的使用Vsftpd服务，可以使用Vsftpd虚拟用户的方式。</p> <p>Vsftpd虚拟用户原理为了虚拟用户没有实际的正式系统用户，而是通过映射到其中一个真实用户以及设置相应的权限来实现访问验证，虚拟用户不能登录Linux系统，从而让系统更加安全可靠。</p> <p>（一）、安装Vsftpd虚拟用户需要用到的软件及认证的模块</p> <div class="language- extra-class"><pre><code>yum install pam* libdb-utils libdb* --skip-broken -y
+</code></pre></div><p>（二）、创建虚拟用户临时文件<code>/etc/vsftpd/ftpusers.txt</code>，新建虚拟用户和密码，其中zhang，wang为虚拟用户名，123456为密码，有多少个用户，以此格式填写即可。（奇行为用户名，偶行为密码）</p> <div class="language- extra-class"><pre><code>zhang
+123456
+wang
+123456
+</code></pre></div><p>（三）、生成Vsftpd虚拟用户数据库认证文件，权限设为700或者600；</p> <div class="language- extra-class"><pre><code>db_load -T -t hash -f /etc/vsftpd/ftpusers.txt  /etc/vsftpd/vsftpd_login.db
+chmod 700 /etc/vsftpd/vsftpd_login.db
+</code></pre></div><p>（四）、配置PAM认证文件<code>/etc/pam.d/vsftpd</code>,行首添加以下两行代码，其他注释掉</p> <div class="language- extra-class"><pre><code>#%PAM-1.0
+auth       required     /lib64/security/pam_userdb.so db=/etc/vsftpd/vsftpd_login
+account    required     /lib64/security/pam_userdb.so db=/etc/vsftpd/vsftpd_login
+#session    optional     pam_keyinit.so    force revoke
+#auth       required    pam_listfile.so item=user sense=deny file=/etc/vsftpd/ftpusers onerr=succeed
+#auth       required    pam_shells.so
+#auth       include     password-auth
+#account    include     password-auth
+#session    required     pam_loginuid.so
+#session    include     password-auth
+</code></pre></div><p>（五）、Vsftpd虚拟用户需要映射到一个系统用户，该系统用户不需要密码，也不需要登陆，主要用于虚拟用户映射使用，创建用户命令：</p> <div class="language- extra-class"><pre><code>useradd -s /sbin/nologin ftpuser
+</code></pre></div><p>（六）、完整的<code>/etc/vsftpd/vsftpd.conf</code>配置文件代码如下：</p> <div class="language- extra-class"><pre><code>#设置为NO代表不允许匿名
+anonymous_enable=YES
+#设定本地用户可以访问，主要是虚拟宿主用户，如果设为NO那么所欲虚拟用户将无法访问。
+local_enable=YES
+#可以进行写的操作
+write_enable=YES
+#设定上传文件的权限掩码
+local_umask=022
+# 设定开启目录标语功能
+dirmessage_enable=YES
+# 设定开启日志记录功能
+xferlog_enable=YES
+#设定端口20进行数据连接
+connect_from_port_20=YES
+#设定日志使用标准的记录格式
+xferlog_std_format=YES
+#设定vsftpd服务工作在standalone模式下。所谓standalone模式就是该服务拥有自己的守护进程，在ps -A可以看出vsftpd的守护进程名。如果
+不想工作在standalone模式下，可以选择SuperDaemon模式，注释掉即可，在该模式下vsftpd将没有自己的守护进程，而是由超级守护进程Xinetd全权代理，&gt;与此同时，vsftpd服务的许多功能，将得不到实现。
+listen=NO
+#启用IPv6监听
+listen_ipv6=YES
+#设定userlist_file中的用户将不能使用ftp
+userlist_enable=YES
+#设定支持TCPwrappers
+tcp_wrappers=YES
+# 虚拟用户启用PAM认证
+pam_service_name=vsftpd
+# 启用虚拟用户
+guest_enable=YES
+# 映射虚拟用户至系统用户ftpuser
+guest_username=ftpuser
+# 设置虚拟用户配置文件所在位置
+user_config_dir=/etc/vsftpd/vsftpd_user_conf
+# 虚拟用户使用与本地用户相同的权限
+virtual_use_local_privs=YES
+</code></pre></div><p>（七）、至此所有虚拟用户共同使用<code>/home/ftpuser</code>主目录实现文件的上传与下载，可以在<code>/etc/vsftpd/vsftpd_user_conf</code>目录创建虚拟用户各自的配置文件，创建虚拟用户配置文件主目录。</p> <div class="language- extra-class"><pre><code>mkdir -p //etc/vsftpd/vsftpd_user_conf
+</code></pre></div><p>（八）、以下分别为虚拟用户zhang，wang创建配置文件，同时创建私有的虚拟目录。</p> <div class="language- extra-class"><pre><code>[root@localhost ~]# vim /etc/vsftpd/vsftpd_user_conf/zhang 
+local_root=/home/ftpuser/zhang
+write_enable=YES
+anon_world_readable_only=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+anon_other_write_enable=YES
+
+[root@localhost ~]# vim /etc/vsftpd/vsftpd_user_conf/wang 
+local_root=/home/ftpuser/wang
+write_enable=YES
+anon_world_readable_only=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+anon_other_write_enable=YES
+
+注释详解：
+local_root=/home/ftpuser/zhang # zhang虚拟用户配置文件的路径
+write_enable=YES               # 允许登陆用户有写权限
+anon_world_readable_only=YES   # 允许匿名用户下载，然后读取文件
+anon_upload_enable=YES         # 允许匿名用户上传文件权限，只有在write_enable=YES生效
+anon_mkdir_write_enable=YES    # 允许匿名用户创建目录，只有在write_enable=YES时该参数生效
+anon_other_write_enable=YES    # 允许匿名用户其他权限，例如删除、重命名等
+</code></pre></div><p>（九）、创建虚拟用户各自虚拟目录。</p> <div class="language- extra-class"><pre><code>mkdir -p /home/ftpuser/{zhang,zhang};chown -R ftpuser:ftpuser /home/ftpuser/
+</code></pre></div><p>（十）、重启vsftpd服务，通过Windows客户端资源管理器访问Vsftpd服务器</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/disk.html" class="prev">
+        Linux磁盘管理
+      </a></span> <span class="next"><a href="/book/linux/HTTP.html">
+        HTTP协议详解
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/26.85e97b1e.js" defer></script>
+  </body>
+</html>

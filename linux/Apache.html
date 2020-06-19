@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Apache Web服务器企业实战 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/16.f1892724.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/3.b5cecfc5.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/36.f9f46091.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link router-link-active">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/linux/" aria-current="page" class="sidebar-link">Linux快速入门</a></li><li><a href="/book/linux/command.html" class="sidebar-link">Linux必备命令</a></li><li><a href="/book/linux/user_rights.html" class="sidebar-link">Linux用户及权限管理</a></li><li><a href="/book/linux/Software.html" class="sidebar-link">Linux软件包企业实战</a></li><li><a href="/book/linux/disk.html" class="sidebar-link">Linux磁盘管理</a></li><li><a href="/book/linux/vdftpd.html" class="sidebar-link">Linux文件服务器企业实战</a></li><li><a href="/book/linux/HTTP.html" class="sidebar-link">HTTP协议详解</a></li><li><a href="/book/linux/Apache.html" aria-current="page" class="active sidebar-link">Apache Web服务器企业实战</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache-web服务器入门简介" class="sidebar-link">Apache Web服务器入门简介</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#prefork-mpm工作原理" class="sidebar-link">Prefork MPM工作原理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#worker-mpm工作原理" class="sidebar-link">Worker MPM工作原理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#event-mpm工作原理" class="sidebar-link">Event MPM工作原理</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#prefork、worker与event引擎区别" class="sidebar-link">Prefork、Worker与Event引擎区别</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache-web服务器安装" class="sidebar-link">Apache Web服务器安装</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache虚拟主机企业应用" class="sidebar-link">Apache虚拟主机企业应用</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache常用目录学习" class="sidebar-link">Apache常用目录学习</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache配置文件详解" class="sidebar-link">Apache配置文件详解</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#require指令进行访问控制" class="sidebar-link">require指令进行访问控制</a></li><li class="sidebar-sub-header"><a href="/book/linux/Apache.html#apache-rewrite规则实战" class="sidebar-link">Apache rewrite规则实战</a></li></ul></li><li><a href="/book/linux/mysql.html" class="sidebar-link">MySQL服务器企业实战</a></li><li><a href="/book/linux/problem.html" class="sidebar-link">问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="apache-web服务器企业实战"><a href="#apache-web服务器企业实战" class="header-anchor">#</a> Apache Web服务器企业实战</h1> <p>Web服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以向浏览器等Web客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。目前最主流的三个Web服务器是Apache Nginx IIS。</p> <p><strong>目前主流的WEB服务器软件包括:</strong></p> <ol><li>Apache是世界使用排名第一的Web服务器软件。</li> <li>Nginx的HTTP服务器。</li> <li>Lighttpd服务器。</li> <li>IIS是微软公司主推的服务器。</li> <li>Resin提供了最快的jsp/servlets运行平台。</li> <li>Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apache、Sun 和其他一些公司及个人共同开发而成。</li> <li>BEA WebLogic是用于开发、集成、部署和管理大型分布式Web应用、网络应用和数据库应用的Java应用服务器。</li> <li>Jetty是一个开源的servlet容器，它为基于Java的web内容，例如JSP和servlet提供运行环境。</li></ol> <h2 id="apache-web服务器入门简介"><a href="#apache-web服务器入门简介" class="header-anchor">#</a> Apache Web服务器入门简介</h2> <p>Apache HTTP Server（简称Apache）是Apache软件基金会的一个开放源码的网页服务器，可以在大多数计算机操作系统中运行，由于其多平台和安全性被广泛使用，是最流行的Web服务器端软件之一。</p> <p>Apache HTTP服务器是一个模块化的服务器，源于NCSAhttpd服务器，经过多次修改，成为世界使用排名第一的Web服务器软件。Apache取自“a patchy server”的读音，意思是充满补丁的服务器，因为它是自由软件，所以不断有人来为它开发新的功能、新的特性、修改原来的缺陷。</p> <p>Apache的特点是简单、速度快、性能稳定，并可做代理服务器来使用。</p> <h2 id="prefork-mpm工作原理"><a href="#prefork-mpm工作原理" class="header-anchor">#</a> Prefork MPM工作原理</h2> <p>每辆汽车都有发动机引擎，不同的引擎，对车子运行效率也不一样，同样apache也有类似的工作引擎或者处理请求的模块，称之为多路处理模块（Multi-Processing Modules，MPM），Apache WEB服务器有三种处理模块Prefork MPM、Worker MPM、Event MPM。</p> <p>在企业中Apache最常用的是Prefork MPM、Worker MPM。Event MPM不支持HTTPS，官网也给出了&quot;This MPM is experimental, so it may or may not work as expected .&quot;的提示，所以Event MPM很少使用。</p> <p>默认的Apache处理模块为prefork MPM方式，prefork采用的预派生子进程方式。prefork用单独的子进程来处理不同的请求，进程之间是彼此独立的，所以比较稳定。</p> <p>prefork MPM 的工作原理：控制进程master在最初建立“StartServers”个进程后，为了满足“MinspareServers”设置的最小空闲进程，所以需创建第一个空闲进程，等待一秒钟，继续创建两个，在等待一秒钟，继续创建四个，依次按照递增指数级创建进程数，最多每秒同时创建32个空闲进程，直到满足至少有“MinspareServers”设置的值为止。如果空闲进程数大于这个值，Apache会自动kill掉一些多余进程。这个值不要设得过大，但如果设的值比“MinSpareServers”小，Apache会自动把其调整为“MinSpareServers+1”。如果站点负载较大，可考虑同时加大“MinSpareServers”和“MaxSpareServers”。</p> <p>Apache的预派生模式（prefork），基于预派生模式不必再请求到来时在产生新的进程，从而减小了系统开销以增加性能，不过由于Prefork MPM引擎是基于多进程方式提供对外服务，每个进程占内存也相对较高。</p> <img src="/book/http/prefork.jpg" alt="prefork MPM"> <div class="language- extra-class"><pre><code>prefork：多进程I/O模型，每个进程响应一个请求，默认模型
+    一个主进程：生成和回收n个子进程，创建套接字，不响应请求
+    多个子进程：工作work进程，每个子进程处理一个请求；系统初始时，预先生成多个空闲进程，等待请求，最大不超过1024个
+</code></pre></div><h2 id="worker-mpm工作原理"><a href="#worker-mpm工作原理" class="header-anchor">#</a> Worker MPM工作原理</h2> <p>相对于Prefork MPM, Worker方式是2.0版中全新的支持多线程和多进程混合模型的MPM，由于使用线程来处理，所以可以处理海量的HTTP请求，而系统资源的开销要小于基于Prefork多进程的方式。worker也是基于多进程，但每个进程又生出多个线程，这样可以保证多线程可以获得进程的稳定性。</p> <p>Worker MPM的工作原理，控制进程master在最建立“StartServers”个进程，每个进程会创建“ ThreadsPerChild ”设置的线程数，多个线程共享该进程的内存空间，同时每个线程独立地处理用户的HTTP请求，为了不在请求到来时在生成线程，worker MPM也可以设置最大最小空闲线程数。</p> <p>Worker MPM模式下同时处理的请求总数=进程总数* ThreadsPerChild, 也即等于MaxClients。如果服务器负载很高，当前进程数不满足需求,Master控制进程会fork 新的进程，最大进进程不能超过Serverlimit数，如果需调整的StartServers进程数，需同时调整ServerLimit值。</p> <img src="/book/http/worker.jpg" alt="worker MPM"> <div class="language- extra-class"><pre><code>worker：复用的多进程I/O模型,多进程多线程，IIS使用此模型
+    一个主进程：生成m个子进程，每个子进程负责生个n个线程，每个线程响应一个请求，并发响应请求：m*n
+</code></pre></div><h2 id="event-mpm工作原理"><a href="#event-mpm工作原理" class="header-anchor">#</a> Event MPM工作原理</h2> <p>这个是Apache中最新的模式，在现在版本里的已经是稳定可用的模式。它和worker模式很像，最大的区别在于，它解决了keep-alive场景下，长期被占用的线程的资源浪费问题（某些线程因为被keep-alive，空挂在哪里等待，中间几乎没有请求过来，甚至等到超时）。event MPM中，会有一个专门的线程来管理这些keep-alive类型的线程，当有真实请求过来的时候，将请求传递给服务线程，执行完毕后，又允许它释放。这样增强了高并发场景下的请求处理能力。</p> <p>event MPM在遇到某些不兼容的模块时，会失效，将会回退到worker模式，一个工作线程处理一个请求。官方自带的模块，全部是支持event MPM的。</p> <p>注意一点，event MPM需要Linux系统（Linux 2.6+）对EPoll的支持，才能启用。</p> <p>还有，需要补充的是HTTPS的连接（SSL），它的运行模式仍然是类似worker的方式，线程会被一直占用，知道连接关闭。部分比较老的资料里，说event MPM不支持SSL，那个说法是几年前的说法，现在已经支持了。</p> <img src="/book/http/event.jpg" alt="event MPM"> <div class="language- extra-class"><pre><code>event：事件驱动模型（worker模型的变种）
+    一个主进程：生成m个子进程，每个进程直接响应n个请求，并发响应请求：m*n，有专门的线程来管理这些keep-alive类型的线程，当有真实请求时，将请求传递给服务线程，执行完毕后，又允许释放。这样增强了高并发场景下的请求处理能力
+    httpd-2.2: event测试版，centos6默认
+    httpd-2.4：event稳定版，centos7默认
+</code></pre></div><h2 id="prefork、worker与event引擎区别"><a href="#prefork、worker与event引擎区别" class="header-anchor">#</a> Prefork、Worker与Event引擎区别</h2> <p>使用命令<code>httpd -V</code>查看=我们Apache的模式，及具体内容。</p> <p>Prefork MPM模式：使用多个进程。每个进程只有一个线程，每个进程在某个确定的时间只能维持一个连接，优点是稳定，但内存开销较高。</p> <p>worker MPM模式：使用多个进程。每个进程包含多个线程，每个线程在某个确定的时间只能维持一个连接，内存占用量比较小，适合大并发、高流量的Web服务器。Wokker MPM缺点是一个线程崩溃，整个进程就会连同其任何线程一起挂掉。</p> <p>event MPM模式：prefork和Worker方式在非常繁忙的服务器应用下都有些不足。尽管HTTP的Keepalive方式能减少TCP连接数量和网络负载，但是 Keepalive需要和服务进程或者线程绑定，这就导致一个繁忙的服务器会耗光所有的线程。 Event MPM是解决这个问题的一种新模型，它把服务进程从连接中分离出来。在服务器处理速度很快，同时具有非常高的点击率时，可用的线程数量就是关键的资源限 制，此时Event MPM方式是最有效的。一个以Worker MPM方式工作的繁忙服务器能够承受每秒好几万次的访问量（例如在大型新闻服务站点的高峰时），而Event MPM可以用来处理更高负载。event和work有相同之处，都是通过线程来处理请求；一个父进程建立多个子进程，而子进程又会建立多个线程。</p> <h2 id="apache-web服务器安装"><a href="#apache-web服务器安装" class="header-anchor">#</a> Apache Web服务器安装</h2> <div class="language- extra-class"><pre><code>版本:
+    CentOS6: 2.2
+    CentOS7: 2.4
+安装方式：
+    rpm：centos发行版，稳定，建议使用
+    编译：定制或特殊需求
+</code></pre></div><p><strong>以下是编译安装httpd-2.4.35</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.查询是否安装了apache服务器httpd
+[root@centos7 ~]# rpm -qa|grep httpd
+httpd-2.4.6-45.el7.centos.x86_64
+httpd-tools-2.4.6-45.el7.centos.x86_64
+
+2.卸载系统自动装的apache服务器httpd
+[root@centos7 ~]# httpd -k stop     #停止httpd服务器
+[root@centos7 ~]# yum remove httpd    #卸载httpd服务器
+
+3.下载httpd并解压
+[root@centos7 ~]# http://mirrors.hust.edu.cn/apache/httpd/httpd-2.4.35.tar.bz2
+[root@centos7 ~]# tar -xjvf httpd-2.4.35.tar.bz2
+tar (child): lbzip2: Cannot exec: No such file or directory 
+tar (child): Error is not recoverable: exiting now 
+tar: Child returned status 2 
+tar: Error is not recoverable: exiting now
+解决方法很简单，只要安装bzip2就行了，yum安装的命令如下：
+yum -y install bzip2
+
+4.安装需要依赖的安装包或者模块
+yum -y install gcc-c++ 
+yum groupinstall &quot;development tools&quot;
+yum install openssl-devel pcre-devel expat-devel apr-devel apr-util-devel -y
+
+5.预编译Apache
+cd httpd-2.4.35/
+./configure
+make &amp;&amp; make install
+
+6.编译完成的Httpd的配置文件位于/usr/local/apache2/conf/httpd.conf,我们需要先做个简单的设置，复杂的设置后期可以参考文档自行设置：
+useradd -r -s /sbin/nologin apache //创建apache 系统用户
+sed -i.bak 's/#ServerName/ServerName/g' /usr/local/apache2/conf/httpd.conf
+sed -i 's/User daemon/User apache/' /usr/local/apache2/conf/httpd.conf
+sed -i 's/Group daemon/Group apache/' /usr/local/apache2/conf/httpd.conf
+
+7.将httpd服务加入开机启动，并添加执行权限
+echo &quot;/usr/local/apache2/bin/apachectl start&quot; &gt;&gt; /etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local
+
+[root@localhost rc.d]# tail -n1 /etc/rc.d/rc.local  
+/usr/local/apache2/bin/apachectl start
+[root@localhost rc.d]# ll /etc/rc.d/rc.local
+-rw-r--r--. 1 root root 512 10月 12 15:27 /etc/rc.d/rc.local
+
+8.环境变量
+echo &quot;PATH=/usr/local/apache2/bin:\$PATH&quot; &gt; /etc/profile.d/httpd.sh
+source /etc/profile.d/httpd.sh
+
+9.关闭防火墙和关闭SELINUX
+systemctl stop firewlld
+sed -i.bak 's/SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config &amp;&amp; setenforce 0 &amp;&amp; getenforce
+
+10.启动httpd服务，浏览器访问当前主机的IP即可。
+apachectl start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br></div></div><h2 id="apache虚拟主机企业应用"><a href="#apache虚拟主机企业应用" class="header-anchor">#</a> Apache虚拟主机企业应用</h2> <p>企业正式环境中，一台WEB服务器发布单个网站非常浪费资源，所以一台WEB服务器上会发布多个网站，少则3~5，多则2~30个网站。在一台服务器上发布多个网站，也称为部署多个虚拟主机，WEB虚拟主机配置方法有以下三种：</p> <ul><li>单个单IP多个socker端口；</li> <li>基于多IP地址的一个端口；</li> <li>基于单IP一个端口不同域名；</li></ul> <p>其中基于同一端口不同域名的方式在企业中得到广泛应用。以下是基于一个端口不同域名，在一台Apache WEB服务器上部署多个网站：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>1.修改httpd.conf文件的480行处，去掉&quot;#&quot;号，开启虚拟主机
+vim /usr/local/apache2/conf/httpd.conf
+Include conf/extra/httpd-vhosts.conf //480行处去掉前面的&quot;#&quot;号
+
+2.编辑/usr/local/apache2/conf/extra/httpd-vhosts.conf中的代码
+&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaaaaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/bbb.com&quot;
+    ServerName www.bbb.com
+    ServerAlias www.bbbbbb.com
+    ErrorLog &quot;logs/bbb.com-error_log&quot;
+    CustomLog &quot;logs/bbb.com-access_log&quot; common
+&lt;/VirtualHost&gt;
+配置说明：
+&lt;VirtualHost *:80&gt;                                    # 虚拟主机配置的起始
+    ServerAdmin 1353250703@qq.com                     # 管理员邮箱
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;  # 虚拟主机发布目录
+    ServerName www.aaa.com                            # 虚拟主机完整域名
+    ServerAlias www.aaaaaa.com                        # 设定主机的候补域名
+    ErrorLog &quot;logs/aaa.com-error_log&quot;                 # 错误日志路径及文件名
+    CustomLog &quot;logs/aaa.com-access_log&quot; common        # 访问日志路径及文件名
+&lt;/VirtualHost&gt;
+
+3. 创建www.aaa.com、www.bbb.com发布目录
+mkdir -p /usr/local/apache2/htdocs/{aaa,bbb}.com/
+
+4. 创建发布目录的index.html页面
+echo aaa.com &gt; /usr/local/apache2/htdocs/aaa.com/index.html
+echo bbb.com &gt; /usr/local/apache2/htdocs/bbb.com/index.html
+
+5. 编辑/etc/hosts文件，添加一下代码
+echo &quot;192.168.77.140 www.aaa.com www.bbb.com www.aaaaaa.com www.bbbbbb.com&quot; &gt;&gt;/etc/hosts
+
+6.使用curl浏览器访问
+[root@localhost ~]# curl www.aaa.com
+aaa.com 
+[root@localhost ~]# curl www.aaaa.com
+^C
+[root@localhost ~]# curl www.aaaaaa.com
+aaa.com
+[root@localhost ~]# curl www.bbb.com    
+bbb.com
+[root@localhost ~]# curl www.bbbb.com 
+^C
+[root@localhost ~]# curl www.bbbbbb.com
+bbb.com
+
+7.在Windows中查看
+编辑 C:\Windows\System32\drivers\etc\hosts 文件最后添加下面一行代码，之后使用浏览器查看。
+192.168.77.140 www.aaa.com www.aaaaaa.com www.bbb.com www.bbbbbb.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h2 id="apache常用目录学习"><a href="#apache常用目录学习" class="header-anchor">#</a> Apache常用目录学习</h2> <p>Apache可以基于源码安装，YUM安装，不同的安装方法，所属的路径也不相同</p> <div class="language- extra-class"><pre><code>/etc/httpd/conf              # Apache配置文件目录
+/usr/lib64/httpd/modules/    # Apache模块存放路径
+/var/www/html/               # YUM安装Apache网站发布目录
+/usr/share/httpd/error/      # 服务器设置错误信息
+/usr/share/httpd/icons/      # Apache小图标文件存放目录
+/var/www/cgi-bin/            # 可执行的CGI程序存放目录
+/var/log/httpd/              # Apache日志目录
+/usr/sbin/apachectl          # Apache启动脚本
+/usr/sbin/httpd              # Apache二进制执行文件
+/usr/bin/htpasswd            # 设置Apache目录访问密码
+
+/usr/local/apache2/bin       # Apache命令目录
+/usr/local/apache2/build     # Apache构建编译目录
+/usr/local/apache2/htdocs    # 源码安装Apache网站发布目录
+/usr/local/apache2/cgi-bin   # 可执行的CGI程序存放目录
+/usr/local/apache2/include   # Apache引用配置文件目录
+/usr/local/apache2/logs      # Apache日志目录
+/usr/local/apache2/man       # Apache帮助文档目录
+/usr/local/apache2/manual    # Apache手册
+/usr/local/apache2/modules   # Apache模块路径
+/usr/local/apache2/error/    # 服务器设置错误信息
+/usr/local/apache2/icons/    # Apache小图标文件存放目录
+/usr/local/apache2/conf/     # Apache配置文件目录           
+</code></pre></div><h2 id="apache配置文件详解"><a href="#apache配置文件详解" class="header-anchor">#</a> Apache配置文件详解</h2> <p>/etc/httpd/conf/httpd.conf是Apache的主配文件，整个Apache也不过就是这个配置文件，里面几乎包含了所有的配置。有的distribution都将这个文件拆分成数个小文件分别管理不同的参数。但是主要配置文件还是以这个文件为主。只要找到这个文件名就知道如何设置了。后面会详细解释Apache主配文件的每一行配置。<a href="https://httpd.apache.org/docs/2.4/zh-cn/" target="_blank" rel="noopener noreferrer">【官方文档参考】<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。<a href="http://archive.apache.org/dist/apr/" target="_blank" rel="noopener noreferrer">【apr下载】<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="httpd-conf配置文件"><a href="#httpd-conf配置文件" class="header-anchor">#</a> httpd.conf配置文件</h3> <p>1、显示服务器版本信息</p> <div class="language- extra-class"><pre><code>ServerTokens Prod  显示“Server: Apache”
+ServerTokens Major 显示“Server: Apache/2″
+ServerTokens Minor 显示“Server: Apache/2.2″
+ServerTokens Min   显示“Server: Apache/2.2.17″
+ServerTokens OS    显示“Server: Apache/2.2.17 (Unix)”
+ServerTokens Full  显示“Server: Apache/2.2.17 (Unix) PHP/5.3.5″ (如果你这指定任何的值，这个是默认的返回信息)
+</code></pre></div><p>2、设置httpd.pid的路径</p> <div class="language- extra-class"><pre><code>PidFile run/httpd.pid     # 默认run/httpd.pid
+</code></pre></div><p>3、ServerRoot 配置</p> <div class="language- extra-class"><pre><code>ServerRoot &quot;/etc/httpd&quot; 
+
+【ServerRoot &quot;&quot; 主要用于指定Apache的安装路径，此选项参数值在安装Apache时系统会自动把Apache的路径写入。Windows安装时，该选项的值为Windows安装的路径，Linux安装时该选项值为编译时选择的路径】
+</code></pre></div><p>4、Mutex default:logs</p> <div class="language- extra-class"><pre><code>Mutex default:logs
+
+【互斥：允许你为多个不同的互斥对象设置互斥机制和互斥文件目录，或者修改全局默认值。如果互斥对象是基于文件的以及默认的互斥文件目录不在本地磁盘或因为其它原因而不适用，那么取消注释并改变目录。下面这个命令是改变互斥对象的目录。】
+</code></pre></div><p>5、监听指定IP和端口</p> <div class="language- extra-class"><pre><code>Listen 80                 # 127.0.0.1:80 监听指定IP和端口，如果同时监控81端口，可以在下面增加一行，如:listen 81。
+</code></pre></div><p>6、加载conf.modules.d/目录下的配置文件</p> <div class="language- extra-class"><pre><code>Include conf.modules.d/*.conf  # 加载conf.modules.d/目录下的配置文件
+</code></pre></div><p>7、Apache运行用户配置</p> <div class="language- extra-class"><pre><code>&lt;IfModule unixd_module&gt;
+    User daemon               # apache的用户，默认为daemon
+    Group daemon              # apache的用户，默认为daemon
+&lt;/IfModule&gt;
+</code></pre></div><p>8、Apache服务默认管理员地址设置</p> <div class="language- extra-class"><pre><code>ServerAdmin root@localhost
+
+【此选项主要用指定Apache服务管理员通知邮箱地址，选择默认值即可，如果有真实的邮箱地址也可以设置此值】
+</code></pre></div><p>9、Apache的默认服务名及端口设置</p> <div class="language- extra-class"><pre><code>ServerName www.example.com:80
+
+【此选项主要用指定Apache默认的服务器名以及端口，默认参数值设置为：ServerName localhost:80即可】
+</code></pre></div><p>10、 Apache的根目录访问控制设置</p> <div class="language- extra-class"><pre><code>&lt;Directory /&gt;
+    AllowOverride none
+    Require all denied
+&lt;/Directory&gt;
+
+【AllowOverride None 表示禁止用户对目录配置文件（.htaccess进行修改）重载，普通站点目录此项建议不开启（AllowOverride all 表示开启）】
+【Require all denied=Order allow,deny 拒绝所有访问请求】
+【Require all granted=Order deny,allow 允许所有访问请求】
+【Allow from all:允许所有客户机访问】
+【此选项主要是针对用户对根目录下所有的访问权限控制，默认Apache对根目录访问都是拒绝访问。后面会继续讲到】
+</code></pre></div><p>11、Apache的默认网站根目录设置及访问控制</p> <div class="language- extra-class"><pre><code>DocumentRoot &quot;/usr/local/apache2/htdocs&quot;
+&lt;Directory &quot;/usr/local/apache2/htdocs&quot;&gt;
+    Options Indexes FollowSymLinks  MultiViews  Includes  IncludesNOEXEC  ExecCGI
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+
+【Options：控制在特定目录中将使用哪些服务器特性。】
+【Indexes：若访问目录下无index文件，则准许显示该目录下的文件列表以供选择。-Indexes禁止浏览目录】
+【FollowSymLinks：准许在目录中使用符号链接到其他目录。】
+【MultiViews：准许内容协商的“多重视图”。如果客户端请求的路径可能对应多种类型的文件，服务器将根据客户端请求的具体情况自动选择一个最匹配客户端要求的文件。例如只在地址栏输入index也可以访问到index.php页面。】
+【Includes：准许SSI。】
+【IncludesNOEXEC：准许SSI，但不可使用exec和include功能。】
+【ExecCGI：准许在该目录下使用CGI。】
+【All：表示除了MultiViews之外的所有特性。】
+【None：表示不启用任何的服务器特性。】
+【注意：如果一个目录被多次设置了options，则最特殊的一个会被完全接受。】
+【此区域的配置文件，主要是针对Apache默认网站根目录的设置以及相关的权限访问设置，默认对网站的根目录具有访问权限，此选项默认值即可】
+</code></pre></div><p>12、Apache的默认首页设置</p> <div class="language- extra-class"><pre><code>&lt;IfModule dir_module&gt;
+    DirectoryIndex index.html
+&lt;/IfModule&gt;
+
+【此区域文件主要设置Apache默认支持的首页，默认只支持:index.html首页，如要支持其他类型的首页，需要在此区域添加:如index.php表示支持index.php类型首页】
+</code></pre></div><p>13、Apache关于.ht文件访问配置</p> <div class="language- extra-class"><pre><code>&lt;Files &quot;.ht*&quot;&gt;
+    Require all denied
+&lt;/Files&gt;
+
+【此选项主要是针对.ht文件访问控制，默认为具有访问权限，此区域文件默认即可】
+</code></pre></div><p>14、Apache关于日志文件配置</p> <div class="language- extra-class"><pre><code>ErrorLog &quot;logs/error_log&quot;
+LogLevel warn
+&lt;IfModule log_config_module&gt;
+    LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b \&quot;%{Referer}i\&quot; \&quot;%{User-Agent}i\&quot;&quot; combined
+    LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot; common
+
+    &lt;IfModule logio_module&gt;
+    LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b \&quot;%{Referer}i\&quot; \&quot;%{User-Agent}i\&quot; %I %O&quot; combinedio
+    &lt;/IfModule&gt;
+
+    CustomLog &quot;logs/access_log&quot; combined
+&lt;/IfModule&gt;
+
+【LogLevel：用于调整记录在错误日志中的信息的详细程度。
+错误信息详细程度按重要性降序排列如下：
+    emerg：紧急（系统无法使用）
+    alert：必须立即采取措施。
+    crit：致命情况。
+    error：错误情况。
+    warn：警告情况。
+    notice：一般重要情况。
+    info：普通信息。
+    debug：调试信息。
+（当指定了某个级别时，所有级别高于它的信息也会被同时记录）】
+【LogFormat：定义访问日志的记录格式】
+【CustomLog：设定日志的文件名和格式】
+【TransferLog：指定日志文件的位置。】
+【LogFormat】
+【%h 客户端IP地址】
+【%l  远程用户,启用mod_ident才有效，通常为减号“-”】
+【%u  验证（basic，digest）远程用户,非登录访问时，为一个减号“-”】
+【%t 服务器收到请求时的时间】
+【%r First line of request，即表示请求报文的首行；记录了此次请求的“方法”，“URL”以及协议版本】
+【%&gt;s 响应状态码】
+【%b 响应报文的大小，单位是字节；不包括响应报文http首部】
+【%{Referer}i 请求报文中首部“referer”的值；即从哪个页面中的超链接跳转至当前页面的】
+【%{User-Agent}i 请求报文中首部“User-Agent”的值；即发出请求的应用程序】
+【此区域文件主要是针对Apache默认的日志级别，默认的访问日志路径，默认的错误日志路径等相关设置，此选项内容默认即可】
+</code></pre></div><p>15、URL重定向，cgi模块配置说明</p> <div class="language- extra-class"><pre><code>&lt;IfModule alias_module&gt;
+    ScriptAlias /cgi-bin/ &quot;/usr/local/apache2/cgi-bin/&quot;
+&lt;/IfModule&gt;
+&lt;Directory &quot;/usr/local/apache2/cgi-bin&quot;&gt;
+    AllowOverride None
+    Options None
+    Require all granted
+&lt;/Directory&gt;
+
+【ScriptAlias：映射一个URL到文件系统并视之为CGI脚本目录】
+【此区域文件主要包含一些URL重定向，别名，脚本别名等相关设置，以及一些特定的处理程序，比如cgi设置说明。后期会继续说道】
+</code></pre></div><p>16、如果你的请求头和足够了解，可以通过mod_headers实现更多缓存策略</p> <div class="language- extra-class"><pre><code>&lt;IfModule headers_module&gt;
+    RequestHeader unset Proxy early
+&lt;/IfModule&gt;
+</code></pre></div><p>17、MIME媒体文件，以及相关http文件解析配置说明</p> <div class="language- extra-class"><pre><code>&lt;IfModule mime_module&gt;
+    TypesConfig /etc/mime.types
+    AddType application/x-compress .Z
+    AddType application/x-gzip .gz .tgz
+    AddType text/html .shtml
+    AddOutputFilter INCLUDES .shtml
+&lt;/IfModule&gt;
+AddDefaultCharset UTF-8
+&lt;IfModule mime_magic_module&gt;
+    MIMEMagicFile conf/magic
+&lt;/IfModule&gt;
+
+【DefaultType：当服务器无法确定一个文档的内容类型时发送的默认MIME内容类型
+    配置示例：
+    DefaultType  text/plain   （纯文本，浏览器在内部打开）
+    DefaultType  application/octet-stream   （浏览器提示用户进行保存）】
+【AddType：为特定后缀的文件指定MIME类型，这里的设置将覆盖mime.types中的设置。
+    配置示例：
+    AddType  application/x-httpd-php  .php .html .htm   （前导点可带可不带）】
+【此区域文件主要包含一些mime文件支持，以及添加一些指令在给定的文件扩展名与特定的内容类型之间建立映射关系，比如添加对php文件扩展名映射关系。】
+</code></pre></div><p>18、服务器页面提示设置</p> <div class="language- extra-class"><pre><code># Customizable error responses come in three flavors:
+# 1) plain text 2) local redirects 3) external redirects
+#
+# Some examples:
+#ErrorDocument 500 &quot;The server made a boo boo.&quot;
+#ErrorDocument 404 /missing.html
+#ErrorDocument 404 &quot;/cgi-bin/missing_handler.pl&quot;
+#ErrorDocument 402 http://www.example.com/subscription_info.html
+
+【ErrorDocument：批示当遇到错误的时候服务器将给客户端什么样的应答。
+    语法：
+    ErrorDocument  error-code  document
+    其中error-code时服务器返回的错误代码，document是回应的数据，可以是简单的文本，
+    本地网页，本地CGI程序，或远程主机上的网页。
+    配置示例：
+    ErrorDocument  500  &quot;The server made a boo boo.&quot;
+    ErrorDocument  402  http://www.example.com/subscription_info.html】
+</code></pre></div><p>19、EnableSendfile on</p> <div class="language- extra-class"><pre><code>【EnableSendfile：控制httpd是否可以使用操作系统内核的sendfile支持来将文件发送到户端。
+    配置示例：
+    EnableMMAP off
+    （这个sendfile机制避免了分开的读和写操作以及缓冲区分配，但是在一些平台或文件系统上会引发一些问题）】
+</code></pre></div><p>20、EnableMMAP  Off
+【EnableMMAP：指示httpd在递送中如果需要读取一个文件的内容，是否可以使用内存映射。
+配置示例：
+EnableMMAP  On
+EnableMMAP  Off
+（这种内存映射有时会带来性能的提高，有时却会出现问题）】
+21、Apache服务器补充设置</p> <div class="language- extra-class"><pre><code>IncludeOptional conf.d/*.conf
+
+【在Apache安装目录下的conf.d/目录中有一些补充配置文件，可以根据需要，通过配置将它们包含到主配置文件conf/httpd.conf文件中。】
+</code></pre></div><p>22、用于使用https连接服务器等设置的地方</p> <div class="language- extra-class"><pre><code>&lt;IfModule ssl_module&gt;
+    SSLRandomSeed startup builtin
+    SSLRandomSeed connect builtin
+&lt;/IfModule&gt;
+</code></pre></div><p>23、conf/extra/目录下文件详解</p> <div class="language- extra-class"><pre><code># 服务器池管理（MPM特定）
+Include conf/extra/httpd-mpm.conf
+
+＃多语言错误消息
+#Include conf/extra/httpd-multilang-errordoc.conf
+
+＃花哨的目录列表
+#Include conf/extra/httpd-autoindex.conf
+
+＃ 语言设定
+#Include conf/extra/httpd-languages.conf
+
+＃用户主目录
+#Include conf/extra/httpd-userdir.conf
+
+＃有关请求和配置的实时信息
+#Include conf/extra/httpd-info.conf
+            
+＃虚拟主机
+包括conf conf/extra/httpd-vhosts.conf
+           
+＃本地访问Apache HTTP Server手册
+#Include conf conf/extra/httpd-manual.conf
+      
+＃分布式创作和版本控制（WebDAV）
+#Include conf/extra/httpd-dav.conf
+    
+＃各种默认设置
+#Include conf/extra/httpd-default.conf
+</code></pre></div><h3 id="httpd-mpm-conf"><a href="#httpd-mpm-conf" class="header-anchor">#</a> httpd-mpm.conf</h3> <p>查看Apache的工作模式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>httpd -l
+apachectl -l    （apache2.4版本以后，这两条命令不会显示prefork模式，需用下两条命令判断）
+
+httpd -V 都可以查看apache的运行模式
+httpd -M 可以查看apache加载的模块
+    httpd -M |grep prefork  可以查看某个模块加载详情。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><blockquote><p>Apache httpd 能更好的为有特殊要求的站点定制。例如，要求 更高伸缩性的站点可以选择使用线程的 MPM，即 worker 或 event； 需要可靠性或者与旧软件兼容的站点可以使用 prefork。</p></blockquote> <p>以下三种模式，使用哪种模式就去掉前面的“#”，默认是prefork模式。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
+#LoadModule mpm_worker_module modules/mod_mpm_worker.so
+#LoadModule mpm_event_module modules/mod_mpm_event.so
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language- extra-class"><pre><code>&lt;IfModule mpm_prefork_module&gt;
+    StartServers    8
+    MinSpareServers 5
+    MaxSpareServers 20
+    ServerLimit 4096
+    MaxRequestWorkers   4096
+    MaxConnectionsPerChild 4000
+&lt;/IfModule&gt;
+
+StartServers    8    //默认是5，启动Apache的时候，唤醒几个PID来处理服务的。Apache使用了进程预派生的技术来处理请求，大大提高了响应速度
+MinSpareServers 5    //默认是5，最小空闲进程数，当空闲子进程数小于5时，那么apache将会立刻生成新的子进程。
+MaxSpareServers 20   //默认是10，最大空闲进程数，当空闲子进程数超过20时，那么父进程会杀死多余的子进程，当我们的网站负载过大，可以适当加大MinSpareServers和MaxSpareServers
+ServerLimit 4096     //服务器的限制
+MaxRequestWorkers   4096     //apache所能接受的http请求数。当请求超过4096时，多余的请求会进入请求队列，直到前面的请求处理完。当我们的服务器剩余资源很多但访问很慢时，我们就要看看这个参数是不是设置太低。当然MaxRequestWorkers默认值为250,当要增大此值时，也要增加serverlimit，但是serverlimit最大为20000。不过要注意的是：这个值并非越大越好因为他会消耗物理内存（与process有关），所以如果你设置太高导致超出物理内存,能够容许的范围，那么效率就会大大降低（因为会跑SWAP），此外，MaxRequestWorkers也在Apache编译的时候就指定最大值了，所以你也无法超出系统最大值，除非你重新编译Apache MaxConnectionsPerChild  4000。apache2.3.1以后的版本MaxClients称为MaxRequestWorkers
+MaxConnectionsPerChild 4000  //MaxConnectionsPerChild每个进程生存期内允许服务的最大请求数量，0表示永不结束。每个程序能够提供的最大传输次数要求。举例来说：如果有个用户连上服务器之后，要求数百个网页，当他的要求数量超过这个值的时候则该程序会被丢弃，另外切换一个新程序。这个设置可以有效地管理每个process在系统上存活的时间。根据观察所得，新程序的效果较好。0表示子进程永不销毁，虽然能够接受更多的请求，但可能会造成内存泄漏。这里建议设置为非零，注意原因： 1).能够防止(偶然的)内存泄漏无限进行，从而耗尽内存。 2).给进程一个有限寿命，从而有助于当服务器负载减轻的时候减少活动进程的数量(重生的机会)。在Apache2.3.9之前的版本是MaxRequestsPerChild。
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>&lt;IfModule mpm_worker_module&gt; 
+    StartServers    8  
+    MinSpareThreads 25
+    MaxSpareThreads 75
+    ThreadsPerChild 75
+    MaxRequestWorkers  4000 
+    MaxConnectionsPerChild 0
+&lt;/IfModule&gt;
+
+StartServers    8  // 默认启动apache工作进程数
+MinSpareThreads 25  // 最小空闲进程数
+MaxSpareThreads 75  // 最大空闲进程数
+ThreadsPerChild 75  // 每个进程启动的线程数
+MaxRequestWorkers  4000 // 每秒支持的最大客户端并发
+MaxConnectionsPerChild 0  // 每个进程能处理的最大请求数，0表示无限制。
+为Apache配置线程访问，即每对WEB服务访问启动一个线程，这样对内存占用率比较小。
+ServerLimit服务器允许配置进程数的上限。
+ThreadLimit每个子进程可能配置的线程上限
+StartServers启动8个httpd进程，
+MaxRequestWorkers同时最多能发起4000个访问，超过的要进入队列等待，其大小有ServerLimit和ThreadsPerChild的乘积决定
+ThreadsPerChild每个子进程生存期间常驻执行线程数，子线程建立之后将不再增加
+MaxConnectionsPerChild每个进程启动的最大线程数，如达到限制数时进程将结束，如置为0则子线程永不结束
+</code></pre></div><hr> <div class="language- extra-class"><pre><code>&lt;IfModule mpm_event_module&gt;
+    ServerLimit 1000
+    StartServers    20   
+    MinSpareThreads 25
+    MaxSpareThreads 1200 
+    ThreadsPerChild 50
+    MaxRequestWorkers   2000     
+    MaxConnectionsPerChild  1000
+&lt;/IfModule&gt;
+
+ServerLimit 1000
+StartServers    20   # apache启动后建立20个子进程，由于默认的Serverlimit 为16，当我们StartServers大于16时，会报错“changing ServerLimit to 1000 from original value of 16 not allowed during restart”，但是我们可以通过Serverlimit来重新设置，不过需要先停止apache服务再启动，直接restart无效。
+MinSpareThreads 25   # 最小空闲线程数
+MaxSpareThreads 1200 # 最大空闲线程数，这里要注意这个值必须要大于StartServers*ThreadsPerChild=20*50=1000，如若我们MaxSpareThreads 800，小于1000，则StartServers-MaxSpareThreads/50=4，则有4个进程会被杀掉，我们可以通过top查看，restart后会生成多个进程，当过一会多余的进程会被kill掉
+ThreadsPerChild 50   # 每个进程可以生成50个线程，这里要注意的是默认的ThreadLimit为64，当我们ThreadsPerChild大于64时，会报错“ThreadsPerChild of 500 exceeds ThreadLimit of 64,decreasing to match”，但是我们可以通过ThreadLimit来重新设置，不过需要先停止apache服务再启动，直接restart无效。
+MaxRequestWorkers   2000     # 最大数量的工作线程，等于ServerLimit*ThreadPerChild，如果按照默认的ServerLimit=16的话，2000&gt;16*50，日志中会报错“MaxRequestWorkers of 1000 would require 20 servers and exceed ServerLimit of 16, decreasing to 800”，这时我们需要通过修改ServerLimit，需要先停止apache服务再启动，直接restart无效。
+MaxConnectionsPerChild  1000 # 每个进程所能建立的最大连接数
+</code></pre></div><h2 id="require指令进行访问控制"><a href="#require指令进行访问控制" class="header-anchor">#</a> require指令进行访问控制</h2> <p>Apache2.4使用require指令进行访问控制--允许或限制IP访问/通过User-Agent禁止不友好网络爬虫</p> <h3 id="允许所有访问请求"><a href="#允许所有访问请求" class="header-anchor">#</a> 允许所有访问请求</h3> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    &lt;RequireAll&gt;
+        Require all granted
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt; 
+</code></pre></div><h3 id="拒绝所有访问请求"><a href="#拒绝所有访问请求" class="header-anchor">#</a> 拒绝所有访问请求</h3> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    &lt;RequireAll&gt;
+        Require all denied
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt;
+</code></pre></div><h3 id="只允许来自特定域名主机的访问请求，其他请求将被拒绝"><a href="#只允许来自特定域名主机的访问请求，其他请求将被拒绝" class="header-anchor">#</a> 只允许来自特定域名主机的访问请求，其他请求将被拒绝</h3> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    &lt;RequireAll&gt;
+        Require host google.com
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt;
+</code></pre></div><h3 id="只允许来自特定ip或ip段的访问请求，其他请求将被拒绝"><a href="#只允许来自特定ip或ip段的访问请求，其他请求将被拒绝" class="header-anchor">#</a> 只允许来自特定IP或IP段的访问请求，其他请求将被拒绝</h3> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    &lt;RequireAll&gt;
+        Require ip 192.120 192.168.100 192.168.1.1
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt;
+</code></pre></div><h3 id="允许所有访问请求，但拒绝来自特定ip或ip段的访问请求（阻止恶意ip或恶意爬虫网段的访问）"><a href="#允许所有访问请求，但拒绝来自特定ip或ip段的访问请求（阻止恶意ip或恶意爬虫网段的访问）" class="header-anchor">#</a> 允许所有访问请求，但拒绝来自特定IP或IP段的访问请求（阻止恶意IP或恶意爬虫网段的访问）</h3> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    &lt;RequireAll&gt;
+        Require all granted
+        Require not ip 192.168.1.1
+        Require not ip 192.120 192.168.100
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt;
+</code></pre></div><h3 id="允许所有访问请求，但拒绝某些user-agent的访问请求（通过user-agent屏蔽垃圾网络爬虫）"><a href="#允许所有访问请求，但拒绝某些user-agent的访问请求（通过user-agent屏蔽垃圾网络爬虫）" class="header-anchor">#</a> 允许所有访问请求，但拒绝某些User-Agent的访问请求（通过User-Agent屏蔽垃圾网络爬虫）</h3> <p>使用mod_setenvif通过正则表达式匹配来访请求的User-Agent，并设置内部环境变量BADBOT，最后拒绝BADBOT的访问请求。</p> <p><strong>Apache2.4下的配置</strong></p> <div class="language- extra-class"><pre><code>&lt;Directory xxx/www/yoursite&gt;
+    SetEnvIfNoCase User-Agent &quot;.*(FeedDemon|JikeSpider|AskTbFXTV|CrawlDaddy|Feedly|Swiftbot|ZmEu|oBot).*&quot; BADBOT
+    SetEnvIfNoCase User-Agent &quot;brandwatch&quot; BADBOT
+    SetEnvIfNoCase User-Agent &quot;rogerbot&quot; BADBOT
+    &lt;RequireAll&gt;
+        Require all granted
+        Require not env BADBOT
+        Require not ip 192.168.100.1
+    &lt;/RequireAll&gt;
+&lt;/Directory&gt;
+</code></pre></div><h3 id="其它require访问控制指令用法如下："><a href="#其它require访问控制指令用法如下：" class="header-anchor">#</a> 其它require访问控制指令用法如下：</h3> <div class="language- extra-class"><pre><code>Require all granted #允许所有
+Require all denied #拒绝所有
+Require env env-var [env-var] ... #允许匹配环境变量中任意一个
+Require method http-method [http-method] ... #允许特定的HTTP方法（GET/POST/HEAD/OPTIONS）
+Require expr expression #允许，表达式为true
+Require user userid [ userid ] ... #允许特定用户
+Require group group-name [group-name] ... #允许特定用户组
+Require valid-user # #允许，有效用户
+Require ip 192.100 192.168.100 192.168.100.5 #允许特定IP或IP段，多个IP或IP段间使用空格分隔
+</code></pre></div><h2 id="apache-rewrite规则实战"><a href="#apache-rewrite规则实战" class="header-anchor">#</a> Apache rewrite规则实战</h2> <h3 id="rewrite规则简介"><a href="#rewrite规则简介" class="header-anchor">#</a> Rewrite规则简介</h3> <p>rewrite规则也称为规则重写，主要功能是实现浏览器访问HTTP URL的跳转，其规则表达式是基于perl语言的，通常而言所有的Web服务器均可以支持URL重写。</p> <p><strong>rewrite URL规则重写用途是</strong></p> <div class="language- extra-class"><pre><code>对搜索引擎优化友好，利于搜索引擎抓取网站页面。
+隐藏网站URL真实地址，浏览器显示更加美观。
+网站变更升级，可以基于rewrite临时重定向到其他页面。
+</code></pre></div><p>如果要想用到rewrite模块，必须先安装或加载rewrite模块。方法有两种一种是编译apache的时候就直接安装rewrite模块（--enable-rewrite），别一种是动态添加模块，编译apache时以DSO模式安装apache,然后再利用源码和apxs来安装rewrite模块。</p> <p>基于服务器级的(httpd.conf)有两种方法，一种是在httpd.conf的全局下直接利用<code>RewriteEngine on</code>来打开rewrite功能;另一种是在局部里利用<code>RewriteEngine on</code>来打开rewrite功能,下面将会举例说明，需要注意的是,必须在每个virtualhost里用<code>RewriteEngine on</code>来打开rewrite功能。否则virtualhost里没有<code>RewriteEngine on</code>它里面的规则也不会生效。</p> <p>基于目录级的(.htaccess),要注意一点那就是必须打开此目录的FollowSymLinks属性（httpd.conf中的Option FollowSymLinks）且在.htaccess里要声明RewriteEngine on。</p> <p>三种概念需要了解：<strong>rewrite结尾标识符</strong>、<strong>rewrite规则常用表达式</strong>、<strong>Apache rewrite变量</strong></p> <p><strong>Apache rewrite结尾标识符</strong>：用于rewrite规则末尾，表示规则的执行属性</p> <div class="language- extra-class"><pre><code>R[=code](force redirect) 强制外部重定向
+强制在替代字符串加上http://thishost[:thisport]/前缀重定向到外部的URL.如果code不指定，将用缺省的302 HTTP状态码。
+F(force URL to be forbidden)禁用URL,返回403HTTP状态码。
+G(force URL to be gone) 强制URL为GONE，返回410HTTP状态码。
+P(force proxy) 强制使用代理转发。
+L(last rule) 表明当前规则是最后一条规则，停止分析以后规则的重写。
+N(next round) 重新从第一条规则开始运行重写过程。
+C(chained with next rule) 与下一条规则关联
+如果规则匹配则正常处理，该标志无效，如果不匹配，那么下面所有关联的规则都跳过。
+T=MIME-type(force MIME type) 强制MIME类型
+NS (used only if no internal sub-request) 只用于不是内部子请求
+NC(no case) 不区分大小写
+QSA(query string append) 追加请求字符串
+NE(no URI escaping of output) 不在输出转义特殊字符
+例如：RewriteRule /foo/(.*) /bar?arg=P1%3d$1 [R,NE] 将能正确的将/foo/zoo转换成/bar?arg=P1=zed
+PT(pass through to next handler) 传递给下一个处理
+例如：
+RewriteRule ^/abc(.*) /def$1 [PT] # 将会交给/def规则处理
+Alias /def /ghi
+S=num(skip next rule(s)) 跳过num条规则
+E=VAR:VAL(set environment variable) 设置环境变量
+</code></pre></div><p><strong>Apache rewrite规则常用表达式</strong>:用于匹配参数、字符串及过滤设置。</p> <div class="language- extra-class"><pre><code>. 匹配任何单字符
+[chars] 匹配字符串:chars
+[^chars] 不匹配字符串:chars
+text1|text2 可选择的字符串:text1或text2
+? 匹配0到1个字符
+* 匹配0到多个字符
++ 匹配1到多个字符
+^ 字符串开始标志
+$ 字符串结束标志
+\n 转义符标志
+反向引用 $N 用于 RewriteRule 中匹配的变量调用(0 &lt;= N &lt;= 9)
+反向引用 %N 用于 RewriteCond 中最后一个匹配的变量调用(1 &lt;= N &lt;= 9)
+</code></pre></div><p><strong>Apache rewrite变量</strong>:常用与匹配HTTP请求头部信息、浏览器主机名、URL等</p> <div class="language- extra-class"><pre><code>HTTP headers:HTTP_USER_AGENT, HTTP_REFERER, HTTP_COOKIE, HTTP_HOST, HTTP_ACCEPT
+connection &amp; request: REMOTE_ADDR, QUERY_STRING
+server internals: DOCUMENT_ROOT, SERVER_PORT, SERVER_PROTOCOL
+system stuff: TIME_YEAR, TIME_MON, TIME_DAY
+
+详解：
+HTTP_USER_AGENT  # 用户使用的代理，例如浏览器
+HTTP_REFERER     # 告知服务器，从哪个页面来访问的
+HTTP_COOKIE      # 客户端缓存，主要用户存储用户名和密码信息
+HTTP_HOST        # 匹配服务器ServerName域名
+HTTP_ACCEPT      # 客户端的浏览器支持的MIME
+REMOTE_ADDR      # 客户端的IP地址
+QUERY_STRING     # URL中访问的字符串
+DOCUMENT_ROOT    # 服务器发布目录
+SERVER_PORT      # 服务器端口
+SERVER_PROTOCOL  # 服务器协议
+TIME_YEAR        # 年
+TIME_MON         # 月
+TIME_DAY         # 日
+</code></pre></div><h3 id="apache-mod-rewrite规则案例"><a href="#apache-mod-rewrite规则案例" class="header-anchor">#</a> Apache mod_rewrite规则案例</h3> <p>将aaa.com跳转到www.aaa.com</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST}    ^aaa.com    [NC]
+    RewriteRule ^/(.*)$         http://www.aaa.com/$1   [R=301,L]
+&lt;/VirtualHost&gt; 
+【RewriteEngine on  # 开启rewrite引擎】
+【RewriteCond %{HTTP_HOST} ^aaa.com [NC] # 匹配以aaa.com开头的域名，NC忽略大小写】
+【RewriteRule ^/(.*)$ http://www.aaa.com/$1 [L] # (.*)表示任意字符串，$1表示引用(.*)中任意内容】
+</code></pre></div><p>将aaa.com、ccc.com、www.ccc.com、跳转到www.aaa.com,OR含义表示或者</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST}   ^www.ccc.com [NC,OR]
+    RewriteCond %{HTTP_HOST}    ^ccc.com    [NC]
+    RewriteCond %{HTTP_HOST}    ^aaa.com    [NC]
+    RewriteRule ^/(.*)$   http://www.aaa.com/$1   [L,R=301]
+&lt;/VirtualHost&gt;
+</code></pre></div><p>访问www.aaa.com首页时，是跳转到http://www.aaa.com/aaa/，R=301永久重定向</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteRule ^/$ http://www.aaa.com/aaa/   [L,R=301]
+&lt;/VirtualHost&gt;
+</code></pre></div><p>访问www.aaa.com首页时，内容访问是www.aaa.com/aaa/,但是浏览器URL地址不变。</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^www.aaa.com      [NC]
+    RewriteRule ^/$ /aaa/index.html   [L]
+&lt;/VirtualHost&gt;
+</code></pre></div><p>判断是否使用移动端访问网站，移动端访问跳转至m.aaa.com</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteCond %{HTTP_USER_AGENT} ^iPhone  [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Android [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WAP [NC]
+    RewriteRule ^/$ http://m.aaa.com/index.html  [L,R=301]
+    RewriteRule ^/(.*)/$    http://m.aaa.com/$1  [L,R=301]
+&lt;/VirtualHost&gt;
+</code></pre></div><p>访问/xxx/123456跳转至/xxx?id=123456</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteRule ^/(.+)/(\d+)$   /$1?id=$2   [L,R=301]
+&lt;/VirtualHost&gt;
+</code></pre></div><p>访问/106325/aaa/123跳转至/index.php?tid/106325/items=123 ,[0-9]表示任意一个数字，+表示多个，(.+)表示任何多个字符</p> <div class="language- extra-class"><pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin 1353250703@qq.com
+    DocumentRoot &quot;/usr/local/apache2/htdocs/aaa.com&quot;
+    ServerName www.aaa.com
+    ServerAlias www.aaa.com
+    ErrorLog &quot;logs/aaa.com-error_log&quot;
+    CustomLog &quot;logs/aaa.com-access_log&quot; common
+    RewriteEngine on
+    RewriteRule ^/([0-9]+)/aaa/(.+)$    /index.php?tid/$1/items=$2  [L,R=301]
+&lt;/VirtualHost&gt;</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/linux/HTTP.html" class="prev">
+        HTTP协议详解
+      </a></span> <span class="next"><a href="/book/linux/mysql.html">
+        MySQL服务器企业实战
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/16.f1892724.js" defer></script>
+  </body>
+</html>

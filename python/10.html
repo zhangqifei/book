@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>判断（if）语句 | 咻一咻</title>
+    <meta name="generator" content="VuePress 1.5.1">
+    <link rel="icon" href="ico.png">
+    <meta name="description" content="Data arrangement">
+    <link rel="preload" href="/book/assets/css/0.styles.a914122f.css" as="style"><link rel="preload" href="/book/assets/js/app.6beacea6.js" as="script"><link rel="preload" href="/book/assets/js/2.d4211503.js" as="script"><link rel="preload" href="/book/assets/js/36.f9f46091.js" as="script"><link rel="prefetch" href="/book/assets/js/10.ab538b22.js"><link rel="prefetch" href="/book/assets/js/11.ff43c237.js"><link rel="prefetch" href="/book/assets/js/12.19c73e40.js"><link rel="prefetch" href="/book/assets/js/13.58e739e6.js"><link rel="prefetch" href="/book/assets/js/14.5d203b2f.js"><link rel="prefetch" href="/book/assets/js/15.d5ffad59.js"><link rel="prefetch" href="/book/assets/js/16.f1892724.js"><link rel="prefetch" href="/book/assets/js/17.1b464a01.js"><link rel="prefetch" href="/book/assets/js/18.d3551f8c.js"><link rel="prefetch" href="/book/assets/js/19.c95ccc11.js"><link rel="prefetch" href="/book/assets/js/20.2322d056.js"><link rel="prefetch" href="/book/assets/js/21.d96df1dc.js"><link rel="prefetch" href="/book/assets/js/22.19576a58.js"><link rel="prefetch" href="/book/assets/js/23.34b4c65a.js"><link rel="prefetch" href="/book/assets/js/24.41349f7e.js"><link rel="prefetch" href="/book/assets/js/25.167d455d.js"><link rel="prefetch" href="/book/assets/js/26.85e97b1e.js"><link rel="prefetch" href="/book/assets/js/27.1c4f5d1e.js"><link rel="prefetch" href="/book/assets/js/28.00a7b212.js"><link rel="prefetch" href="/book/assets/js/29.003a80c1.js"><link rel="prefetch" href="/book/assets/js/3.b5cecfc5.js"><link rel="prefetch" href="/book/assets/js/30.82f34ea1.js"><link rel="prefetch" href="/book/assets/js/31.d1b5a2de.js"><link rel="prefetch" href="/book/assets/js/32.c0b6c4e9.js"><link rel="prefetch" href="/book/assets/js/33.ae11896f.js"><link rel="prefetch" href="/book/assets/js/34.73898584.js"><link rel="prefetch" href="/book/assets/js/35.41289148.js"><link rel="prefetch" href="/book/assets/js/37.9efc5734.js"><link rel="prefetch" href="/book/assets/js/38.84d9e1a9.js"><link rel="prefetch" href="/book/assets/js/39.e46dc08b.js"><link rel="prefetch" href="/book/assets/js/4.5e65c180.js"><link rel="prefetch" href="/book/assets/js/40.8ddadb79.js"><link rel="prefetch" href="/book/assets/js/41.582e66cb.js"><link rel="prefetch" href="/book/assets/js/42.71b4aa4a.js"><link rel="prefetch" href="/book/assets/js/43.57835db4.js"><link rel="prefetch" href="/book/assets/js/44.d5fa4e17.js"><link rel="prefetch" href="/book/assets/js/45.cd06a740.js"><link rel="prefetch" href="/book/assets/js/46.65af01eb.js"><link rel="prefetch" href="/book/assets/js/47.8c8144ca.js"><link rel="prefetch" href="/book/assets/js/48.14e24a01.js"><link rel="prefetch" href="/book/assets/js/49.0145d788.js"><link rel="prefetch" href="/book/assets/js/5.dbc57029.js"><link rel="prefetch" href="/book/assets/js/50.2d76481d.js"><link rel="prefetch" href="/book/assets/js/51.7bd181e7.js"><link rel="prefetch" href="/book/assets/js/52.64387366.js"><link rel="prefetch" href="/book/assets/js/53.e5670611.js"><link rel="prefetch" href="/book/assets/js/54.38de349a.js"><link rel="prefetch" href="/book/assets/js/55.a101f972.js"><link rel="prefetch" href="/book/assets/js/56.219c5fb2.js"><link rel="prefetch" href="/book/assets/js/57.3fc676d3.js"><link rel="prefetch" href="/book/assets/js/58.7ea571a7.js"><link rel="prefetch" href="/book/assets/js/59.194c948a.js"><link rel="prefetch" href="/book/assets/js/6.9cac8d12.js"><link rel="prefetch" href="/book/assets/js/7.7f48c2c8.js"><link rel="prefetch" href="/book/assets/js/8.668fb685.js"><link rel="prefetch" href="/book/assets/js/9.5604aa9e.js">
+    <link rel="stylesheet" href="/book/assets/css/0.styles.a914122f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/book/" class="home-link router-link-active"><!----> <span class="site-name">咻一咻</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link router-link-active">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="linux" class="dropdown-title"><span class="title">linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/linux/" class="nav-link">
+  linux基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/book/Knowledge_summary/" class="nav-link">
+  linux知识汇总
+</a></li><li class="dropdown-item"><!----> <a href="/book/vim/" class="nav-link">
+  vim编辑器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程" class="dropdown-title"><span class="title">编程</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/python/" class="nav-link router-link-active">
+  python
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/architect/" class="nav-link">
+  架构是技术图谱
+</a></li><li class="dropdown-item"><!----> <a href="/book/culture/" class="nav-link">
+  程序员基础知识
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/book/data/" class="nav-link">
+  资料
+</a></li><li class="dropdown-item"><!----> <a href="/book/link/" class="nav-link">
+  关于
+</a></li><li class="dropdown-item"><!----> <a href="https://www.zhangqifei.top/about/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  留言
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>python基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/book/python/" aria-current="page" class="sidebar-link">认识 Python</a></li><li><a href="/book/python/02.html" class="sidebar-link">第一个 Python 程序</a></li><li><a href="/book/python/03.html" class="sidebar-link">PyCharm 的初始设置（知道）</a></li><li><a href="/book/python/04.html" class="sidebar-link">多文件项目的演练</a></li><li><a href="/book/python/05.html" class="sidebar-link">注释</a></li><li><a href="/book/python/06.html" class="sidebar-link">算数运算符</a></li><li><a href="/book/python/07.html" class="sidebar-link">程序执行原理（科普）</a></li><li><a href="/book/python/08.html" class="sidebar-link">变量的基本使用</a></li><li><a href="/book/python/09.html" class="sidebar-link">变量的命名</a></li><li><a href="/book/python/10.html" aria-current="page" class="active sidebar-link">判断（if）语句</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/book/python/10.html#目标" class="sidebar-link">目标</a></li><li class="sidebar-sub-header"><a href="/book/python/10.html#_01-开发中的应用场景" class="sidebar-link">01. 开发中的应用场景</a></li><li class="sidebar-sub-header"><a href="/book/python/10.html#_02-if-语句体验" class="sidebar-link">02. if 语句体验</a></li><li class="sidebar-sub-header"><a href="/book/python/10.html#_03-逻辑运算" class="sidebar-link">03. 逻辑运算</a></li><li class="sidebar-sub-header"><a href="/book/python/10.html#_04-if-语句进阶" class="sidebar-link">04. if 语句进阶</a></li><li class="sidebar-sub-header"><a href="/book/python/10.html#_05-综合应用-石头剪刀布" class="sidebar-link">05. 综合应用 —— 石头剪刀布</a></li></ul></li><li><a href="/book/python/11.html" class="sidebar-link">运算符</a></li><li><a href="/book/python/12.html" class="sidebar-link">循环</a></li><li><a href="/book/python/13.html" class="sidebar-link">函数基础</a></li><li><a href="/book/python/14.html" class="sidebar-link">高级变量类型</a></li><li><a href="/book/python/15.html" class="sidebar-link">综合应用 —— 名片管理系统</a></li><li><a href="/book/python/16.html" class="sidebar-link">变量进阶（理解）</a></li><li><a href="/book/python/17.html" class="sidebar-link">函数进阶</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>面向对象</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="判断（if）语句"><a href="#判断（if）语句" class="header-anchor">#</a> 判断（if）语句</h1> <h2 id="目标"><a href="#目标" class="header-anchor">#</a> 目标</h2> <ul><li>开发中的应用场景</li> <li>if 语句体验</li> <li>if 语句进阶</li> <li>综合应用</li></ul> <h2 id="_01-开发中的应用场景"><a href="#_01-开发中的应用场景" class="header-anchor">#</a> 01. 开发中的应用场景</h2> <p>生活中的判断几乎是无所不在的，我们每天都在做各种各样的选择，如果这样？如果那样？……</p> <img src="/book/media/14963192801181/001_%E6%9C%AA%E6%88%90%E5%B9%B4%E4%BA%BA%E7%A6%81%E6%AD%A2%E5%85%A5%E5%86%85.jpg" alt="001_未成年人禁止入内-w400"> <img src="/book/media/14963192801181/002_%E7%81%AB%E8%BD%A6%E7%AB%99%E5%AE%89%E6%A3%80.png" alt="002_火车站安检-w400"> <h3 id="程序中的判断"><a href="#程序中的判断" class="header-anchor">#</a> 程序中的判断</h3> <img src="/book/media/14963192801181/003_%E5%88%A4%E6%96%AD%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="003_判断示意图-w600"> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 今天发工资<span class="token punctuation">:</span>
+
+    先还信用卡的钱
+
+    <span class="token keyword">if</span> 有剩余<span class="token punctuation">:</span>
+
+        又可以happy了，O<span class="token punctuation">(</span>∩_∩<span class="token punctuation">)</span>O哈哈<span class="token operator">~</span>
+
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+
+        噢，no。。。还的等<span class="token number">30</span>天
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+
+    盼着发工资
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="判断的定义"><a href="#判断的定义" class="header-anchor">#</a> 判断的定义</h3> <ul><li>如果 <strong>条件满足</strong>，才能做某件事情，</li> <li>如果 <strong>条件不满足</strong>，就做另外一件事情，或者什么也不做</li></ul> <blockquote><p>正是因为有了判断，才使得程序世界丰富多彩，充满变化！</p> <p><strong>判断语句</strong> 又被称为 “分支语句”，正是因为有了判断，才让程序有了很多的分支</p></blockquote> <h2 id="_02-if-语句体验"><a href="#_02-if-语句体验" class="header-anchor">#</a> 02. if 语句体验</h2> <h3 id="_2-1-if-判断语句基本语法"><a href="#_2-1-if-判断语句基本语法" class="header-anchor">#</a> 2.1 if 判断语句基本语法</h3> <p>在 <code>Python</code> 中，<strong>if 语句</strong> 就是用来进行判断的，格式如下：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 要判断的条件<span class="token punctuation">:</span>
+    条件成立时，要做的事情
+    ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>注意：代码的缩进为一个 <code>tab</code> 键，或者 <strong>4</strong> 个空格 —— <strong>建议使用空格</strong></p> <ul><li>在 Python 开发中，Tab 和空格不要混用！</li></ul></blockquote> <p><strong>我们可以把整个 if 语句看成一个完整的代码块</strong></p> <img src="/book/media/14963192801181/004_if%E8%AF%AD%E5%8F%A5%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%971.png" alt="004_if语句是一个完整的代码块1-w400"> <h3 id="_2-2-判断语句演练-判断年龄"><a href="#_2-2-判断语句演练-判断年龄" class="header-anchor">#</a> 2.2 判断语句演练 —— 判断年龄</h3> <p><strong>需求</strong></p> <ol><li>定义一个整数变量记录年龄</li> <li>判断是否满 18 岁 （<strong>&gt;=</strong>）</li> <li>如果满 18 岁，允许进网吧嗨皮</li></ol> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 1. 定义年龄变量</span>
+age <span class="token operator">=</span> <span class="token number">18</span>
+
+<span class="token comment"># 2. 判断是否满 18 岁</span>
+<span class="token comment"># if 语句以及缩进部分的代码是一个完整的代码块</span>
+<span class="token keyword">if</span> age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;可以进网吧嗨皮……&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 3. 思考！- 无论条件是否满足都会执行</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;这句代码什么时候执行?&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>注意</strong>：</p> <ul><li><code>if</code> 语句以及缩进部分是一个 <strong>完整的代码块</strong></li></ul> <h3 id="_2-3-else-处理条件不满足的情况"><a href="#_2-3-else-处理条件不满足的情况" class="header-anchor">#</a> 2.3 else 处理条件不满足的情况</h3> <p><strong>思考</strong></p> <p>在使用 <code>if</code> 判断时，只能做到满足条件时要做的事情。那如果需要在 <strong>不满足条件的时候</strong>，做某些事情，该如何做呢？</p> <p><strong>答案</strong></p> <p><code>else</code>，格式如下：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 要判断的条件<span class="token punctuation">:</span>
+    条件成立时，要做的事情
+    ……
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    条件不成立时，要做的事情
+    ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>注意</strong>：</p> <ul><li><code>if</code> 和 <code>else</code> 语句以及各自的缩进部分共同是一个 <strong>完整的代码块</strong></li></ul> <h3 id="_2-4-判断语句演练-判断年龄改进"><a href="#_2-4-判断语句演练-判断年龄改进" class="header-anchor">#</a> 2.4 判断语句演练 —— 判断年龄改进</h3> <p><strong>需求</strong></p> <ol><li>输入用户年龄</li> <li>判断是否满 18 岁 （<strong>&gt;=</strong>）</li> <li>如果满 18 岁，允许进网吧嗨皮</li> <li>如果未满 18 岁，提示回家写作业</li></ol> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 1. 输入用户年龄</span>
+age <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;今年多大了？&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 2. 判断是否满 18 岁</span>
+<span class="token comment"># if 语句以及缩进部分的代码是一个完整的语法块</span>
+<span class="token keyword">if</span> age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;可以进网吧嗨皮……&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;你还没长大，应该回家写作业！&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 3. 思考！- 无论条件是否满足都会执行</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;这句代码什么时候执行?&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><img src="/book/media/14963192801181/005_ifelse%E8%AF%AD%E5%8F%A5%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9D%971.png" alt="005_ifelse语句是一个完整的代码块1-w400"> <h2 id="_03-逻辑运算"><a href="#_03-逻辑运算" class="header-anchor">#</a> 03. 逻辑运算</h2> <ul><li>在程序开发中，通常 <strong>在判断条件时</strong>，会需要同时判断多个条件</li> <li>只有多个条件都满足，才能够执行后续代码，这个时候需要使用到 <strong>逻辑运算符</strong></li> <li><strong>逻辑运算符</strong> 可以把 <strong>多个条件</strong> 按照 <strong>逻辑</strong> 进行 <strong>连接</strong>，变成 <strong>更复杂的条件</strong></li> <li>Python 中的 <strong>逻辑运算符</strong> 包括：<strong>与 and</strong>／<strong>或 or</strong>／<strong>非 not</strong> 三种</li></ul> <h3 id="_3-1-and"><a href="#_3-1-and" class="header-anchor">#</a> 3.1 <code>and</code></h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>条件1 and 条件2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><strong>与</strong>／<strong>并且</strong></li> <li>两个条件同时满足，返回 <code>True</code></li> <li>只要有一个不满足，就返回 <code>False</code></li></ul> <table><thead><tr><th style="text-align:center;">条件 1</th> <th style="text-align:center;">条件 2</th> <th style="text-align:center;">结果</th></tr></thead> <tbody><tr><td style="text-align:center;">成立</td> <td style="text-align:center;">成立</td> <td style="text-align:center;">成立</td></tr> <tr><td style="text-align:center;">成立</td> <td style="text-align:center;">不成立</td> <td style="text-align:center;">不成立</td></tr> <tr><td style="text-align:center;">不成立</td> <td style="text-align:center;">成立</td> <td style="text-align:center;">不成立</td></tr> <tr><td style="text-align:center;">不成立</td> <td style="text-align:center;">不成立</td> <td style="text-align:center;">不成立</td></tr></tbody></table> <h3 id="_3-2-or"><a href="#_3-2-or" class="header-anchor">#</a> 3.2 <code>or</code></h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>条件1 or 条件2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><strong>或</strong>／<strong>或者</strong></li> <li>两个条件只要有一个满足，返回 <code>True</code></li> <li>两个条件都不满足，返回 <code>False</code></li></ul> <table><thead><tr><th style="text-align:center;">条件 1</th> <th style="text-align:center;">条件 2</th> <th style="text-align:center;">结果</th></tr></thead> <tbody><tr><td style="text-align:center;">成立</td> <td style="text-align:center;">成立</td> <td style="text-align:center;">成立</td></tr> <tr><td style="text-align:center;">成立</td> <td style="text-align:center;">不成立</td> <td style="text-align:center;">成立</td></tr> <tr><td style="text-align:center;">不成立</td> <td style="text-align:center;">成立</td> <td style="text-align:center;">成立</td></tr> <tr><td style="text-align:center;">不成立</td> <td style="text-align:center;">不成立</td> <td style="text-align:center;">不成立</td></tr></tbody></table> <h3 id="_3-3-not"><a href="#_3-3-not" class="header-anchor">#</a> 3.3 <code>not</code></h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>not 条件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><strong>非</strong>／<strong>不是</strong></li></ul> <table><thead><tr><th style="text-align:center;">条件</th> <th style="text-align:center;">结果</th></tr></thead> <tbody><tr><td style="text-align:center;">成立</td> <td style="text-align:center;">不成立</td></tr> <tr><td style="text-align:center;">不成立</td> <td style="text-align:center;">成立</td></tr></tbody></table> <h4 id="逻辑运算演练"><a href="#逻辑运算演练" class="header-anchor">#</a> 逻辑运算演练</h4> <ol><li>练习1: 定义一个整数变量 <code>age</code>，编写代码判断年龄是否正确
+<ul><li>要求人的年龄在 0-120 之间</li></ul></li> <li>练习2: 定义两个整数变量 <code>python_score</code>、<code>c_score</code>，编写代码判断成绩
+<ul><li>要求只要有一门成绩 &gt; 60 分就算合格</li></ul></li> <li>练习3: 定义一个布尔型变量 <code>is_employee</code>，编写代码判断是否是本公司员工
+<ul><li>如果不是提示不允许入内</li></ul></li></ol> <p>答案 1：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 练习1: 定义一个整数变量 age，编写代码判断年龄是否正确</span>
+age <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token comment"># 要求人的年龄在 0-120 之间</span>
+<span class="token keyword">if</span> age <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token keyword">and</span> age <span class="token operator">&lt;=</span> <span class="token number">120</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;年龄正确&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;年龄不正确&quot;</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>答案 2：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 练习2: 定义两个整数变量 python_score、c_score，编写代码判断成绩</span>
+python_score <span class="token operator">=</span> <span class="token number">50</span>
+c_score <span class="token operator">=</span> <span class="token number">50</span>
+
+<span class="token comment"># 要求只要有一门成绩 &gt; 60 分就算合格</span>
+<span class="token keyword">if</span> python_score <span class="token operator">&gt;</span> <span class="token number">60</span> <span class="token keyword">or</span> c_score <span class="token operator">&gt;</span> <span class="token number">60</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;考试通过&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;再接再厉！&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>答案 3：</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 练习3: 定义一个布尔型变量 `is_employee`，编写代码判断是否是本公司员工</span>
+is_employee <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token comment"># 如果不是提示不允许入内</span>
+<span class="token keyword">if</span> <span class="token keyword">not</span> is_employee<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;非公勿内&quot;</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="_04-if-语句进阶"><a href="#_04-if-语句进阶" class="header-anchor">#</a> 04. if 语句进阶</h2> <h3 id="_4-1-elif"><a href="#_4-1-elif" class="header-anchor">#</a> 4.1 <code>elif</code></h3> <ul><li>在开发中，使用 <code>if</code> 可以 <strong>判断条件</strong></li> <li>使用 <code>else</code> 可以处理 <strong>条件不成立</strong> 的情况</li> <li>但是，如果希望 <strong>再增加一些条件</strong>，<strong>条件不同，需要执行的代码也不同</strong> 时，就可以使用 <code>elif</code></li> <li>语法格式如下：</li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 条件<span class="token number">1</span><span class="token punctuation">:</span>
+    条件<span class="token number">1</span>满足执行的代码
+    ……
+<span class="token keyword">elif</span> 条件<span class="token number">2</span><span class="token punctuation">:</span>
+    条件<span class="token number">2</span>满足时，执行的代码
+    ……
+<span class="token keyword">elif</span> 条件<span class="token number">3</span><span class="token punctuation">:</span>
+    条件<span class="token number">3</span>满足时，执行的代码
+    ……
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    以上条件都不满足时，执行的代码
+    ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>对比逻辑运算符的代码</li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 条件<span class="token number">1</span> <span class="token keyword">and</span> 条件<span class="token number">2</span><span class="token punctuation">:</span>
+    条件<span class="token number">1</span>满足 并且 条件<span class="token number">2</span>满足 执行的代码
+    ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>注意</strong></p> <ol><li><code>elif</code> 和 <code>else</code> 都必须和 <code>if</code> 联合使用，而不能单独使用</li> <li>可以将 <code>if</code>、<code>elif</code> 和 <code>else</code> 以及各自缩进的代码，看成一个 <strong>完整的代码块</strong></li></ol> <h4 id="elif-演练-女友的节日"><a href="#elif-演练-女友的节日" class="header-anchor">#</a> elif 演练 —— 女友的节日</h4> <p><strong>需求</strong></p> <ol><li>定义 <code>holiday_name</code> 字符串变量记录节日名称</li> <li>如果是 <strong>情人节</strong> 应该 <strong>买玫瑰</strong>／<strong>看电影</strong></li> <li>如果是 <strong>平安夜</strong> 应该 <strong>买苹果</strong>／<strong>吃大餐</strong></li> <li>如果是 <strong>生日</strong> 应该 <strong>买蛋糕</strong></li> <li>其他的日子每天都是节日啊……</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>holiday_name = &quot;平安夜&quot;
+
+if holiday_name == &quot;情人节&quot;:
+    print(&quot;买玫瑰&quot;)
+    print(&quot;看电影&quot;)
+elif holiday_name == &quot;平安夜&quot;:
+    print(&quot;买苹果&quot;)
+    print(&quot;吃大餐&quot;)
+elif holiday_name == &quot;生日&quot;:
+    print(&quot;买蛋糕&quot;)
+else:
+    print(&quot;每天都是节日啊……&quot;)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_4-2-if-的嵌套"><a href="#_4-2-if-的嵌套" class="header-anchor">#</a> 4.2 <code>if</code> 的嵌套</h3> <img src="/book/media/14963192801181/002_%E7%81%AB%E8%BD%A6%E7%AB%99%E5%AE%89%E6%A3%80.png" alt="002_火车站安检-w400"> <blockquote><p><strong>elif</strong> 的应用场景是：<strong>同时</strong> 判断 <strong>多个条件</strong>，所有的条件是 <strong>平级</strong> 的</p></blockquote> <ul><li>在开发中，使用 <code>if</code> 进行条件判断，如果希望 <strong>在条件成立的执行语句中</strong> 再 <strong>增加条件判断</strong>，就可以使用 <strong>if 的嵌套</strong></li> <li><strong>if 的嵌套</strong> 的应用场景就是：<strong>在之前条件满足的前提下，再增加额外的判断</strong></li> <li><strong>if 的嵌套</strong> 的语法格式，<strong>除了缩进之外</strong> 和之前的没有区别</li> <li>语法格式如下：</li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">if</span> 条件 <span class="token number">1</span><span class="token punctuation">:</span>
+    条件 <span class="token number">1</span> 满足执行的代码
+    ……
+    
+    <span class="token keyword">if</span> 条件 <span class="token number">1</span> 基础上的条件 <span class="token number">2</span><span class="token punctuation">:</span>
+        条件 <span class="token number">2</span> 满足时，执行的代码
+        ……    
+        
+    <span class="token comment"># 条件 2 不满足的处理</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        条件 <span class="token number">2</span> 不满足时，执行的代码
+        
+<span class="token comment"># 条件 1 不满足的处理</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    条件<span class="token number">1</span> 不满足时，执行的代码
+    ……
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h4 id="if-的嵌套-演练-火车站安检"><a href="#if-的嵌套-演练-火车站安检" class="header-anchor">#</a> if 的嵌套 演练 —— 火车站安检</h4> <p><strong>需求</strong></p> <ol><li>定义布尔型变量 <code>has_ticket</code> 表示是否有车票</li> <li>定义整型变量 <code>knife_length</code> 表示刀的长度，单位：厘米</li> <li>首先检查是否有车票，如果有，才允许进行 <strong>安检</strong></li> <li>安检时，需要检查刀的长度，判断是否超过 20 厘米
+<ul><li>如果超过 20 厘米，提示刀的长度，不允许上车</li> <li>如果不超过 20 厘米，安检通过</li></ul></li> <li>如果没有车票，不允许进门</li></ol> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 定义布尔型变量 has_ticket 表示是否有车票</span>
+has_ticket <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token comment"># 定义整数型变量 knife_length 表示刀的长度，单位：厘米</span>
+knife_length <span class="token operator">=</span> <span class="token number">20</span>
+
+<span class="token comment"># 首先检查是否有车票，如果有，才允许进行 安检</span>
+<span class="token keyword">if</span> has_ticket<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;有车票，可以开始安检...&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 安检时，需要检查刀的长度，判断是否超过 20 厘米</span>
+    <span class="token comment"># 如果超过 20 厘米，提示刀的长度，不允许上车</span>
+    <span class="token keyword">if</span> knife_length <span class="token operator">&gt;=</span> <span class="token number">20</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;不允许携带 %d 厘米长的刀上车&quot;</span> <span class="token operator">%</span> knife_length<span class="token punctuation">)</span>
+    <span class="token comment"># 如果不超过 20 厘米，安检通过</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;安检通过，祝您旅途愉快……&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 如果没有车票，不允许进门</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;大哥，您要先买票啊&quot;</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h2 id="_05-综合应用-石头剪刀布"><a href="#_05-综合应用-石头剪刀布" class="header-anchor">#</a> 05. 综合应用 —— 石头剪刀布</h2> <p><strong>目标</strong></p> <ol><li>强化 <strong>多个条件</strong> 的 <strong>逻辑运算</strong></li> <li>体会 <code>import</code> 导入模块（“工具包”）的使用</li></ol> <p><strong>需求</strong></p> <ol><li>从控制台输入要出的拳 —— 石头（1）／剪刀（2）／布（3）</li> <li>电脑 <strong>随机</strong> 出拳 —— 先假定电脑只会出石头，完成整体代码功能</li> <li>比较胜负</li></ol> <table><thead><tr><th style="text-align:center;">序号</th> <th style="text-align:center;">规则</th></tr></thead> <tbody><tr><td style="text-align:center;">1</td> <td style="text-align:center;">石头 胜 剪刀</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;">剪刀 胜 布</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;">布 胜 石头</td></tr></tbody></table> <h3 id="_5-1-基础代码实现"><a href="#_5-1-基础代码实现" class="header-anchor">#</a> 5.1 基础代码实现</h3> <ul><li>先 <strong>假定电脑就只会出石头</strong>，完成整体代码功能</li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># 从控制台输入要出的拳 —— 石头（1）／剪刀（2）／布（3）</span>
+player <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;请出拳 石头（1）／剪刀（2）／布（3）：&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 电脑 随机 出拳 - 假定电脑永远出石头</span>
+computer <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token comment"># 比较胜负</span>
+<span class="token comment"># 如果条件判断的内容太长，可以在最外侧的条件增加一对大括号</span>
+<span class="token comment"># 再在每一个条件之间，使用回车，PyCharm 可以自动增加 8 个空格</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>player <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">and</span> computer <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">or</span>
+        <span class="token punctuation">(</span>player <span class="token operator">==</span> <span class="token number">2</span> <span class="token keyword">and</span> computer <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token keyword">or</span>
+        <span class="token punctuation">(</span>player <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">and</span> computer <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;噢耶！！！电脑弱爆了！！！&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> player <span class="token operator">==</span> computer<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;心有灵犀，再来一盘！&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;不行，我要和你决战到天亮！&quot;</span><span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_5-2-随机数的处理"><a href="#_5-2-随机数的处理" class="header-anchor">#</a> 5.2 随机数的处理</h3> <ul><li>在 <code>Python</code> 中，要使用随机数，首先需要导入 <strong>随机数</strong> 的 <strong>模块</strong> —— “工具包”</li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> random
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li><p>导入模块后，可以直接在 <strong>模块名称</strong> 后面敲一个 <code>.</code> 然后按 <code>Tab</code> 键，会提示该模块中包含的所有函数</p></li> <li><p><code>random.randint(a, b)</code> ，返回 <code>[a, b]</code> 之间的整数，包含 <code>a</code> 和 <code>b</code></p></li> <li><p>例如：</p></li></ul> <div class="language-python line-numbers-mode"><pre class="language-python"><code>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>  <span class="token comment"># 生成的随机数n: 12 &lt;= n &lt;= 20   </span>
+random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>  <span class="token comment"># 结果永远是 20   </span>
+random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 该语句是错误的，下限必须小于上限</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/book/python/09.html" class="prev">
+        变量的命名
+      </a></span> <span class="next"><a href="/book/python/11.html">
+        运算符
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/book/assets/js/app.6beacea6.js" defer></script><script src="/book/assets/js/2.d4211503.js" defer></script><script src="/book/assets/js/36.f9f46091.js" defer></script>
+  </body>
+</html>
